@@ -1,11 +1,10 @@
 ---
-title: Thyme
 tags: [perennial, herb, active]
 location: raised-bed-1
 planted: 2026-03-15
 ---
 
-## :herb: Thyme
+# :herb: Thyme
 
 **Type:** Perennial Herb  
 **Variety:** [e.g., Tuscan Blue, Arp]
