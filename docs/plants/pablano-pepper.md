@@ -2,7 +2,7 @@
 
 ![pablano-pepper][1]{ loading=lazy }
 
-## Cultivation Status
+## :clipboard: Cultivation Status
 
 | Attribute | Details |
 | :--- | :--- |
