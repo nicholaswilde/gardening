@@ -1,4 +1,4 @@
-# gardening
+# Gardening
 A site to document my home gardening
 
 ## :balance_scale: License
