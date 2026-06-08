@@ -2,6 +2,14 @@
 
 ![jalepeno-pepper][1]{ loading=lazy }
 
-**Source:** Nusery start
+## Cultivation Status
+
+| Attribute | Details |
+| :--- | :--- |
+| **Current State** | Active Growth *(Options: Seedling / Active Growth / Flowering / Harvesting / Dormant)* |
+| **Date Planted** | 2026-03-15 |
+| **Season Planted** | Early Spring |
+| **Location** | Herb Bed |
+| **Source** | Nusery start |
 
 [1]: <../assets/images/jalepeno-pepper.jpg>
