@@ -19,6 +19,7 @@ planted: 2026-03-15
 | **Date Planted** | 2026-03-15 |
 | **Season Planted** | Early Spring |
 | **Location** | Herb Bed |
+| **Origin** | Gifted transplant |
 
 ## Log & Observations
 
