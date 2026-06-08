@@ -12,4 +12,6 @@
 | **Location** | Raised Bed 3 |
 | **Origin** | Nusery start |
 
+## :notebook: Notes
+
 [1]: <../assets/images/jalepeno-pepper.jpg>
