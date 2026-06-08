@@ -1,6 +1,8 @@
 ---
 version: '3'
 
+dotenv: ['.env']
+
 vars:
   ROOT_DIR:
     sh: git rev-parse --show-toplevel
