@@ -5,12 +5,12 @@ location: raised-bed-1
 planted: 2026-03-15
 ---
 
-# :herb: Oregano
+## :herb: Oregano
 
 **Type:** Perennial Herb  
 **Variety:** [e.g., Tuscan Blue, Arp]
 
-## Cultivation Status
+### Cultivation Status
 
 | Attribute | Details |
 | :--- | :--- |
@@ -19,13 +19,13 @@ planted: 2026-03-15
 | **Season Planted** | Early Spring |
 | **Location** | Herb Bed |
 
-## Log & Observations
+### Log & Observations
 
 * **2026-06-07:** Growth is accelerating. Pinching back the top stems to encourage lateral branching.
 * **2026-04-10:** Established well in the soil. Adjusted drip irrigation emitter to reduce water pooling.
-* **2026-03-15:** Transplanted starter from the nursery. 
+* **2026-03-15:** Transplanted starter from the nursery.
 
-## Notes
+### Notes
 
 * **Sunlight:** Full sun.
 * **Soil:** Needs excellent drainage; added extra perlite to the planting hole.

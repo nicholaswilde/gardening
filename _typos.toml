@@ -1,0 +1,12 @@
+[files]
+extend-exclude = [
+  "docs/assets/images/**",
+  "conductor/**",
+  "*.jpg",
+  "*.png",
+  "*.gif",
+  "*.webp",
+  "*.ico",
+]
+
+[default.extend-words]

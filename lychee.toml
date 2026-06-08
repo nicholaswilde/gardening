@@ -1,0 +1,19 @@
+# Lychee Configuration File
+
+# Display settings
+verbose = "info"
+host_stats = true
+
+# Request settings
+timeout = 5
+max_retries = 2
+max_concurrency = 20
+
+# Accept rate-limiting and anti-scraper codes as valid to prevent false build failures
+accept = [200, 201, 202, 204, 206, 403, 405, 429, 520]
+
+# Exclude private IP ranges and loopbacks
+exclude_all_private = true
+
+# Regex exclusions for specific slow/rate-limited URLs
+exclude = []

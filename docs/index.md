@@ -1,4 +1,4 @@
-# :seedling: Gardening :open_book:
+# :seedling: Gardening :open_book
 
 [![task](https://img.shields.io/badge/task-enabled-brightgreen?logo=task&logoColor=white&style=for-the-badge)](https://taskfile.dev/)
 

@@ -1,0 +1,31 @@
+---
+name: link-check
+on:  # yamllint disable-line rule:truthy
+  # Schedule check each day at 8 UTC
+  schedule: [{cron: "0 8 * * *"}]
+  workflow_dispatch:
+  pull_request:
+  push:
+    branches:
+      - main
+    paths:
+      - 'docs/**/*.md'
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  link-check:
+    name: Link Check
+    runs-on: ubuntu-22.04
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v6
+
+      - name: Check markdown links
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: docs/
+          fail: false

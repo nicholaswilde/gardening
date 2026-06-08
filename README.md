@@ -1,10 +1,10 @@
-# :seedling: Gardening :open_book:
+# :seedling: Gardening :open_book
 
 A site to document my home gardening
 
 ## :balance_scale: License
 
-[Apache 2.0 License](../LICENSE)
+[Apache 2.0 License](./LICENSE)
 
 ---
 
