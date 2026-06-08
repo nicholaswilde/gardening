@@ -13,23 +13,23 @@ tasks:
     desc: Serve a local zensical server
     cmds:
       - zensical serve
-  linkcheck:
+  lc:
     desc: Check for dead links using lychee
     cmds:
       - lychee docs/
-  linkcheck-offline:
+  lc:offline:
     desc: Check for dead local links and images using lychee (offline)
     cmds:
       - lychee --offline docs/
-  linkcheck-file:
+  lc:file:
     desc: Link check a given file using lychee
     cmds:
       - lychee {{shellQuote .FILE}}
-  markdownlint:
+  mdl:
     desc: Run markdownlint-cli
     cmds:
       - rumdl check .
-  markdownlint-fix:
+  mdl:fix:
     desc: Run markdownlint-cli fix
     cmds:
       - rumdl check --fix .
@@ -42,7 +42,7 @@ tasks:
     cmds:
       - python3 scripts/generate_typos_config.py
       - typos
-  spellcheck-file:
+  sc:file:
     desc: Spellcheck a single file
     cmds:
       - python3 scripts/generate_typos_config.py
@@ -52,25 +52,20 @@ tasks:
       - task -a
     silent: true
 
-  yamllint:
+  yl:
     desc: Run yamllint
     cmds:
       - yamllint-rs .
       
-  install-tools:
+  tools:install:
     desc: Install required tools
     cmds:
       - uv tool install zensical
 
-  update-tools:
+  tools:update:
     desc: Upgrade Zensical (re-installation required, --from flag unsupported)
     cmds:
       - uv tool upgrade zensical
-
-  serve:
-    desc: Run the local Zensical development server
-    cmds:
-      - zensical serve
 
   build:
     desc: Build the static site
@@ -90,11 +85,6 @@ tasks:
       - test -f .env.enc
     cmds:
        - 'sops -d --input-type dotenv --output-type dotenv .env.enc > .env'
-
-  check-links:
-    desc: Run a local link checker across docs
-    cmds:
-      - npx markdown-link-check docs/**/*.md
 
   new-plant:
     desc: "Generate a new plant profile template. Usage: task new-plant -- poblano-pepper"
