@@ -21,9 +21,11 @@ Beds = [
 
 [[project.nav]]
 Plants = [
+  { "Cilantro" = "plants/cilantro.md" },
   { "Jalepeno Pepper" = "plants/jalepeno-pepper.md" },
   { "Oregano" = "plants/oregano.md" },
   { "Pablano Pepper" = "plants/pablano-pepper.md" },
+  { "Parsley" = "plants/parsley.md" },
   { "Rosemary" = "plants/rosemary.md" },
   { "Sungold Tomato" = "plants/sungold-tomato.md" },
   { "Thyme" = "plants/thyme.md" }
