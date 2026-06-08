@@ -11,7 +11,7 @@ planted: 2026-03-15
 **Type:** Perennial Herb  
 **Variety:** [e.g., Tuscan Blue, Arp]
 
-## Cultivation Status
+## :clipboard: Cultivation Status
 
 | Attribute | Details |
 | :--- | :--- |
