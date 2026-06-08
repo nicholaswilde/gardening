@@ -21,7 +21,7 @@ planted: 2026-03-15
 | **Location** | Herb Bed |
 | **Origin** | Gifted transplant |
 
-## Log & Observations
+## :memo: Log & Observations
 
 * **2026-06-07:** Growth is accelerating. Pinching back the top stems to encourage lateral branching.
 * **2026-04-10:** Established well in the soil. Adjusted drip irrigation emitter to reduce water pooling.
