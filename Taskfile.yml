@@ -1,0 +1,102 @@
+---
+version: '3'
+
+tasks:
+  default:
+    cmds:
+      - task: serve
+
+  install-tools:
+    desc: Install required tools
+    cmds:
+      - uv tool install zensical
+
+  update-tools:
+    desc: Upgrade Zensical (re-installation required, --from flag unsupported)
+    cmds:
+      - uv tool install zensical
+
+  serve:
+    desc: Run the local Zensical development server
+    cmds:
+      - zensical serve
+
+  build:
+    desc: Build the static site
+    cmds:
+      - zensical build
+
+  sops-encrypt:
+    desc: Encrypt secrets file
+    cmds:
+      - sops --encrypt --in-place secrets.env
+
+  sops-decrypt:
+    desc: Decrypt secrets file
+    cmds:
+      - sops --decrypt --in-place secrets.env
+
+  check-links:
+    desc: Run a local link checker across docs
+    cmds:
+      - npx markdown-link-check docs/**/*.md
+
+  new-plant:
+    desc: "Generate a new plant profile template. Usage: task new-plant -- poblano-pepper"
+    vars:
+      FILE: '{{.CLI_ARGS}}'
+      DATE:
+        sh: date +%Y-%m-%d
+    cmds:
+      - 'test -n "{{.FILE}}" || (echo "Error: Provide a filename (e.g., task new-plant -- tomato)" && exit 1)'
+      - mkdir -p docs/plants
+      - |
+        cat << 'EOF' > docs/plants/{{.FILE}}.md
+        ---
+        title: {{.FILE}}
+        tags: []
+        location: 
+        planted: {{.DATE}}
+        ---
+
+        # {{.FILE}}
+
+        **Type:** **Variety:** ## Cultivation Status
+
+        | Attribute | Details |
+        | :--- | :--- |
+        | **Current State** | Active Growth |
+        | **Date Planted** | {{.DATE}} |
+        | **Season Planted** | |
+        | **Location** | |
+
+        ## Log & Observations
+
+        * **{{.DATE}}:** Initial logging.
+
+        ## Notes
+        * EOF
+      - echo "Created docs/plants/{{.FILE}}.md"
+  
+  new-bed:
+    desc: "Generate a new raised bed template. Usage: task new-bed -- raised-bed-4"
+    vars:
+      FILE: '{{.CLI_ARGS}}'
+      DATE:
+        sh: date +%Y-%m-%d
+    cmds:
+      - 'test -n "{{.FILE}}" || (echo "Error: Provide a filename (e.g., task new-bed -- raised-bed-4)" && exit 1)'
+      - mkdir -p docs/beds
+      - |
+        cat << 'EOF' > docs/beds/{{.FILE}}.md
+        # {{.FILE}}
+
+        **Dimensions:** **Material:** **Irrigation:** ## Soil Management
+        * **{{.DATE}}:** Initial setup.
+
+        ## Crop History
+        | Year | Season | Crop | Notes |
+        | :--- | :--- | :--- | :--- |
+        | | | | |
+        EOF
+      - echo "Created docs/beds/{{.FILE}}.md"
