@@ -11,11 +11,11 @@ Documenting my gardening history
 
 Development of this site is documented [here][3].
 
-## :scales:​License
+## :scales:​ License
 
 ​[Apache 2.0 License](../LICENSE)
 
-## :pencil:​Author
+## :pencil:​ Author
 
 ​This project was started in 2026 by [Nicholas Wilde][2].
 
