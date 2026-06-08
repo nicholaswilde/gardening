@@ -1,4 +1,5 @@
-# :seedling: Gardening
+# :seedling: Gardening :open_book:
+
 A site to document my home gardening
 
 ## :balance_scale: License
