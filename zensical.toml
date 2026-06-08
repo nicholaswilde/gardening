@@ -35,6 +35,11 @@ Infrastructure = [
   { "Irrigation" = "infrastructure/irrigation.md" }
 ]
 
+# [[project.nav]]
+# Archive."2025 Season" = [
+#   { "" = "-2025.md" }
+#]
+
 [[project.nav]]
 Reference = [
   { "Future" = "reference/future.md" },
