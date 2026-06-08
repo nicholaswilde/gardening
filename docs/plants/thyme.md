@@ -27,7 +27,7 @@ planted: 2026-03-15
 * **2026-04-10:** Established well in the soil. Adjusted drip irrigation emitter to reduce water pooling.
 * **2026-03-15:** Transplanted starter from the nursery.
 
-## Notes
+## :notebook: Notes
 
 * **Sunlight:** Full sun.
 * **Soil:** Needs excellent drainage; added extra perlite to the planting hole.
