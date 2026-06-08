@@ -8,4 +8,6 @@
 | **Date Planted** | 2026-03-15 |
 | **Season Planted** | Early Spring |
 | **Location** | Herb Bed |
-| **Source** | Living herb |
+| **Origin** | Living herb |
+
+## :notebook: Notes
