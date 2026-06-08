@@ -9,10 +9,14 @@ vars:
   PORT: 8000
 
 tasks:
+  bootstrap:
+    desc: "Initialize the project and install all dependencies"
+    cmds:
+      - uv sync
   serve:
     desc: Serve a local zensical server
     cmds:
-      - zensical serve
+      - uv run zensical serve
   lc:
     desc: Check for dead links using lychee
     cmds:
@@ -42,15 +46,12 @@ tasks:
     cmds:
       - python3 scripts/generate_typos_config.py
       - typos
+
   sc:file:
     desc: Spellcheck a single file
     cmds:
       - python3 scripts/generate_typos_config.py
       - typos {{shellQuote .FILE}}
-  default:
-    cmds:
-      - task -a
-    silent: true
 
   yl:
     desc: Run yamllint
@@ -88,60 +89,15 @@ tasks:
 
   new-plant:
     desc: "Generate a new plant profile template. Usage: task new-plant -- poblano-pepper"
-    vars:
-      FILE: '{{.CLI_ARGS}}'
-      DATE:
-        sh: date +%Y-%m-%d
     cmds:
-      - 'test -n "{{.FILE}}" || (echo "Error: Provide a filename (e.g., task new-plant -- tomato)" && exit 1)'
-      - mkdir -p docs/plants
-      - |
-        cat << 'EOF' > docs/plants/{{.FILE}}.md
-        ---
-        title: {{.FILE}}
-        tags: []
-        location: 
-        planted: {{.DATE}}
-        ---
-
-        # {{.FILE}}
-
-        **Type:** **Variety:** ## Cultivation Status
-
-        | Attribute | Details |
-        | :--- | :--- |
-        | **Current State** | Active Growth |
-        | **Date Planted** | {{.DATE}} |
-        | **Season Planted** | |
-        | **Location** | |
-
-        ## Log & Observations
-
-        * **{{.DATE}}:** Initial logging.
-
-        ## Notes
-        * EOF
-      - echo "Created docs/plants/{{.FILE}}.md"
+      - uv run python3 scripts/new_plant.py {{.CLI_ARGS}}
   
   new-bed:
     desc: "Generate a new raised bed template. Usage: task new-bed -- raised-bed-4"
-    vars:
-      FILE: '{{.CLI_ARGS}}'
-      DATE:
-        sh: date +%Y-%m-%d
     cmds:
-      - 'test -n "{{.FILE}}" || (echo "Error: Provide a filename (e.g., task new-bed -- raised-bed-4)" && exit 1)'
-      - mkdir -p docs/beds
-      - |
-        cat << 'EOF' > docs/beds/{{.FILE}}.md
-        # {{.FILE}}
+      - uv run python3 scripts/new_bed.py {{.CLI_ARGS}}
 
-        **Dimensions:** **Material:** **Irrigation:** ## Soil Management
-        * **{{.DATE}}:** Initial setup.
-
-        ## Crop History
-        | Year | Season | Crop | Notes |
-        | :--- | :--- | :--- | :--- |
-        | | | | |
-        EOF
-      - echo "Created docs/beds/{{.FILE}}.md"
+  default:
+    cmds:
+      - task -a
+    silent: true

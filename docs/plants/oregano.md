@@ -6,6 +6,8 @@ planted: 2026-03-15
 
 # :herb: Oregano
 
+![oregano][1]{ loading=lazy }
+
 **Type:** Perennial Herb  
 **Variety:** [e.g., Tuscan Blue, Arp]
 
@@ -28,3 +30,5 @@ planted: 2026-03-15
 
 * **Sunlight:** Full sun.
 * **Soil:** Needs excellent drainage; added extra perlite to the planting hole.
+
+[1]: <../assets/images/oregano.jpg>
