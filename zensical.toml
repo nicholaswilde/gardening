@@ -13,13 +13,6 @@ edit_uri = "edit/main/docs/"
 "Home" = "index.md"
 
 [[project.nav]]
-Beds = [
-  { "Raised Bed 1" = "beds/raised-bed-1.md" },
-  { "Raised Bed 2" = "beds/raised-bed-2.md" },
-  { "Raised Bed 3" = "beds/raised-bed-3.md" }
-]
-
-[[project.nav]]
 Plants = [
   { "Chives Common" = "plants/chives-common.md" },
   { "Cilantro" = "plants/cilantro.md" },
@@ -34,6 +27,10 @@ Plants = [
 
 [[project.nav]]
 Infrastructure = [
+  { "Backyard Pot 1" = "containers/backyard-pot-1.md" },
+  { "Raised Bed 1" = "beds/raised-bed-1.md" },
+  { "Raised Bed 2" = "beds/raised-bed-2.md" },
+  { "Raised Bed 3" = "beds/raised-bed-3.md" },
   { "Click & Grow" = "infrastructure/click-and-grow.md" },
   { "Irrigation" = "infrastructure/irrigation.md" }
 ]
