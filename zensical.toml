@@ -34,6 +34,7 @@ Plants = [
 
 [[project.nav]]
 Infrastructure = [
+  { "Click & Grow" = "infrastructure/click-and-grow.md" },
   { "Irrigation" = "infrastructure/irrigation.md" }
 ]
 
