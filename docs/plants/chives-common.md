@@ -1,3 +1,3 @@
 # :herb: Chives Common
 
-**Source:** live herbs from grocery store
+**Source:** living herbs from the supermarket
