@@ -10,6 +10,6 @@
 | **Date Planted** | 2026-03-15 |
 | **Season Planted** | Early Spring |
 | **Location** | Herb Bed |
-| **Source** | Nusery start |
+| **Origin** | Nusery start |
 
 [1]: <../assets/images/jalepeno-pepper.jpg>
