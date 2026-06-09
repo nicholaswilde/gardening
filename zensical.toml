@@ -14,7 +14,7 @@ edit_uri = "edit/main/docs/"
 
 [[project.nav]]
 Plants = [
-  { "Jalapeno Pepper" = "plants/jalapeno-pepper.md" },
+  { "Jalapeño Pepper" = "plants/jalapeno-pepper.md" },
   { "Oregano" = "plants/oregano.md" },
   { "Poblano Pepper" = "plants/poblano-pepper.md" },
   { "Rosemary" = "plants/rosemary.md" },
