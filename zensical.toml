@@ -77,8 +77,8 @@ social = [
   { icon = "fontawesome/solid/key", link = "https://github.com/nicholaswilde.gpg" },
 ]
 
-[project.markdown_extensions."pymdownx.superfences"]
+[project.markdown_extensions.pymdownx.superfences]
 custom_fences = [
-  { name = "mermaid", class = "mermaid", format = "!!python/name:pymdownx.superfences.fence_mermaid_format" }
+  { name = "mermaid", class = "mermaid", format = "pymdownx.superfences.fence_code_format" }
 ]
 
