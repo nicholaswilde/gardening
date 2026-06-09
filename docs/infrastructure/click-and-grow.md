@@ -3,7 +3,9 @@
 !!! example ""
 
     **Status:** Inactive  
+    
     **Model:** [Smart Garden 3][1]
+    
     **Location:** Kitchen Counter  
 
 ## :clipboard: Active Pods
