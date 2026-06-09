@@ -7,6 +7,11 @@ source: seed
 ---
 # :herb: Chives Common
 
+!!! example ""
+
+    Type: Perennial Herb
+    Variety: [e.g., Tuscan Blue, Arp]
+
 ## :clipboard: Cultivation Status
 
 | Attribute | Details |
