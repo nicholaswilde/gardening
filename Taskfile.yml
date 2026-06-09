@@ -89,11 +89,15 @@ tasks:
 
   new-plant:
     desc: "Generate a new plant profile template. Usage: task new-plant -- poblano-pepper"
+    predonditions:
+      - test -f scripts/new_plant.py
     cmds:
       - uv run python3 scripts/new_plant.py {{.CLI_ARGS}}
   
   new-bed:
     desc: "Generate a new raised bed template. Usage: task new-bed -- raised-bed-4"
+    predonditions:
+      - test -f scripts/new_bed.py
     cmds:
       - uv run python3 scripts/new_bed.py {{.CLI_ARGS}}
   
