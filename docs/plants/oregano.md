@@ -6,7 +6,7 @@ planted: 2026-03-15
 
 # :herb: Oregano
 
-![oregano][1]{ loading=lazy }
+![oregano][1]{ width="400" loading=lazy }
 
 !!! example ""
 
