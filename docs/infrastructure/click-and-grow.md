@@ -3,7 +3,7 @@
 !!! example ""
 
     **Status:** Inactive  
-    **Model:** Smart Garden 3
+    **Model:** [Smart Garden 3][1]
     **Location:** Kitchen Counter  
 
 ## :clipboard: Active Pods
@@ -46,3 +46,5 @@ Think of this as the "Current State" for the device, tracking what is actively p
   * Water level sensor (Researching capacitive vs. ultrasonic to avoid nutrient water corrosion)
   * Custom 3D printed low-profile enclosure
 * **Implementation Notes:** The sensor will need to fit alongside the existing mechanical float without disrupting the light timer array. Once active, update the hardware table above with the deployment date.
+
+[1]: <https://www.clickandgrow.com/products/the-smart-garden-3>
