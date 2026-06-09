@@ -7,6 +7,11 @@ origin: seed
 ---
 # :herb: Cilantro
 
+!!! example ""
+
+    Type: Perennial Herb
+    Variety: [e.g., Tuscan Blue, Arp]
+
 ## :clipboard: Cultivation Status
 
 | Attribute | Details |
