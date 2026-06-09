@@ -9,8 +9,9 @@ origin: seed
 
 !!! example ""
 
-    Type: Perennial Herb
-    Variety: [e.g., Tuscan Blue, Arp]
+    **Type:** Perennial Herb
+    
+    **Variety:** [e.g., Tuscan Blue, Arp]
 
 ## :clipboard: Cultivation Status
 
