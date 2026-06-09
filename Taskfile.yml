@@ -96,7 +96,13 @@ tasks:
     desc: "Generate a new raised bed template. Usage: task new-bed -- raised-bed-4"
     cmds:
       - uv run python3 scripts/new_bed.py {{.CLI_ARGS}}
-
+  
+  dashboard:
+    desc: "Generate the seasonal planting dashboard"
+    cmds:
+      - uv run python scripts/build_dashboard.py
+      - echo "Seasonal dashboard updated!"
+      
   default:
     cmds:
       - task -a
