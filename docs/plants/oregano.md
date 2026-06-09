@@ -10,7 +10,8 @@ planted: 2026-03-15
 
 !!! example ""
 
-    **Type:** Perennial Herb  
+    **Type:** Perennial Herb
+    
     **Variety:** [e.g., Tuscan Blue, Arp]
 
 ## :clipboard: Cultivation Status
