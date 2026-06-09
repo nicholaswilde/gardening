@@ -45,7 +45,8 @@ Archive = [
 [[project.nav]]
 Reference = [
   { "Future" = "reference/future.md" },
-  { "Development" = "reference/development.md" }
+  { "Development" = "reference/development.md" },
+  { "Style Guide" = "reference/style-guide.md" }
 ]
 
 [project.theme]
