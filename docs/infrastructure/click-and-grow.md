@@ -2,11 +2,11 @@
 
 !!! example ""
 
-    **Status:** Inactive  
+    :material-list-status: **Status:** Inactive  
     
-    **Model:** [Smart Garden 3][1]
+    :material-tag-text-outline: **Model:** [Smart Garden 3][1]
     
-    **Location:** Kitchen Counter  
+    :material-map-marker-outline: **Location:** Kitchen Counter  
 
 ## :clipboard: Active Pods
 
