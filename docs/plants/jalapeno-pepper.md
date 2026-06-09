@@ -1,6 +1,6 @@
 # :hot_pepper: Jalapeño Pepper
 
-![jalapeno-pepper][1]{ width="350" loading=lazy }
+![jalapeno-pepper][1]{ width="400" loading=lazy }
 
 !!! example ""
 
