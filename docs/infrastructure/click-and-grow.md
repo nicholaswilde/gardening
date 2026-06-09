@@ -1,7 +1,10 @@
 # :seedling: Click & Grow
 
-**Status:** Inactive  
-**Model:** Smart Garden 9 *(Update with your specific model)* **Location:** Kitchen Counter  
+!!! example ""
+
+    **Status:** Inactive  
+    **Model:** Smart Garden 3
+    **Location:** Kitchen Counter  
 
 ## :clipboard: Active Pods
 
