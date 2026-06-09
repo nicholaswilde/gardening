@@ -1,3 +1,3 @@
 # :herb: Flat Leaf Parsley
 
-## :notebook: Notes
+## :pushpin: Notes
