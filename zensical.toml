@@ -34,12 +34,12 @@ Infrastructure = [
 
 [[project.nav]]
 Archive = [
-  { "Chives Common 2025" = "plants/chives-common-2025.md" },
   { "2025" = [
-    { "Cilantro 2025" = "plants/cilantro-2025.md" }
+    { "Chives Common" = "plants/chives-common-2025.md" },
+    { "Cilantro" = "plants/cilantro-2025.md" },
+    { "Flat Leaf Parsley" = "plants/flat-leaf-parsley-2025.md" },
+    { "Sage" = "plants/sage-2025.md" }
   ] },
-  { "Flat Leaf Parsley 2025" = "plants/flat-leaf-parsley-2025.md" },
-  { "Sage 2025" = "plants/sage-2025.md" }
 ]
 
 [[project.nav]]
@@ -62,7 +62,7 @@ logo = "material/watering-can"
 repo = "fontawesome/brands/github"
 
 [project.theme.palette]
-scheme = "slate"
+scheme = "sate"
 primary = "custom"
 
 [project.extra]
