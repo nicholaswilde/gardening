@@ -36,7 +36,8 @@ Infrastructure = [
 [[project.nav]]
 Archive = [
   { "Chives Common 2026" = "plants/chives-common-2026.md" },
-  { "Flat Leaf Parsley 2025" = "plants/flat-leaf-parsley-2025.md" }
+  { "Flat Leaf Parsley 2025" = "plants/flat-leaf-parsley-2025.md" },
+  { "Sage 2026" = "plants/sage-2026.md" }
 ]
 
 [[project.nav]]
