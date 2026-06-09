@@ -4,6 +4,7 @@
 
     **Status:** Active  
     **Dimensions:** 4' x 8' x 1.5' (48 cu ft) 
+    
     **Material:** Rough-sawn Cedar  
     **Constructed:** October 2021
 
