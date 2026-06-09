@@ -7,15 +7,22 @@
 
 Documenting my gardening history
 
+## :map: Backyard Garden Layout
+
 ```mermaid
 graph TD
     %% Garden Layout - Top View
-    subgraph Backyard Space
+    subgraph backyardSpace[" "]
         direction LR
-        Bed1[Raised Bed 1<br/>🍅 Tomatoes] 
-        Bed2[Raised Bed 2<br/>🌿 Herbs]
-        Bed3[Raised Bed 3<br/>🌶️ Peppers]
-        Pot1((Backyard Pot 1<br/>🍃 Mint))
+
+        Pot1((Backyard Pot 1<br/>🍃 Mint)) ~~~ Hidden1[" "] ~~~ Hidden2[" "]
+
+        %% First row
+        Hidden3[" "] ~~~ Bed1[Raised Bed 1<br/>🌺 Flowers] ~~~ Hidden4[" "]
+
+        %% Second row
+        Hidden5[" "] ~~~ Bed2[Raised Bed 2<br/>🌿 Herbs] ~~~  Bed3[Raised Bed 3<br/>🌶️  Peppers & <br/>🍅 Tomatoes]
+        
     end
     
     %% Interactive routing: Click a node to go to its specific markdown page
@@ -29,7 +36,12 @@ graph TD
     style Bed2 fill:#313244,stroke:#cba6f7,stroke-width:2px,rx:5,ry:5,color:#cdd6f4
     style Bed3 fill:#313244,stroke:#cba6f7,stroke-width:2px,rx:5,ry:5,color:#cdd6f4
     style Pot1 fill:#313244,stroke:#a6e3a1,stroke-width:2px,color:#cdd6f4
-    style Backyard Space fill:transparent,stroke:#585b70,stroke-width:2px,stroke-dasharray: 5 5
+    style backyardSpace fill:transparent,stroke:#585b70,stroke-width:2px,stroke-dasharray: 5 5
+    style Hidden1 fill:none,stroke:none
+    style Hidden2 fill:none,stroke:none
+    style Hidden3 fill:none,stroke:none
+    style Hidden4 fill:none,stroke:none
+    style Hidden5 fill:none,stroke:none
 ```
 
 ## :gear: Development

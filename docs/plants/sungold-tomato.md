@@ -2,7 +2,7 @@
 
 ![sungold-tomato][1]{ loading=lazy }
 
-## Cultivation Status
+## :clipboard: Cultivation Status
 
 | Attribute | Details |
 | :--- | :--- |
@@ -12,6 +12,8 @@
 | **Location** | Raised Bed 3 |
 | **Origin** | Nusery start |
 
-## :notebook: Notes
+## :memo: Log & Observations
+
+## :pushpin: Notes
 
 [1]: <../assets/images/sungold-tomato.jpg>

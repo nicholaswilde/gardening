@@ -1,6 +1,6 @@
-# :hot_pepper: Pablano Pepper
+# :hot_pepper: Jalapeno Pepper
 
-![pablano-pepper][1]{ loading=lazy }
+![jalapeno-pepper][1]{ loading=lazy }
 
 ## :clipboard: Cultivation Status
 
@@ -12,6 +12,8 @@
 | **Location** | Raised Bed 3 |
 | **Origin** | Nusery start |
 
-## :notebook: Notes
+## :memo: Log & Observations
 
-[1]: <../assets/images/pablano-pepper.jpg>
+## :pushpin: Notes
+
+[1]: <../assets/images/jalapeno-pepper.jpg>

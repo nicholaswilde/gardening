@@ -17,4 +17,6 @@ origin: seed
 | **Location** | Raised Bed 2 |
 | **Outcome** | High yield. Ground into flour for sourdough starters. |
 
+## :memo: Log & Observations
+
 ## :pushpin: Notes

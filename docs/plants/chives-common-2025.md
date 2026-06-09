@@ -7,7 +7,7 @@ source: seed
 ---
 # :herb: Chives Common
 
-## Cultivation Status
+## :clipboard: Cultivation Status
 
 | Attribute | Details |
 | :--- | :--- |
@@ -16,5 +16,7 @@ source: seed
 | **Season Planted** | Early Spring |
 | **Location** | Raised Bed 3 |
 | **Origin** | Living herb |
+
+## :memo: Log & Observations
 
 ## :pushpin: Notes

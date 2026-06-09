@@ -1,3 +1,3 @@
 # :herb: Mint
 
-## :notebook: Notes
+## :pushpin: Notes

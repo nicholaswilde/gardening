@@ -11,7 +11,7 @@ planted: 2026-03-15
 **Type:** Perennial Herb  
 **Variety:** [e.g., Tuscan Blue, Arp]
 
-## Cultivation Status
+## :clipboard: Cultivation Status
 
 | Attribute | Details |
 | :--- | :--- |
@@ -27,7 +27,7 @@ planted: 2026-03-15
 * **2026-04-10:** Established well in the soil. Adjusted drip irrigation emitter to reduce water pooling.
 * **2026-03-15:** Transplanted starter from the nursery.
 
-## :notebook: Notes
+## :pushpin: Notes
 
 * **Sunlight:** Full sun.
 * **Soil:** Needs excellent drainage; added extra perlite to the planting hole.

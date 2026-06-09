@@ -14,9 +14,9 @@ edit_uri = "edit/main/docs/"
 
 [[project.nav]]
 Plants = [
-  { "Jalepeno Pepper" = "plants/jalepeno-pepper.md" },
+  { "Jalapeno Pepper" = "plants/jalapeno-pepper.md" },
   { "Oregano" = "plants/oregano.md" },
-  { "Pablano Pepper" = "plants/pablano-pepper.md" },
+  { "Poblano Pepper" = "plants/poblano-pepper.md" },
   { "Rosemary" = "plants/rosemary.md" },
   { "Sungold Tomato" = "plants/sungold-tomato.md" },
   { "Thyme" = "plants/thyme.md" }
@@ -32,24 +32,21 @@ Infrastructure = [
   { "Irrigation" = "infrastructure/irrigation.md" }
 ]
 
-#[[project.nav]]
-#Archive = [
-#  { "2025" = [
-#    { "Chives Common" = "plants/chives-common-2025.md" },
-#    { "Cilantro" = "plants/cilantro-2025.md" },
-#    { "Flat Leaf Parsley" = "plants/#flat-leaf-parsley-2025.md" },
-#    { "Sage" = "plants/sage-2025.md" }
-#  ] },
-#]
+[[project.nav]]
+Archive = [
+  { "2025" = [
+  { "Chives Common" = "plants/chives-common-2025.md" },
+  { "Cilantro" = "plants/cilantro-2025.md" },
+  { "Flat Leaf Parsley" = "plants/flat-leaf-parsley-2025.md" },
+  { "Sage" = "plants/sage-2025.md" }
+] },
+]
 
 [[project.nav]]
 Reference = [
   { "Future" = "reference/future.md" },
   { "Development" = "reference/development.md" }
 ]
-
-# [project.nav."Infrastructure"]
-
 
 [project.theme]
 features = [
@@ -60,10 +57,24 @@ features = [
 [project.theme.icon]
 logo = "material/watering-can"
 repo = "fontawesome/brands/github"
+# 
+# [project.theme.palette]
+# scheme = "sate"
+# primary = "custom"
 
-[project.theme.palette]
-scheme = "sate"
-primary = "custom"
+# Palette toggle for light mode
+[[project.theme.palette]]
+media = "(prefers-color-scheme: light)"
+scheme = "default"
+toggle.icon = "lucide/sun"
+toggle.name = "Switch to dark mode"
+
+# Palette toggle for dark mode
+[[project.theme.palette]]
+media = "(prefers-color-scheme: dark)"
+scheme = "slate"
+toggle.icon = "lucide/moon"
+toggle.name = "Switch to light mode"
 
 [project.extra]
 social = [
@@ -77,8 +88,38 @@ social = [
   { icon = "fontawesome/solid/key", link = "https://github.com/nicholaswilde.gpg" },
 ]
 
+[project.markdown_extensions.abbr]
+[project.markdown_extensions.admonition]
+[project.markdown_extensions.attr_list]
+[project.markdown_extensions.def_list]
+[project.markdown_extensions.footnotes]
+[project.markdown_extensions.md_in_html]
+[project.markdown_extensions.toc]
+permalink = true
+[project.markdown_extensions.pymdownx.arithmatex]
+generic = true
+[project.markdown_extensions.pymdownx.betterem]
+[project.markdown_extensions.pymdownx.caret]
+[project.markdown_extensions.pymdownx.details]
+[project.markdown_extensions.pymdownx.emoji]
+emoji_generator = "zensical.extensions.emoji.to_svg"
+emoji_index = "zensical.extensions.emoji.twemoji"
+[project.markdown_extensions.pymdownx.highlight]
+anchor_linenums = true
+line_spans = "__span"
+pygments_lang_class = true
+[project.markdown_extensions.pymdownx.inlinehilite]
+[project.markdown_extensions.pymdownx.keys]
+[project.markdown_extensions.pymdownx.magiclink]
+[project.markdown_extensions.pymdownx.mark]
+[project.markdown_extensions.pymdownx.smartsymbols]
 [project.markdown_extensions.pymdownx.superfences]
 custom_fences = [
   { name = "mermaid", class = "mermaid", format = "pymdownx.superfences.fence_code_format" }
 ]
-
+[project.markdown_extensions.pymdownx.tabbed]
+alternate_style = true
+combine_header_slug = true
+[project.markdown_extensions.pymdownx.tasklist]
+custom_checkbox = true
+[project.markdown_extensions.pymdownx.tilde]
