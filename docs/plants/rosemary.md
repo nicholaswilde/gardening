@@ -6,7 +6,7 @@ planted: 2026-03-15
 
 # :herb: Rosemary
 
-![rosemary][1]{ loading=lazy }
+![rosemary][1]{ width="400" loading=lazy }
 
 !!! example ""
 
