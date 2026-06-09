@@ -2,7 +2,11 @@
 
 !!! example ""
 
-    [Rain Bird ESP-TM2][1]
+    **Status:** Active
+    **Model:** [Rain Bird ESP-TM2][1]
+    **Location:** Backyard
+
+## Zones
 
 ## :pushpin: Notes
 
