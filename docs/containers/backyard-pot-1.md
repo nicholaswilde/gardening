@@ -1,9 +1,11 @@
 # :potted_plant: Backyard Pot 1
 
-**Status:** Active  
-**Volume:** 5 Gallon  
-**Material:** Glazed Ceramic  
-**Drainage:** Single bottom hole, elevated on feet.  
+!!! example ""
+
+    **Status:** Active  
+    **Volume:** 5 Gallon  
+    **Material:** Glazed Ceramic  
+    **Drainage:** Single bottom hole, elevated on feet.  
 
 ## :wrench: Location & Hardware
 * **Current Zone:** Concrete Patio (Full Sun)
