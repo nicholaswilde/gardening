@@ -1,3 +1,10 @@
+---
+tags: [annual, crop, archived]
+location: raised-bed-2
+planted: 2025-10-15
+removed: 2026-05-10
+source: seed
+---
 # :herb: Chives Common
 
 ## Cultivation Status
