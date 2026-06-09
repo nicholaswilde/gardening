@@ -37,7 +37,7 @@ Archive = [
   { "Chives Common 2025" = "plants/chives-common-2025.md" },
   { "2025" = [
     { "Cilantro 2025" = "plants/cilantro-2025.md" }
-  ],
+  ] },
   { "Flat Leaf Parsley 2025" = "plants/flat-leaf-parsley-2025.md" },
   { "Sage 2025" = "plants/sage-2025.md" }
 ]
