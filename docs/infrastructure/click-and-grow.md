@@ -35,7 +35,10 @@ Think of this as the "Current State" for the device, tracking what is actively p
 
 * **2026-06-09:** Initial documentation.
 * **2025-05:** Procured replacement Smart Garden Plastic Cups (3 pieces).
-* **Maintenance Note:** Ensure water float is checked weekly and plastic domes are removed once sprouts reach the top.
+
+!!! note "Maintenance Note"
+
+    Ensure water float is checked weekly and plastic domes are removed once sprouts reach the top.
 
 ## :rocket: Planned Upgrades
 
