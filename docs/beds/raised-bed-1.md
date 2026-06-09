@@ -3,7 +3,7 @@
 **Status:** Active  
 **Dimensions:** 4' x 8' x 1.5' (48 cu ft)  
 **Material:** Rough-sawn Cedar  
-**Constructed:** Spring 2024  
+**Constructed:** Spring 2021
 
 ## :hammer_and_wrench: Hardware & Irrigation
 
