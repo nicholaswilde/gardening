@@ -15,7 +15,6 @@ edit_uri = "edit/main/docs/"
 [[project.nav]]
 Plants = [
   { "Cilantro" = "plants/cilantro.md" },
-  { "Flat Leaf Parsley" = "plants/flat-leaf-parsley.md" },
   { "Jalepeno Pepper" = "plants/jalepeno-pepper.md" },
   { "Oregano" = "plants/oregano.md" },
   { "Pablano Pepper" = "plants/pablano-pepper.md" },
@@ -36,7 +35,8 @@ Infrastructure = [
 
 [[project.nav]]
 Archive = [
-  { "Chives Common 2026" = "plants/chives-common-2026.md" }
+  { "Chives Common 2026" = "plants/chives-common-2026.md" },
+  { "Flat Leaf Parsley 2025" = "plants/flat-leaf-parsley-2025.md" }
 ]
 
 [[project.nav]]
