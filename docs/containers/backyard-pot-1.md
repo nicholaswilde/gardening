@@ -21,3 +21,4 @@
 | :--- | :--- | :--- | :--- |
 | 2026 | Summer | Mint | Isolated to prevent root spreading. |
 
+## :pushpin: Notes
