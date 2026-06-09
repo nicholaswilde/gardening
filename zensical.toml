@@ -49,8 +49,6 @@ Reference = [
 
 
 [project.theme]
-# logo = "lucide/smile"
-# favicon = "lucide/smile"
 features = [
   "content.action.edit",
   "content.action.view"
@@ -58,7 +56,7 @@ features = [
 
 [project.theme.icon]
 logo = "material/watering-can"
-# favicon = "lucide/smile"
+repo = "fontawesome/brands/github"
 
 [project.theme.palette]
 scheme = "slate"
@@ -70,7 +68,7 @@ social = [
   { icon = "fontawesome/brands/github", link = "https://github.com/nicholaswilde" },
   { icon = "fontawesome/brands/twitter", link = "https://twitter.com/nicholascwilde" },
   { icon = "fontawesome/brands/instagram", link = "https://www.instagram.com/wildewoodworking/" },
-  { icon = "fontawesome/brands/linkedin-in", link = "https://www.linkedin.com/in/nicholaswilde" },
+  { icon = "fontawesome/brands/linkedin-in", link = "https://www.linked.com/in/nicholaswilde" },
   { icon = "fontawesome/brands/facebook", link = "https://www.facebook.com/nicholas.wilde/" },
   { icon = "fontawesome/brands/keybase", link = "https://keybase.io/nicholaswilde" },
   { icon = "fontawesome/solid/key", link = "https://github.com/nicholaswilde.gpg" },
