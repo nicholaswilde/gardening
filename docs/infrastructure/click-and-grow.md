@@ -42,9 +42,13 @@ Think of this as the "Current State" for the device, tracking what is actively p
 
 ## :rocket: Planned Upgrades
 
-**Project:** ESP32 Water Level Telemetry  
-**Status:** Planning  
-**Target Integration:** ESPHome / MQTT  
+!!! example ""
+
+    **Project:** ESP32 Water Level Telemetry 
+    
+    **Status:** Planning  
+    
+    **Target Integration:** ESPHome / MQTT  
 
 * **Objective:** Automate water level alerts to eliminate manual weekly float checks and push notifications directly to the dashboard.
 * **Hardware Requirements:** * ESP32 microcontroller
