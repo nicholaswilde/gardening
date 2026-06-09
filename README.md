@@ -5,7 +5,7 @@
 [![spellcheck](https://img.shields.io/github/actions/workflow/status/nicholaswilde/gardening/spellcheck.yaml?label=spellcheck&style=for-the-badge&branch=main)](https://github.com/nicholaswilde/gardening/actions/workflows/spellcheck.yaml)
 [![task](https://img.shields.io/badge/task-enabled-brightgreen?logo=task&logoColor=white&style=for-the-badge)](https://taskfile.dev/)
 
-A site to document my home gardening
+Documenting my gardening history
 
 ---
 
