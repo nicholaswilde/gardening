@@ -1,6 +1,6 @@
 # :hot_pepper: Poblano Pepper
 
-![poblano-pepper][1]{ loading=lazy }
+![poblano-pepper][1]{ width="400" loading=lazy }
 
 !!! example ""
 
