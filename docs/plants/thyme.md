@@ -8,8 +8,10 @@ planted: 2026-03-15
 
 ![thyme][1]{ loading=lazy }
 
-**Type:** Perennial Herb  
-**Variety:** [e.g., Tuscan Blue, Arp]
+!!! example ""
+
+    **Type:** Perennial Herb  
+    **Variety:** [e.g., Tuscan Blue, Arp]
 
 ## :clipboard: Cultivation Status
 
