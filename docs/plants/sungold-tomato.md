@@ -1,6 +1,6 @@
 # :tomato: Sungold Tomato
 
-![sungold-tomato][1]{ loading=lazy }
+![sungold-tomato][1]{ width="400" loading=lazy }
 
 !!! example ""
 
