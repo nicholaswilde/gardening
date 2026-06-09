@@ -99,6 +99,8 @@ tasks:
   
   dashboard:
     desc: "Generate the seasonal planting dashboard"
+    predonditions:
+      - test -f scripts/build_dashboard.py
     cmds:
       - uv run python scripts/build_dashboard.py
       - echo "Seasonal dashboard updated!"
