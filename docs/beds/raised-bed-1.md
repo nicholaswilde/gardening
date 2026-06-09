@@ -26,3 +26,5 @@
 | 2026 | Spring | Poblano Peppers | Active. Adjusted emitters closer to root zones. |
 | 2025 | Winter | Winter Wheat | Experimental cover crop. |
 | 2025 | Summer | Tomatoes | High yield, but soil nitrogen was depleted by fall. |
+
+## :pushpin: Notes
