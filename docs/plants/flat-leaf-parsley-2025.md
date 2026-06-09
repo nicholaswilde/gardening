@@ -8,6 +8,11 @@ source: seed
 
 # :herb: Flat Leaf Parsley
 
+!!! example ""
+
+    Type: Perennial Herb
+    Variety: [e.g., Tuscan Blue, Arp]
+
 ## :clipboard: Cultivation Status
 
 | Attribute | Details |
