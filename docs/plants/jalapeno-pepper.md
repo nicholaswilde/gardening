@@ -1,4 +1,4 @@
-# :hot_pepper: Jalapeno Pepper
+# :hot_pepper: Jalapeño Pepper
 
 ![jalapeno-pepper][1]{ loading=lazy }
 
