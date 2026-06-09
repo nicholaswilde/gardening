@@ -3,8 +3,11 @@
 !!! example ""
 
     **Status:** Active  
+    
     **Volume:** 5 Gallon  
+    
     **Material:** Glazed Ceramic  
+    
     **Drainage:** Single bottom hole, elevated on feet.  
 
 ## :wrench: Location & Hardware
