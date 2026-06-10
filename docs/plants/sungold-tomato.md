@@ -13,8 +13,11 @@ genus: Solanum
     **Type:** Vegetable
 
     **Botanical Name:** *Solanum lycopersicum*
+   
     **Family:** Solanaceae
+   
     **Genus:** Solanum
+   
     **Variety:** Sungold
 
 ## :clipboard: Cultivation Status
