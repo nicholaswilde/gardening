@@ -2,13 +2,13 @@
 
 !!! example ""
 
-    :material-list-status: **Status:** Active  
+    **:material-list-status: Status:** Active  
 
-    **Volume:** 5 Gallon  
+    **:material-bucket-outline: Volume:** 5 Gallon  
 
-    **Material:** Glazed Ceramic  
+    **:material-fence: Material:** Glazed Ceramic  
 
-    **Drainage:** Single bottom hole, elevated on feet.  
+    **:material-filter-outline: Drainage:** Single bottom hole, elevated on feet.  
 
 ## :wrench: Location & Hardware
 
