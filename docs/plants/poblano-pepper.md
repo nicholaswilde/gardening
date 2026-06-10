@@ -21,6 +21,7 @@ genus: Capsicum
     **:material-dna: Variety:** Poblano
 
     **:material-storefront-outline: Origin:** Nursery Start
+
 ## :clipboard: Cultivation Status
 
 | Attribute | Details |

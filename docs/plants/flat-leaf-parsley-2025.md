@@ -24,6 +24,7 @@ genus: Petroselinum
     **:material-dna: Variety:** Flat Leaf
 
     **:material-seed: Origin:** Seed (Indoor Start)
+
 ## :clipboard: Cultivation Status
 
 | Attribute | Details |

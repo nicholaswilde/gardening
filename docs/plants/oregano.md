@@ -24,6 +24,7 @@ genus: Origanum
     **:material-dna: Variety:** Greek Oregano
 
     **:material-seed: Origin:** Seed (Indoor Start)
+
 ## :clipboard: Cultivation Status
 
 | Attribute | Details |

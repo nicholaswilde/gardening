@@ -24,6 +24,7 @@ genus: Rosmarinus
     **:material-dna: Variety:** Common
 
     **:material-gift-outline: Origin:** Gifted transplant
+
 ## :clipboard: Cultivation Status
 
 | Attribute | Details |

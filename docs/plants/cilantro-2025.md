@@ -24,6 +24,7 @@ genus: Coriandrum
     **:material-dna: Variety:** Common
 
     **:material-seed: Origin:** Seed (Indoor Start)
+
 ## :clipboard: Cultivation Status
 
 | Attribute | Details |

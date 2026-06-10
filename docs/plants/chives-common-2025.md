@@ -24,15 +24,17 @@ genus: Allium
     **:material-dna: Variety:** Common
 
     **:material-store-outline: Origin:** Living herb
+
 ## :clipboard: Cultivation Status
 
 | Attribute | Details |
 | :--- | :--- |
-| **Current State** | Active Growth *(Options: Seedling / Active Growth / Flowering / Harvesting / Dormant)* |
-| **Date Planted** | 2026-03-15 |
-| **Season Planted** | Early Spring |
-| **Location** | Raised Bed 3 |
-| **Origin** | Living herb|
+| **Final State** | Harvested / Cleared *(Options: Harvested / Composted / Failed / Relocated)* |
+| **Date Planted** | 2025-10-15 |
+| **Date Removed** | 2026-05-10 |
+| **Location** | Raised Bed 2 |
+| **Outcome** | High yield. |
+| **Origin** | Living herb |
 
 ## :memo: Log & Observations
 

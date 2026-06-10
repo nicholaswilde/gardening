@@ -54,6 +54,7 @@ When listing physical properties, infrastructure states, or botanical taxonomy (
 * **Target Integration:** `:material-connection:` (e.g., `**:material-connection: Target Integration:** MQTT`)
 
 ### Origin Mappings
+
 When documenting a plant's origin in frontmatter or an admonition block, strictly use one of the following standard terms and its corresponding icon:
 
 | Origin Type | Icon Shortcode | Example |
@@ -69,6 +70,7 @@ When documenting a plant's origin in frontmatter or an admonition block, strictl
 | **Living herb** | `:material-store-outline:` | `**:material-store-outline: Origin:** Living herb` |
 
 ### Cultivation States
+
 When documenting a plant's current cultivation state in its status table, use one of the following standard states:
 
 * **Seedling:** The plant is in its earliest growth stage after germination.
@@ -84,18 +86,18 @@ When building summary blocks at the top of pages, utilize the built-in MkDocs ad
 ```text
 !!! info "Botanical Profile"
     **:material-leaf: Type:** Pepper
-    
+
     **:material-dna: Variety:** Poblano
 ```
 
 ```text
 !!! example ""
     **:material-list-status: Status:** Active
-    
+
     **:material-ruler-square: Dimensions:** 4' x 8' x 1.5'
-    
+
     **:material-fence: Material:** Cedar
-    
+
     **:material-calendar-check-outline: Constructed:** 2021
 ```
 

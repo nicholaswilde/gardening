@@ -21,6 +21,7 @@ genus: Solanum
     **:material-dna: Variety:** Sungold
 
     **:material-storefront-outline: Origin:** Nursery Start
+
 ## :clipboard: Cultivation Status
 
 | Attribute | Details |
