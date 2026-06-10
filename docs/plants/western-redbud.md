@@ -11,10 +11,6 @@ genus: Cercis
 
 === "2026-06-10"
 
-    ![western-redbud][2]{ width="400" loading=lazy }
-
-=== "2026-06-07"
-
     ![western-redbud][1]{ width="400" loading=lazy }
 
 !!! example ""
@@ -50,5 +46,4 @@ genus: Cercis
 * **Sunlight:** Full sun to partial shade.
 * **Soil:** Well-draining soil, tolerant of clay and nutrient-poor soils.
 
-[1]: <../assets/images/western-redbud-2026-06-07.webp>
-[2]: <../assets/images/western-redbud-2026-06-10.webp>
+[1]: <../assets/images/western-redbud-2026-06-10.webp>
