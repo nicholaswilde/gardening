@@ -6,7 +6,9 @@ genus: Solanum
 
 # :tomato: Sungold Tomato
 
-![sungold-tomato][1]{ width="400" loading=lazy }
+=== "2026-06-07"
+
+    ![sungold-tomato][1]{ width="400" loading=lazy }
 
 !!! example ""
 
