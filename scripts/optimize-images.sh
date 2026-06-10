@@ -22,7 +22,7 @@ for file in docs/assets/images/*.jpg; do
   fi
 done
 
-# 2. Process PNGs (Graphics): Optimize in-place to keep compatibility
+# 2. Process PNG files (Graphics): Optimize in-place to keep compatibility
 for file in docs/assets/images/*.png; do
   [ -f "$file" ] || continue
   
