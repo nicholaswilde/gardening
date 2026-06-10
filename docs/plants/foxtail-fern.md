@@ -9,7 +9,7 @@ genus: Asparagus
 
 # :seedling: Foxtail Fern
 
-=== "2026-06-07"
+=== "2026-06-10"
 
     ![foxtail-fern][1]{ width="400" loading=lazy }
 
@@ -46,4 +46,4 @@ genus: Asparagus
 * **Sunlight:** Partial shade.
 * **Soil:** Rich, moist, well-draining soil.
 
-[1]: <../assets/images/foxtail-fern-2026-06-07.webp>
+[1]: <../assets/images/foxtail-fern-2026-06-10.webp>
