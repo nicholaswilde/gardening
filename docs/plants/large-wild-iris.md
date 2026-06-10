@@ -9,7 +9,9 @@ genus: Dietes
 
 # :seedling: Large Wild Iris
 
-![large-wild-iris][1]{ width="400" loading=lazy }
+=== "2026-06-07"
+
+    ![large-wild-iris][1]{ width="400" loading=lazy }
 
 !!! example ""
 

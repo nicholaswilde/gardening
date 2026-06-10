@@ -10,7 +10,9 @@ removed: 2026-02
 
 # :herb: Basil
 
-![basil][1]{ width="400" loading=lazy }
+=== "2025-02-15"
+
+    ![basil][1]{ width="400" loading=lazy }
 
 !!! example ""
 

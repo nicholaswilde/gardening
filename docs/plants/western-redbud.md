@@ -9,7 +9,9 @@ genus: Cercis
 
 # :deciduous_tree: Western Redbud
 
-![western-redbud][1]{ width="400" loading=lazy }
+=== "2026-06-07"
+
+    ![western-redbud][1]{ width="400" loading=lazy }
 
 !!! example ""
 

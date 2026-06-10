@@ -9,7 +9,9 @@ genus: Lagerstroemia
 
 # :deciduous_tree: Crape Myrtle Tree
 
-![crape-myrtle-tree][1]{ width="400" loading=lazy }
+=== "2026-06-07"
+
+    ![crape-myrtle-tree][1]{ width="400" loading=lazy }
 
 !!! example ""
 

@@ -9,7 +9,9 @@ genus: Rosa
 
 # :rose: Iceburg Rose
 
-![iceburg-rose][1]{ width="400" loading=lazy }
+=== "2026-06-07"
+
+    ![iceburg-rose][1]{ width="400" loading=lazy }
 
 !!! example ""
 

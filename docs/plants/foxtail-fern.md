@@ -9,7 +9,9 @@ genus: Asparagus
 
 # :seedling: Foxtail Fern
 
-![foxtail-fern][1]{ width="400" loading=lazy }
+=== "2026-06-07"
+
+    ![foxtail-fern][1]{ width="400" loading=lazy }
 
 !!! example ""
 

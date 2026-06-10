@@ -9,7 +9,9 @@ genus: Buddleja
 
 # :seedling: Butterfly Bush
 
-![butterfly-bush][1]{ width="400" loading=lazy }
+=== "2026-06-07"
+
+    ![butterfly-bush][1]{ width="400" loading=lazy }
 
 !!! example ""
 
