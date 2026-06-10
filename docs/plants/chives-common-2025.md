@@ -32,7 +32,7 @@ genus: Allium
 | **Final State** | Harvested / Cleared |
 | **Date Planted** | 2025-10-15 |
 | **Date Removed** | 2026-05-10 |
-| **Location** | Raised Bed 2 |
+| **Location** | Raised Bed 3 |
 | **Outcome** | High yield. |
 | **Origin** | Living herb |
 
