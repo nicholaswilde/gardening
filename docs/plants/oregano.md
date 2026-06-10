@@ -9,7 +9,9 @@ genus: Origanum
 
 # :herb: Oregano
 
-![oregano][1]{ width="400" loading=lazy }
+=== "2026-06-07"
+
+    ![oregano][1]{ width="400" loading=lazy }
 
 !!! example ""
 
