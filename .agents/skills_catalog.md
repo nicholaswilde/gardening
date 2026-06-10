@@ -46,3 +46,22 @@ This catalog details the custom agent skills available in this repository to aut
 - **Trigger Condition**: When updating the planting date of an existing plant.
 - **Command**: `task update-plant-date -- <plant_name> <date>`
 - **Behavior**: Calls `scripts/update_plant_date.py` to parse and update the dates.
+
+### 7. [Process New Plant Issue](./skills/process_new_plant_issue.md)
+
+- **Description**: Automatically processes a `🌱 New Plant Entry` issue using the `gh` tool, downloads and WebP-optimizes the image, generates the plant profile page, fetches botanical details from Trefle, updates site navigation, and pushes a PR.
+- **Trigger Condition**: When processing an issue to add a brand new plant.
+- **Behavior**: Retrieves the issue using `gh`, parses details, calls `scripts/new_plant.py` and `scripts/verify_plant.py`, and opens a pull request.
+
+### 8. [Process Add Plant Log Entry with Photo Issue](./skills/process_log_entry_issue.md)
+
+- **Description**: Automatically processes a `📸 Add Plant Log Entry with Photo` issue using the `gh` tool, downloads/optimizes the photo, appends the new log entry to the plant profile, and opens a PR.
+- **Trigger Condition**: When processing an issue to log a dated observation with a photo for an existing plant.
+- **Behavior**: Retrieves issue details using `gh`, runs `scripts/add_log_entry.py`, embeds the optimized photo under the log entry, and submits a pull request.
+
+### 9. [Process Add Image to Existing Plant Issue](./skills/process_add_image_issue.md)
+
+- **Description**: Automatically processes a `🖼️ Add Image to Existing Plant` issue using the `gh` tool, downloads/optimizes the image, associates it with the plant profile, and opens a PR.
+- **Trigger Condition**: When processing an issue to add/update an image for an existing plant.
+- **Behavior**: Retrieves issue using `gh`, downloads and runs `scripts/optimize-images.sh`, updates references in the markdown file, and pushes a PR.
+

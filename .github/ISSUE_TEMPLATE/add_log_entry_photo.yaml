@@ -1,0 +1,46 @@
+name: 📸 Add Plant Log Entry with Photo
+description: Log a new observation or update with a photo for an existing plant.
+title: "[Log Entry]: "
+labels: ["garden-log", "image-processing"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ### 📸 Add a Log Entry with a Photo to an Existing Plant
+        Use this template to record a new growth update, milestone, or health check for a plant already in the garden log, along with a photo.
+  
+  - type: input
+    id: plant_name
+    attributes:
+      label: 🌵 Plant Name / Variety
+      description: Enter the name of the existing plant (must match the markdown file name under docs/plants/ in kebab-case or exact title).
+      placeholder: e.g., Roma Tomato, butterfly-bush
+    validations:
+      required: true
+
+  - type: input
+    id: log_date
+    attributes:
+      label: 📅 Log Date
+      description: When was this observation made? (Defaults to today's date if not specified).
+      placeholder: e.g., YYYY-MM-DD (e.g., 2026-06-10)
+    validations:
+      required: true
+
+  - type: textarea
+    id: plant_image
+    attributes:
+      label: 📷 Plant Image
+      description: Drag and drop your new tracking image here.
+      placeholder: Drop your plant image here...
+    validations:
+      required: true
+
+  - type: textarea
+    id: log_notes
+    attributes:
+      label: 📝 Observation Notes
+      description: What did you observe? (e.g., first flowers blooming, pruned yellow leaves).
+      placeholder: e.g., Spotted the first flowers opening today! Added some organic fertilizer.
+    validations:
+      required: true

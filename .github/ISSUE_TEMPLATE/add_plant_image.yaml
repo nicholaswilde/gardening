@@ -1,0 +1,37 @@
+name: 🖼️ Add Image to Existing Plant
+description: Upload a new or replacement primary image for an existing plant.
+title: "[Add Image]: "
+labels: ["image-processing"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ### 🖼️ Add / Update Image for an Existing Plant
+        Use this template to submit an image for an existing plant in the catalog (e.g., replacing the main image or adding an updated visual).
+  
+  - type: input
+    id: plant_name
+    attributes:
+      label: 🌵 Plant Name / Variety
+      description: Enter the name of the existing plant (must match the markdown file name under docs/plants/ in kebab-case or exact title).
+      placeholder: e.g., Roma Tomato, butterfly-bush
+    validations:
+      required: true
+
+  - type: textarea
+    id: plant_image
+    attributes:
+      label: 📷 Plant Image
+      description: Drag and drop the image here.
+      placeholder: Drop your plant image here...
+    validations:
+      required: true
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: 📝 Additional Notes / Instructions
+      description: Optional comments or details about the image (e.g., "replace primary photo").
+      placeholder: e.g., Updating the primary cover photo for the new season.
+    validations:
+      required: false

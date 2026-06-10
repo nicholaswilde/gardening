@@ -4,6 +4,7 @@ An auto-generated overview of all crops sorted by their optimal planting window.
 
 ## :cherry_blossom: Early Spring
 
+* [Basil](plants/basil-2025.md)
 * [Jalapeño Pepper](plants/jalapeno-pepper.md)
 * [Oregano](plants/oregano.md)
 * [Poblano Pepper](plants/poblano-pepper.md)

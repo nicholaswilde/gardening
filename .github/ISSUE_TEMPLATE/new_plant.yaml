@@ -1,7 +1,7 @@
 name: 🌱 New Plant Entry
 description: Log a new plant addition with images, planting data, and tracking details.
 title: "[New Plant]: "
-labels: ["garden-log", "image-processing"]
+labels: ["new-plant", "image-processing"]
 body:
   - type: markdown
     attributes:
@@ -33,10 +33,15 @@ body:
       label: 🏡 Source Type
       description: How did you acquire or start this plant?
       options:
-        - Seed
-        - Cutting / Propagation
-        - Nursery Pot / Transplant
-        - Existing / Established
+        - Seed (Indoor Start)
+        - Seed (Direct Sow)
+        - Nursery Start
+        - Bare Root
+        - Cutting / Clone
+        - Division
+        - Volunteer
+        - Gifted transplant
+        - Living herb
     validations:
       required: true
 

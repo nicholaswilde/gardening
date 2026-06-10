@@ -7,6 +7,7 @@
 - **Jinja2**: >=3.1.6 (templating engine for generating plant/bed files)
 - **Trefle API**: Used to lookup and verify botanical taxonomy and metadata (e.g., scientific name, family, genus,
   preferred light, soil pH)
+- **GitHub CLI (`gh`)**: Used to interface with GitHub to manage issues, pull requests, and automate repository workflows.
 
 ## Architecture & Data Flow
 
@@ -15,3 +16,4 @@
 - **Automation**: Task-based build workflows using Python runner scripts.
 - **External API Integration**: Query and lookup plant information from the Trefle API using the `TREFLE_TOKEN`
   environment variable defined in the `.env` file.
+- **GitHub Integration**: Interface with GitHub via the `gh` tool to manage issues (e.g., new plant submissions, log entries, image uploads) and pull requests (e.g., branches, review status, merging) for automated and manual repository tracking.
