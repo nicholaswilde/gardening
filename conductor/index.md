@@ -8,6 +8,7 @@
 ## Workflow
 - [Workflow](./workflow.md)
 - [Code Style Guides](./code_styleguides/)
+- [Skills Catalog](../.agents/skills_catalog.md)
 
 ## Management
 - [Tracks Registry](./tracks.md)
