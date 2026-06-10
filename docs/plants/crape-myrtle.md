@@ -7,7 +7,7 @@ family: Lythraceae
 genus: Lagerstroemia
 ---
 
-# :deciduous_tree: Crape Myrtle Tree
+# :deciduous_tree: Crape Myrtle
 
 === "2026-06-10"
 
