@@ -16,8 +16,11 @@ genus: Thymus
     **Type:** Perennial Herb
 
     **Botanical Name:** *Thymus vulgaris*
+    
     **Family:** Lamiaceae
+    
     **Genus:** Thymus
+    
     **Variety:** Common
 
 ## :clipboard: Cultivation Status
