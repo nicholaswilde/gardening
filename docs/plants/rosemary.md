@@ -9,7 +9,9 @@ genus: Rosmarinus
 
 # :herb: Rosemary
 
-![rosemary][1]{ width="400" loading=lazy }
+=== "2026-06-07"
+
+    ![rosemary][1]{ width="400" loading=lazy }
 
 !!! example ""
 
