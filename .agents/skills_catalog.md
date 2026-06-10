@@ -18,3 +18,10 @@ This catalog details the custom agent skills available in this repository to aut
 - **Trigger Condition**: When adding a new plant to the repository's documentation database.
 - **Command**: `uv run python3 scripts/new_plant.py <plant_name>`
 - **Output**: `docs/plants/<plant_name>.md`
+
+### 3. [Add Plant Log Entry](./skills/add_log_entry.md)
+
+- **Description**: Standardizes how log entries and observations are formatted and added to
+  individual plant documentation files under the log section.
+- **Trigger Condition**: When editing an existing plant profile to record dated observations or care events.
+- **Behavior**: Appends a formatted, dated list item directly below the H2 heading to preserve reverse chronological order.
