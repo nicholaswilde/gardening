@@ -7,9 +7,6 @@ from collections import defaultdict
 PLANTS_DIR = "docs/plants"
 DASHBOARD_FILE = "docs/seasonal-dashboard.md"
 
-# Regex to capture the YAML frontmatter block
-FRONTMATTER_RE = re.compile(r'^---\n(.*?)\n---', re.DOTALL)
-
 def build_dashboard():
     seasons = defaultdict(list)
     
@@ -26,20 +23,18 @@ def build_dashboard():
         with open(filepath, 'r', encoding='utf-8') as f:
             content = f.read()
             
-        match = FRONTMATTER_RE.search(content)
-        if match:
-            fm = match.group(1)
-            # Extract title and season using regex
-            title_match = re.search(r'^title:\s*(.+)', fm, re.MULTILINE)
-            season_match = re.search(r'^season:\s*(.+)', fm, re.MULTILINE)
+        # Parse title from H1 header
+        title_match = re.search(r'^#\s+(?::\w+:\s*)?(.+)', content, re.MULTILINE)
+        # Parse season from the Cultivation Status table
+        season_match = re.search(r'\|\s*\*\*Season Planted\*\*\s*\|\s*([^|]+)\s*\|', content)
+        
+        if title_match and season_match:
+            title = title_match.group(1).strip()
+            season = season_match.group(1).strip()
             
-            if title_match and season_match:
-                title = title_match.group(1).strip()
-                season = season_match.group(1).strip()
-                
-                # Only add if a season is actually defined
-                if season:
-                    seasons[season].append((title, filename))
+            # Only add if a season is actually defined and not 'Unknown'
+            if season and season != 'Unknown':
+                seasons[season].append((title, filename))
 
     # Generate the Markdown Dashboard
     with open(DASHBOARD_FILE, 'w', encoding='utf-8') as f:
@@ -53,13 +48,16 @@ def build_dashboard():
             "Early Fall", "Mid-Fall", "Late Fall / Winter"
         ]
         
+        sections = []
         for target_season in season_order:
             if target_season in seasons:
-                f.write(f"## {target_season}\n")
+                section_lines = [f"## {target_season}", ""]
                 # Sort plants alphabetically within the season
                 for title, filename in sorted(seasons[target_season]):
-                    f.write(f"* [{title}](plants/{filename})\n")
-                f.write("\n")
+                    section_lines.append(f"* [{title}](plants/{filename})")
+                sections.append("\n".join(section_lines))
+        
+        f.write("\n\n".join(sections) + "\n")
 
 if __name__ == "__main__":
     build_dashboard()
