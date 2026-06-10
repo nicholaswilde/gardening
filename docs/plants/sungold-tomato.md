@@ -43,4 +43,4 @@ genus: Solanum
     * **Light Level:** 8/10
     * **Preferred Soil pH:** 7.0 - 7.5
 
-[1]: <../assets/images/sungold-tomato.webp>
+[1]: <../assets/images/sungold-tomato-2026-06-07.webp>

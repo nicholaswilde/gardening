@@ -46,4 +46,4 @@ genus: Asparagus
 * **Sunlight:** Partial shade.
 * **Soil:** Rich, moist, well-draining soil.
 
-[1]: <../assets/images/foxtail-fern.webp>
+[1]: <../assets/images/foxtail-fern-2026-06-07.webp>

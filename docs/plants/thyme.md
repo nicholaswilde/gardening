@@ -52,4 +52,4 @@ genus: Thymus
 * **Sunlight:** Full sun.
 * **Soil:** Needs excellent drainage; added extra perlite to the planting hole.
 
-[1]: <../assets/images/thyme.webp>
+[1]: <../assets/images/thyme-2026-06-07.webp>

@@ -52,4 +52,4 @@ genus: Origanum
 * **Sunlight:** Full sun.
 * **Soil:** Needs excellent drainage; added extra perlite to the planting hole.
 
-[1]: <../assets/images/oregano.webp>
+[1]: <../assets/images/oregano-2026-06-07.webp>

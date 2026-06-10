@@ -46,4 +46,4 @@ genus: Buddleja
 * **Sunlight:** Full sun.
 * **Soil:** Well-draining, fertile soil.
 
-[1]: <../assets/images/butterfly-bush.webp>
+[1]: <../assets/images/butterfly-bush-2026-06-07.webp>

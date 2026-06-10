@@ -49,4 +49,4 @@ genus: Festuca
 * **Sunlight:** Full sun to partial shade.
 * **Soil:** Moist, well-draining soil.
 
-[1]: <../assets/images/marathon-ii-grass.webp>
+[1]: <../assets/images/marathon-ii-grass-2026-06-07.webp>

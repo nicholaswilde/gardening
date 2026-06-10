@@ -46,4 +46,4 @@ genus: Rosa
 * **Sunlight:** Full sun.
 * **Soil:** Moist, well-draining soil.
 
-[1]: <../assets/images/iceburg-rose.webp>
+[1]: <../assets/images/iceburg-rose-2026-06-07.webp>

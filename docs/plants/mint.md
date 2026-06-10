@@ -50,4 +50,4 @@ genus: Mentha
 * **Sunlight:** Full sun to partial shade.
 * **Soil:** Moist, well-draining soil rich in organic matter.
 
-[1]: <../assets/images/mint.webp>
+[1]: <../assets/images/mint-2026-06-07.webp>

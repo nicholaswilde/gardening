@@ -15,6 +15,7 @@ This document lists the utility and automation scripts available in the `scripts
 | `new_bed.py` | Python 3 | Scaffolds a new raised bed profile template | `python3 scripts/new_bed.py <bed-name>` |
 | `new_plant.py` | Python 3 | Scaffolds a new plant profile template | `python3 scripts/new_plant.py <plant-name>` |
 | `optimize-images.sh` | Bash | Converts `.jpg` images to `.webp` and optimizes `.png` images in-place | `bash scripts/optimize-images.sh` |
+| `rename_existing_images.py` | Python 3 | Renames existing plant images to match their tab dates and updates markdown references | `python3 scripts/rename_existing_images.py` |
 | `update_origin.py` | Python 3 | Updates the plant origin in admonition and status table | `python3 scripts/update_origin.py <plant-name> <origin-type>` |
 | `update_plant_date.py` | Python 3 | Updates the planting date, corresponding season, and log entries | `python3 scripts/update_plant_date.py <plant-name> <date>` |
 | `verify_plant.py` | Python 3 | Verifies a plant profile against the Trefle database | `python3 scripts/verify_plant.py <filepath> [--update]` |
@@ -127,5 +128,12 @@ This document lists the utility and automation scripts available in the `scripts
 - **Arguments**:
     - `image_path`: Path to the image file (e.g. `docs/assets/images/rosemary.webp`)
 - **Dependencies**: `sys`, `os`, `datetime`, `PIL.Image`, `PIL.ExifTags`
+
+### 13. `rename_existing_images.py`
+
+- **Path**: `scripts/rename_existing_images.py`
+- **Description**: Parses all plant markdown profile pages, extracts the date from the image tab, renames the physical WebP image file in assets to include that date (to prevent conflict), and updates the page's markdown reference accordingly.
+- **Dependencies**: `os`, `re`, `glob`
+
 
 

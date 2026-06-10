@@ -46,4 +46,4 @@ genus: Cercis
 * **Sunlight:** Full sun to partial shade.
 * **Soil:** Well-draining soil, tolerant of clay and nutrient-poor soils.
 
-[1]: <../assets/images/western-redbud.webp>
+[1]: <../assets/images/western-redbud-2026-06-07.webp>

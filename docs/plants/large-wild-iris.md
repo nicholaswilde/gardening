@@ -46,4 +46,4 @@ genus: Dietes
 * **Sunlight:** Full sun to light shade.
 * **Soil:** Well-draining, moist soil.
 
-[1]: <../assets/images/large-wild-iris.webp>
+[1]: <../assets/images/large-wild-iris-2026-06-07.webp>

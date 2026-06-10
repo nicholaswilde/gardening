@@ -54,4 +54,4 @@ removed: 2026-02
 * **Sunlight:** 
 * **Soil:** 
 
-[1]: <../assets/images/basil.webp>
+[1]: <../assets/images/basil-2025-02-15.webp>

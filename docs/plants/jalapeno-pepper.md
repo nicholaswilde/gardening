@@ -41,4 +41,4 @@ genus: Capsicum
 * **Trefle Database Info:**
     * **Scientific Name:** *Capsicum annuum* (Solanaceae Family)
 
-[1]: <../assets/images/jalapeno-pepper.webp>
+[1]: <../assets/images/jalapeno-pepper-2026-06-07.webp>

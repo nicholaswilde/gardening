@@ -49,4 +49,4 @@ genus: Lagerstroemia
 * **Sunlight:** Full sun.
 * **Soil:** Moist, well-draining soil.
 
-[1]: <../assets/images/crape-myrtle-tree.webp>
+[1]: <../assets/images/crape-myrtle-tree-2026-06-07.webp>
