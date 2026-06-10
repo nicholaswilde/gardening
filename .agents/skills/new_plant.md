@@ -22,7 +22,8 @@ follow the required styling conventions, and have their metadata correctly initi
     - **Type & Variety:** Specify the botanical type and variety in the metadata block.
     - **Cultivation Details:** Fill in the Location and Origin attributes.
     - **Notes:** Fill in sun and soil requirements.
-5. **Run Quality Checks:** Check for formatting, spelling, and link integrity:
+5. **Update Navigation Config:** Open `zensical.toml` and add the new plant to the `Plants` list under `[[project.nav]]` in alphabetical order, mapping the display title to the plant profile path (e.g. `{ "Mint" = "plants/mint.md" }`).
+6. **Run Quality Checks:** Check for formatting, spelling, and link integrity:
 
     ```bash
     rumdl check docs/plants/<plant_name>.md
@@ -36,11 +37,11 @@ follow the required styling conventions, and have their metadata correctly initi
     rumdl check --fix docs/plants/<plant_name>.md
     ```
 
-6. **Git Checkpoint:** Stage and commit the new plant profile with a conventional commit message:
+7. **Git Checkpoint:** Stage and commit the new plant profile and the updated zensical.toml with a conventional commit message:
 
     ```bash
-    git add docs/plants/<plant_name>.md
-    git commit -m "docs(plants): add <plant_name> profile"
+    git add docs/plants/<plant_name>.md zensical.toml
+    git commit -m "docs(plants): add <plant_name> profile and update navigation"
     ```
 
 ## Examples
