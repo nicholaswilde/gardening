@@ -2,13 +2,13 @@
 
 !!! example ""
 
-    :material-list-status: **Status:** Active  
+    **:material-list-status: Status:** Active  
 
-    **Dimensions:** 4' x 8' x 1.5' (48 cu ft) 
+    **:material-ruler-square: Dimensions:** 4' x 8' x 1.5' (48 cu ft)  
 
-    **Material:** Rough-sawn Cedar  
+    **:material-fence: Material:** Rough-sawn Cedar  
 
-    **Constructed:** October 2021
+    **:material-calendar-check-outline: Constructed:** October 2021
 
 ## :hammer_and_wrench: Hardware & Irrigation
 
