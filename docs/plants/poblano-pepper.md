@@ -13,8 +13,11 @@ genus: Capsicum
     **Type:** Vegetable
 
     **Botanical Name:** *Capsicum annuum*
+    
     **Family:** Solanaceae
+    
     **Genus:** Capsicum
+    
     **Variety:** Poblano
 
 ## :clipboard: Cultivation Status
