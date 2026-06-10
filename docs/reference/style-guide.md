@@ -59,8 +59,20 @@ When building summary blocks at the top of pages, utilize the built-in MkDocs ad
 
 ```text
 !!! info "Botanical Profile"
-    **:material-leaf: Type:** Pepper  
+    **:material-leaf: Type:** Pepper
+    
     **:material-dna: Variety:** Poblano
+```
+
+```text
+!!! example ""
+    **:material-list-status: Status:** Active
+    
+    **:material-ruler-square: Dimensions:** 4' x 8' x 1.5'
+    
+    **:material-fence: Material:** Cedar
+    
+    **:material-calendar-check-outline: Constructed:** 2021
 ```
 
 ### 2. Add it to the Navigation
