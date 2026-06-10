@@ -1,0 +1,68 @@
+name: 🌱 New Plant Entry
+description: Log a new plant addition with images, planting data, and tracking details.
+title: "[New Plant]: "
+labels: ["garden-log", "image-processing"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ### 🌿 Add a New Plant to the Collection
+        Fill out this form to log a new plant. The automated processing script will download, compress, and archive the plant data.
+  
+  - type: input
+    id: plant_name
+    attributes:
+      label: 🌵 Plant Name / Variety
+      description: Enter the common name, scientific name, or specific variety.
+      placeholder: e.g., Roma Tomato, Golden Pothos, Meyer Lemon
+    validations:
+      required: true
+
+  - type: input
+    id: plant_date
+    attributes:
+      label: 📅 Planting Date
+      description: When was this plant sown, propagated, or transplanted?
+      placeholder: e.g., YYYY-MM-DD (e.g., 2026-06-10)
+    validations:
+      required: true
+
+  - type: dropdown
+    id: plant_source_type
+    attributes:
+      label: 🏡 Source Type
+      description: How did you acquire or start this plant?
+      options:
+        - Seed
+        - Cutting / Propagation
+        - Nursery Pot / Transplant
+        - Existing / Established
+    validations:
+      required: true
+
+  - type: input
+    id: plant_location
+    attributes:
+      label: 📍 Garden Location / Zone
+      description: Where is this plant located? (e.g., Raised Bed 1, Indoor Shelf, Backyard South Facing)
+      placeholder: e.g., Raised Bed 2, Front Porch
+    validations:
+      required: true
+
+  - type: textarea
+    id: plant_image
+    attributes:
+      label: 📷 Plant Image
+      description: Drag and drop your tracking image here.
+      placeholder: Drop your plant image here...
+    validations:
+      required: true
+
+  - type: textarea
+    id: log_notes
+    attributes:
+      label: 📝 Initial Care Notes / Observations
+      description: Add details like soil mix used, initial watering routine, or current health status.
+      placeholder: e.g., Planted in organic compost blend. Added mycorrhizae to roots.
+    validations:
+      required: false
