@@ -1,7 +1,7 @@
 ---
 tags: [perennial, shrub, active]
 location: front-yard
-planted: 2026-06-10
+planted: 2021-11-01
 botanical_name: Rosa 'Iceburg'
 family: Rosaceae
 genus: Rosa
@@ -30,14 +30,14 @@ genus: Rosa
 | Attribute | Details |
 | :--- | :--- |
 | **Current State** | Active Growth |
-| **Date Planted** | 2026-06-10 |
-| **Season Planted** | Early Summer |
+| **Date Planted** | 2021-11-01 |
+| **Season Planted** | Late Fall / Winter |
 | **Location** | Front Yard |
 | **Origin** | Nursery Start |
 
 ## :memo: Log & Observations
 
-* **2026-06-10:** Initial logging. Planted in the Front Yard.
+* **2021-11-01:** Initial logging. Planted in the Front Yard.
 
 ## :pushpin: Notes
 
