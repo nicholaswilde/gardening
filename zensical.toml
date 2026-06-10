@@ -25,7 +25,8 @@ Plants = [
   { "Poblano Pepper" = "plants/poblano-pepper.md" },
   { "Rosemary" = "plants/rosemary.md" },
   { "Sungold Tomato" = "plants/sungold-tomato.md" },
-  { "Thyme" = "plants/thyme.md" }
+  { "Thyme" = "plants/thyme.md" },
+  { "Western Redbud" = "plants/western-redbud.md" }
 ]
 
 [[project.nav]]
