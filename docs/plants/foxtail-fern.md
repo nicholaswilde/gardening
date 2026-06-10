@@ -7,7 +7,7 @@ family: Asparagaceae
 genus: Asparagus
 ---
 
-# :fern: Foxtail Fern
+# :seedling: Foxtail Fern
 
 ![foxtail-fern][1]{ width="400" loading=lazy }
 
