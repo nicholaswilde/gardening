@@ -10,6 +10,7 @@ This document lists the utility and automation scripts available in the `scripts
 | `archive_plant.py` | Python 3 | Archives a plant profile, renames files, and updates navigation | `python3 scripts/archive_plant.py <plant-name> <year> <removed-date> <final-state> "<outcome>"` |
 | `build_dashboard.py` | Python 3 | Generates the seasonal planting dashboard | `python3 scripts/build_dashboard.py` |
 | `generate_typos_config.py` | Python 3 | Generates the `_typos.toml` whitelist configuration from `dictionary.txt` | `python3 scripts/generate_typos_config.py` |
+| `get_image_date.py` | Python 3 | Extracts the EXIF "date taken" from an image file | `python3 scripts/get_image_date.py <image-path>` |
 | `get_plant_states.py` | Python 3 | Lists all plant cultivation states | `python3 scripts/get_plant_states.py` |
 | `new_bed.py` | Python 3 | Scaffolds a new raised bed profile template | `python3 scripts/new_bed.py <bed-name>` |
 | `new_plant.py` | Python 3 | Scaffolds a new plant profile template | `python3 scripts/new_plant.py <plant-name>` |
@@ -118,4 +119,13 @@ This document lists the utility and automation scripts available in the `scripts
     - `plant-name-or-file`: Name of the plant or path to the markdown file
     - `date`: Planting date in YYYY-MM-DD or YYYY-MM format
 - **Dependencies**: `sys`, `os`, `re`, `datetime`
+
+### 12. `get_image_date.py`
+
+- **Path**: `scripts/get_image_date.py`
+- **Description**: Extracts the "date taken" (DateTimeOriginal) from the EXIF metadata of an image file, falling back to the file modification time if EXIF data is not available.
+- **Arguments**:
+    - `image_path`: Path to the image file (e.g. `docs/assets/images/rosemary.webp`)
+- **Dependencies**: `sys`, `os`, `datetime`, `PIL.Image`, `PIL.ExifTags`
+
 

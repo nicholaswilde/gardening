@@ -12,7 +12,7 @@ for file in docs/assets/images/*.jpg; do
   orig_size=$(stat -c%s "$file")
   echo "Converting photo: $(basename "$file")..."
   
-  cwebp -q 80 "$file" -o "$output"
+  cwebp -q 80 -metadata all "$file" -o "$output"
   
   if [ $? -eq 0 ] && [ -f "$output" ]; then
     new_size=$(stat -c%s "$output")
@@ -29,7 +29,7 @@ for file in docs/assets/images/*.png; do
   orig_size=$(stat -c%s "$file")
   echo "Optimizing graphic: $(basename "$file")..."
   
-  oxipng -o 4 --strip all "$file"
+  oxipng -o 4 --strip safe "$file"
   
   new_size=$(stat -c%s "$file")
   total_orig=$((total_orig + orig_size))

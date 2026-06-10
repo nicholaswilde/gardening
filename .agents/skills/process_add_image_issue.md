@@ -21,16 +21,27 @@ This skill instructs the agent on how to use the GitHub CLI (`gh`) to fetch and 
    git checkout -b issue-<issue_number>-add-image
    ```
 4. **Download and Optimize Image:**
-   - If the request is to replace/update the primary image, download the image to `docs/assets/images/<plant_name_kebab>.<ext>`, overwriting the existing image format (the optimization script will convert to `.webp`).
+   - If the request is to replace/update the primary image, download the image to `docs/assets/images/<plant_name_kebab>.<ext>`, overwriting the existing image format (the optimization script will convert to `.webp` while preserving EXIF metadata).
    - If the request is to add a new image without replacing the primary one, download it to `docs/assets/images/<plant_name_kebab>-updated.<ext>`.
    - Run the optimization script:
      ```bash
      bash scripts/optimize-images.sh
      ```
 5. **Update Plant Profile References:**
+   - Extract the "date taken" from the optimized image file using:
+     ```bash
+     uv run python3 scripts/get_image_date.py docs/assets/images/<image_file>
+     ```
+   - Wrap the image reference in a date-labeled tab:
+     ```markdown
+     === "YYYY-MM-DD"
+
+         ![plant-name][1]{ width="400" loading=lazy }
+     ```
+     Use the extracted date for `YYYY-MM-DD`. If there are multiple images, place them in tabs sorted in reverse chronological order (most recent first).
    - If it's a replacement primary image, ensure the markdown reference at the bottom of `docs/plants/<plant_name_kebab>.md` maps to the new `.webp` file:
      `[1]: <../assets/images/<plant_name_kebab>.webp>`
-   - If it's an additional image, append it to the appropriate section or create a gallery/figure.
+   - If it's an additional image, define a new reference (e.g., `[2]`, `[3]`) and map it to the respective WebP file.
 6. **Run Quality Checks:**
    ```bash
    rumdl check docs/plants/<plant_name_kebab>.md
