@@ -63,7 +63,7 @@ This skill instructs the agent on how to use the GitHub CLI (`gh`) to fetch and 
 9. **Commit, Push & Create PR:**
    ```bash
    git add docs/plants/<plant_name_kebab>.md docs/assets/images/<plant_name_kebab>.webp zensical.toml
-   git commit -m "feat(plants): add <plant_name> from issue #<issue_number>"
+   git commit -m "feat(plants): add <plant_name> (Closed #<issue_number>)"
    git push origin issue-<issue_number>-new-plant
    gh pr create --title "feat: Add <plant_name> (closes #<issue_number>)" --body "Automatically processed from issue #<issue_number> using Antigravity." --label "new-plant"
    ```

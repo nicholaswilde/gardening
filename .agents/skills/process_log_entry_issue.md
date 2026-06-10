@@ -47,7 +47,7 @@ This skill instructs the agent on how to use the GitHub CLI (`gh`) to fetch and 
 7. **Commit, Push & Create PR:**
    ```bash
    git add docs/plants/<plant_name_kebab>.md docs/assets/images/<plant_name_kebab>-<log_date>.webp
-   git commit -m "docs(plants): add log entry and photo for <plant_name_kebab> from issue #<issue_number>"
+   git commit -m "docs(plants): add log entry and photo for <plant_name_kebab> (Closed #<issue_number>)"
    git push origin issue-<issue_number>-log-entry
    gh pr create --title "docs: Add log entry and photo for <plant_name_kebab> (closes #<issue_number>)" --body "Automatically processed log entry from issue #<issue_number>." --label "garden-log"
    ```
