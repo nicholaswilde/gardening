@@ -2,13 +2,13 @@
 
 !!! example ""
 
-    :material-list-status: **Status:** Active
+    **:material-list-status: Status:** Active
 
-    **Model:** [Rain Bird ESP-TM2 8 Station][1]
+    **:material-barcode: Model:** [Rain Bird ESP-TM2 8 Station][1]
 
-    **Stations:** 8
+    **:material-view-grid-outline: Stations:** 8
 
-    **Location:** Backyard
+    **:material-map-marker-outline: Location:** Backyard
 
 ## Zones
 
