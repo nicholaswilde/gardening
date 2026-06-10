@@ -9,6 +9,10 @@ genus: Buddleja
 
 # :seedling: Butterfly Bush
 
+=== "2026-06-10"
+
+    ![butterfly-bush][2]{ width="400" loading=lazy }
+
 === "2026-06-07"
 
     ![butterfly-bush][1]{ width="400" loading=lazy }
@@ -47,3 +51,4 @@ genus: Buddleja
 * **Soil:** Well-draining, fertile soil.
 
 [1]: <../assets/images/butterfly-bush-2026-06-07.webp>
+[2]: <../assets/images/butterfly-bush-2026-06-10.webp>
