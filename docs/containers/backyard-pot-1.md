@@ -2,7 +2,7 @@
 
 !!! example ""
 
-    **Status:** Active  
+    :material-list-status: **Status:** Active  
     
     **Volume:** 5 Gallon  
     
