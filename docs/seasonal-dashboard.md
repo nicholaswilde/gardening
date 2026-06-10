@@ -25,4 +25,5 @@ An auto-generated overview of all crops sorted by their optimal planting window.
 * [Butterfly Bush](plants/butterfly-bush.md)
 * [Foxtail Fern](plants/foxtail-fern.md)
 * [Iceburg Rose](plants/iceburg-rose.md)
+* [Large Wild Iris](plants/large-wild-iris.md)
 * [Western Redbud](plants/western-redbud.md)
