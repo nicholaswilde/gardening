@@ -1,0 +1,139 @@
+version: '3'
+
+dotenv: ['.env']
+
+vars:
+  ROOT_DIR:
+    sh: git rev-parse --show-toplevel
+  PORT: 8000
+
+tasks:
+  optimize-images:
+    desc: Optimize images
+    cmds:
+      - scripts/optimize-images.sh
+
+  check-deps:
+    desc: Ensure necessary tools are installed on Debian
+    status:
+      - command -v cwebp && command -v oxipng
+    cmds:
+      - sudo apt update
+      - sudo apt install -y webp
+      - |
+        if ! command -v oxipng; then
+          cargo install oxipng
+        fi
+
+  bootstrap:
+    desc: Initialize the project and install all dependencies
+    cmds:
+      - uv sync
+
+  serve:
+    desc: Serve a local zensical server
+    cmds:
+      - uv run zensical serve
+
+  linkcheck:
+    desc: Check for dead links using lychee
+    cmds:
+      - lychee docs/
+
+  linkcheck-offline:
+    desc: Check for dead local links and images using lychee (offline)
+    cmds:
+      - lychee --offline docs/
+
+  linkcheck-file:
+    desc: Link check a given file using lychee
+    cmds:
+      - lychee {{shellQuote .FILE}}
+
+  markdownlint:
+    desc: Run markdownlint
+    cmds:
+      - rumdl check .
+
+  markdownlint-fix:
+    desc: Run markdownlint fix
+    cmds:
+      - rumdl check --fix .
+
+  sort:
+    desc: Sort dictionary.txt
+    cmds:
+      - sort {{ .ROOT_DIR }}/dictionary.txt -u -o {{ .ROOT_DIR }}/dictionary.txt
+
+  spellcheck:
+    desc: Spellcheck cook files
+    cmds:
+      - python3 scripts/generate_typos_config.py
+      - typos
+
+  spellcheck-file:
+    desc: Spellcheck a single file
+    cmds:
+      - python3 scripts/generate_typos_config.py
+      - typos {{shellQuote .FILE}}
+
+  yamllint:
+    desc: Run yamllint
+    cmds:
+      - yamllint-rs .
+
+  tools:install:
+    desc: Install required tools
+    cmds:
+      - uv tool install zensical
+
+  tools:update:
+    desc: Upgrade Zensical
+    cmds:
+      - uv tool upgrade zensical
+
+  build:
+    desc: Build the static site
+    cmds:
+      - zensical build
+
+  encrypt:
+    desc: Encrypt secrets file using SOPS
+    preconditions:
+      - test -f .env
+    cmds:
+      - 'sops -e --input-type dotenv --output-type dotenv .env > .env.enc'
+
+  decrypt:
+    desc: Decrypt secrets file using SOPS
+    preconditions:
+      - test -f .env.enc
+    cmds:
+      - 'sops -d --input-type dotenv --output-type dotenv .env.enc > .env'
+
+  new-plant:
+    desc: "Generate a new plant profile template. Usage: task new-plant -- poblano-pepper"
+    preconditions:
+      - test -f scripts/new_plant.py
+    cmds:
+      - uv run python3 scripts/new_plant.py {{.CLI_ARGS}}
+
+  new-bed:
+    desc: "Generate a new raised bed template. Usage: task new-bed -- raised-bed-4"
+    preconditions:
+      - test -f scripts/new_bed.py
+    cmds:
+      - uv run python3 scripts/new_bed.py {{.CLI_ARGS}}
+
+  dashboard:
+    desc: Generate the seasonal planting dashboard
+    preconditions:
+      - test -f scripts/build_dashboard.py
+    cmds:
+      - uv run python scripts/build_dashboard.py
+      - echo "Seasonal dashboard updated!"
+
+  default:
+    cmds:
+      - task -a
+    silent: true

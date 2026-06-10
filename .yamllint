@@ -1,9 +1,6 @@
----
 extends: default
-
 ignore: |
   **/.github/**
-
 rules:
   indentation: disable
   line-length:
