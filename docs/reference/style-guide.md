@@ -68,6 +68,15 @@ When documenting a plant's origin in frontmatter or an admonition block, strictl
 | **Gifted transplant** | `:material-gift-outline:` | `**:material-gift-outline: Origin:** Gifted transplant` |
 | **Living herb** | `:material-store-outline:` | `**:material-store-outline: Origin:** Living herb` |
 
+### Cultivation States
+When documenting a plant's current cultivation state in its status table, use one of the following standard states:
+
+* **Seedling:** The plant is in its earliest growth stage after germination.
+* **Active Growth:** The plant is actively growing foliage and establishing roots.
+* **Flowering:** The plant is producing flowers.
+* **Harvesting:** The plant is actively producing crops ready for harvest.
+* **Dormant:** The plant is in a temporary state of suspended growth (typically during winter).
+
 ## 🎨 Admonition Blocks
 
 When building summary blocks at the top of pages, utilize the built-in MkDocs admonitions formatted with the standard icons:
