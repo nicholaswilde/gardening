@@ -24,24 +24,18 @@ This skill instructs the agent on how to use the GitHub CLI (`gh`) to fetch and 
    ```bash
    git checkout -b issue-<issue_number>-new-plant
    ```
-4. **Generate Profile Template:**
-   Convert the plant name to kebab-case (e.g., `wild-strawberry`) and run the generation script:
-   ```bash
-   uv run python3 scripts/new_plant.py <plant_name_kebab>
-   ```
-5. **Download and Optimize Image:**
+4. **Download and Optimize Image:**
    - Download the image from the parsed URL using `curl` or `wget` to `docs/assets/images/<plant_name_kebab>.<ext>` (e.g., `.png` or `.jpg`).
    - Run the image optimization script to convert to optimized `.webp` (preserving EXIF metadata):
      ```bash
      bash scripts/optimize-images.sh
      ```
-   - Extract the "date taken" from the optimized image file:
-     ```bash
-     uv run python3 scripts/get_image_date.py docs/assets/images/<plant_name_kebab>.webp
-     ```
-   - In `docs/plants/<plant_name_kebab>.md`, ensure the image is inside a tab labeled with this extracted date (e.g. `=== "YYYY-MM-DD"`).
-   - Ensure the image is referenced correctly at the bottom of the new file:
-     `[1]: <../assets/images/<plant_name_kebab>.webp>`
+5. **Generate Profile Template:**
+   Convert the plant name to kebab-case (e.g., `wild-strawberry`) and run the generation script:
+   ```bash
+   uv run python3 scripts/new_plant.py <plant_name_kebab>
+   ```
+   This script will automatically detect the optimized image, extract the EXIF date taken, rename the WebP image to include the date (e.g., `wild-strawberry-2026-06-10.webp`), and generate the Markdown profile with the correct date tab and image reference.
 6. **Populate Metadata and Details:**
    Open `docs/plants/<plant_name_kebab>.md` and update:
    - **Tags/Frontmatter**:

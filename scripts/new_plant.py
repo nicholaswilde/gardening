@@ -31,20 +31,84 @@ def get_season(date_obj):
     return "Unknown"
 
 def main():
-    if len(sys.argv) < 2:
-        print("Error: Provide a filename (e.g., python3 scripts/new_plant.py tomato)")
-        sys.exit(1)
+    import argparse
     
-    filename = sys.argv[1]
+    # Setup sys.path to import from sibling scripts
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    if script_dir not in sys.path:
+        sys.path.insert(0, script_dir)
+    from get_image_date import get_date_taken
+
+    parser = argparse.ArgumentParser(description="Generate a new plant profile template.")
+    parser.add_argument("filename", help="Kebab-case name of the plant (e.g. poblano-pepper)")
+    parser.add_argument("--image-date", help="Date the image was taken (YYYY-MM-DD)")
+    parser.add_argument("--image-filename", help="Filename of the image (without .webp)")
+    
+    args = parser.parse_args()
+    filename = args.filename
+    
     now = datetime.now()
     current_date = now.strftime("%Y-%m-%d")
     title = filename.replace('-', ' ').title()
     season = get_season(now)
     
     # Get the project root directory (assuming script is in /scripts)
-    script_dir = os.path.dirname(os.path.abspath(__file__))
     project_root = os.path.dirname(script_dir)
+    images_dir = os.path.join(project_root, "docs", "assets", "images")
     
+    image_date = args.image_date
+    image_filename = args.image_filename
+    
+    if not image_date or not image_filename:
+        # Automatic detection logic
+        detected_date = None
+        detected_filename = None
+        
+        non_dated_image = os.path.join(images_dir, f"{filename}.webp")
+        if os.path.exists(non_dated_image):
+            extracted = get_date_taken(non_dated_image)
+            if extracted:
+                detected_date = extracted
+                dated_name = f"{filename}-{extracted}"
+                dated_path = os.path.join(images_dir, f"{dated_name}.webp")
+                
+                # Avoid renaming conflict if dated file already exists
+                if not os.path.exists(dated_path):
+                    os.rename(non_dated_image, dated_path)
+                    print(f"Renamed {non_dated_image} to {dated_path}")
+                else:
+                    os.remove(non_dated_image)
+                    print(f"Dated image already exists. Removed temporary {non_dated_image}")
+                detected_filename = dated_name
+        else:
+            # Check if a dated image already exists
+            import glob
+            pattern = os.path.join(images_dir, f"{filename}-*.webp")
+            matching_files = glob.glob(pattern)
+            if matching_files:
+                matching_files.sort()
+                newest_image = matching_files[-1]
+                detected_filename = os.path.splitext(os.path.basename(newest_image))[0]
+                extracted = get_date_taken(newest_image)
+                if extracted:
+                    detected_date = extracted
+                else:
+                    # Parse date from filename ending with YYYY-MM-DD
+                    parts = detected_filename.split('-')
+                    if len(parts) >= 3:
+                        possible_date = "-".join(parts[-3:])
+                        try:
+                            datetime.strptime(possible_date, "%Y-%m-%d")
+                            detected_date = possible_date
+                        except ValueError:
+                            pass
+        
+        # Fallbacks
+        if not image_date:
+            image_date = detected_date if detected_date else current_date
+        if not image_filename:
+            image_filename = detected_filename if detected_filename else f"{filename}-{image_date}"
+
     # Setup Jinja2 environment pointing to the templates directory
     template_dir = os.path.join(project_root, "templates")
     env = Environment(loader=FileSystemLoader(template_dir))
@@ -55,7 +119,9 @@ def main():
         filename=filename,
         title=title,
         season=season,
-        current_date=current_date
+        current_date=current_date,
+        image_date=image_date,
+        image_filename=image_filename
     )
     
     # Define output path
