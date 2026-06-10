@@ -56,11 +56,11 @@ def parse_markdown(filepath):
                 k, v = line.split(':', 1)
                 frontmatter[k.strip()] = v.strip().strip("[]'\"")
 
-    # Get Type and Variety from admonitions or main content
-    type_match = re.search(r'\*\*Type:\*\*\s*(.+)', content)
+    # Get Type and Variety from admonitions or main content (allowing optional Material icons)
+    type_match = re.search(r'\*\*(?::material-[a-z-]+:\s*)?Type:\*\*\s*(.+)', content)
     plant_type = type_match.group(1).strip() if type_match else None
 
-    variety_match = re.search(r'\*\*Variety:\*\*\s*(.+)', content)
+    variety_match = re.search(r'\*\*(?::material-[a-z-]+:\s*)?Variety:\*\*\s*(.+)', content)
     variety = variety_match.group(1).strip() if variety_match else None
 
     # Get Sunlight and Soil from notes
@@ -219,9 +219,10 @@ def main():
         if variety and "Tuscan Blue" in variety:
             # Let's clean the variety field or set it
             new_variety = "Greek Oregano" if "oregano" in plant_name.lower() else "Common"
-            content = content.replace(
-                f"**Variety:** {variety}",
-                f"**Variety:** {new_variety}"
+            content = re.sub(
+                rf'(\*\*(?::material-[a-z-]+:\s*)?Variety:\*\*)\s*{re.escape(variety)}',
+                rf'\1 {new_variety}',
+                content
             )
             print(f"- Replaced placeholder variety with '{new_variety}'.")
 
@@ -264,8 +265,8 @@ def main():
             print("- Created frontmatter with botanical taxonomy.")
 
         # Add botanical_name, family, genus details in the Admonition block
-        # Look for the Variety: line to insert right after or before it
-        variety_pattern = r'([ \t]*\*\*Variety:\*\*.*?\n)'
+        # Look for the Variety: line to insert right after or before it (allowing optional Material icons)
+        variety_pattern = r'([ \t]*\*\*(?::material-[a-z-]+:\s*)?Variety:\*\*.*?\n)'
         var_match = re.search(variety_pattern, content)
         if var_match:
             original_var = var_match.group(1)

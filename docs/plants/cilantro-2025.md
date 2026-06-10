@@ -13,16 +13,15 @@ genus: Coriandrum
 
 !!! example ""
 
-    **Type:** Perennial Herb
+    **:material-leaf: Type:** Perennial Herb
 
     **Botanical Name:** *Coriandrum sativum*
-    
-    **Family:** Apiaceae
-    
-    **Genus:** Coriandrum
-    
-    **Variety:** Common
 
+    **Family:** Apiaceae
+
+    **Genus:** Coriandrum
+
+    **:material-dna: Variety:** Common
 ## :clipboard: Cultivation Status
 
 | Attribute | Details |

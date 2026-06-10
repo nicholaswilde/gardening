@@ -13,16 +13,15 @@ genus: Petroselinum
 
 !!! example ""
 
-    **Type:** Biennial Herb (grown as annual)
+    **:material-leaf: Type:** Biennial Herb (grown as annual)
 
     **Botanical Name:** *Petroselinum crispum*
-    
-    **Family:** Apiaceae
-    
-    **Genus:** Petroselinum
-    
-    **Variety:** Flat Leaf
 
+    **Family:** Apiaceae
+
+    **Genus:** Petroselinum
+
+    **:material-dna: Variety:** Flat Leaf
 ## :clipboard: Cultivation Status
 
 | Attribute | Details |

@@ -10,16 +10,15 @@ genus: Solanum
 
 !!! example ""
 
-    **Type:** Vegetable
+    **:material-leaf: Type:** Vegetable
 
     **Botanical Name:** *Solanum lycopersicum*
-   
-    **Family:** Solanaceae
-   
-    **Genus:** Solanum
-   
-    **Variety:** Sungold
 
+    **Family:** Solanaceae
+
+    **Genus:** Solanum
+
+    **:material-dna: Variety:** Sungold
 ## :clipboard: Cultivation Status
 
 | Attribute | Details |

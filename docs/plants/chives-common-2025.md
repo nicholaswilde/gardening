@@ -13,16 +13,15 @@ genus: Allium
 
 !!! example ""
 
-    **Type:** Perennial Herb
+    **:material-leaf: Type:** Perennial Herb
 
     **Botanical Name:** *Allium schoenoprasum*
-   
-    **Family:** Amaryllidaceae
-    
-    **Genus:** Allium
-    
-    **Variety:** Common
 
+    **Family:** Amaryllidaceae
+
+    **Genus:** Allium
+
+    **:material-dna: Variety:** Common
 ## :clipboard: Cultivation Status
 
 | Attribute | Details |

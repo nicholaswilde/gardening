@@ -11,12 +11,11 @@ status: Active
 
 !!! example ""
 
-    **:material-leaf: Type:** Houseplant (Dracaena)  
+    **:material-leaf: Type:** Houseplant (Dracaena)
 
-    **:material-dna: Variety:** 'Janet Craig'  
+    **:material-dna: Variety:** 'Janet Craig'
 
     **:material-map-marker-outline: Location:** Bedroom
-
 ## :clipboard: Cultivation Status
 
 | Attribute | Details |

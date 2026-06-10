@@ -13,16 +13,15 @@ genus: Origanum
 
 !!! example ""
 
-    **Type:** Perennial Herb
+    **:material-leaf: Type:** Perennial Herb
 
     **Botanical Name:** *Origanum vulgare*
-    
-    **Family:** Lamiaceae
-    
-    **Genus:** Origanum
-    
-    **Variety:** Greek Oregano
 
+    **Family:** Lamiaceae
+
+    **Genus:** Origanum
+
+    **:material-dna: Variety:** Greek Oregano
 ## :clipboard: Cultivation Status
 
 | Attribute | Details |

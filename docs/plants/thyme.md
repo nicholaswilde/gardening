@@ -13,16 +13,15 @@ genus: Thymus
 
 !!! example ""
 
-    **Type:** Perennial Herb
+    **:material-leaf: Type:** Perennial Herb
 
     **Botanical Name:** *Thymus vulgaris*
-    
-    **Family:** Lamiaceae
-    
-    **Genus:** Thymus
-    
-    **Variety:** Common
 
+    **Family:** Lamiaceae
+
+    **Genus:** Thymus
+
+    **:material-dna: Variety:** Common
 ## :clipboard: Cultivation Status
 
 | Attribute | Details |

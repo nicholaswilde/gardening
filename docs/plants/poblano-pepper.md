@@ -10,16 +10,15 @@ genus: Capsicum
 
 !!! example ""
 
-    **Type:** Vegetable
+    **:material-leaf: Type:** Vegetable
 
     **Botanical Name:** *Capsicum annuum*
-    
-    **Family:** Solanaceae
-    
-    **Genus:** Capsicum
-    
-    **Variety:** Poblano
 
+    **Family:** Solanaceae
+
+    **Genus:** Capsicum
+
+    **:material-dna: Variety:** Poblano
 ## :clipboard: Cultivation Status
 
 | Attribute | Details |

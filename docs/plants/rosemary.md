@@ -13,16 +13,15 @@ genus: Rosmarinus
 
 !!! example ""
 
-    **Type:** Perennial Herb
+    **:material-leaf: Type:** Perennial Herb
 
     **Botanical Name:** *Rosmarinus officinalis*
-    
-    **Family:** Lamiaceae
-    
-    **Genus:** Rosmarinus
-    
-    **Variety:** Common
 
+    **Family:** Lamiaceae
+
+    **Genus:** Rosmarinus
+
+    **:material-dna: Variety:** Common
 ## :clipboard: Cultivation Status
 
 | Attribute | Details |
