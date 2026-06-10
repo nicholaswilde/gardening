@@ -31,6 +31,7 @@ Think of this as the "Current State" for the device, tracking what is actively p
 | Parsley | 0 | 2020–2024 | | Historical order. Likely depleted. |
 | Cockscomb | 0 | 2020–2024 | | Historical order. Likely depleted. |
 | Red Hot Chili Pepper | 0 | 2022-02 | | Historical order. Likely depleted. |
+| Red Sweet Pepper | 0 | 2025-02-18 | | Historical order. Likely depleted. |
 
 ## :wrench: Hardware & Maintenance
 
