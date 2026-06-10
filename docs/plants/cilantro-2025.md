@@ -16,8 +16,11 @@ genus: Coriandrum
     **Type:** Perennial Herb
 
     **Botanical Name:** *Coriandrum sativum*
+    
     **Family:** Apiaceae
+    
     **Genus:** Coriandrum
+    
     **Variety:** Common
 
 ## :clipboard: Cultivation Status
