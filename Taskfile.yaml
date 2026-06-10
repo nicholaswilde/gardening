@@ -146,6 +146,13 @@ tasks:
     cmds:
       - uv run python3 scripts/archive_plant.py {{.CLI_ARGS}}
 
+  get-plant-states:
+    desc: "List the cultivation states of all plant profiles. Usage: task get-plant-states"
+    preconditions:
+      - test -f scripts/get_plant_states.py
+    cmds:
+      - uv run python3 scripts/get_plant_states.py
+
   new-bed:
     desc: "Generate a new raised bed template. Usage: task new-bed -- raised-bed-4"
     preconditions:

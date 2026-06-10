@@ -32,3 +32,10 @@ This catalog details the custom agent skills available in this repository to aut
 - **Trigger Condition**: When verifying accuracy, resolving placeholder fields, or updating plant profile files.
 - **Command**: `task verify-plant -- <path_to_markdown> [--slug <slug>] [--update]`
 - **Behavior**: Calls `scripts/verify_plant.py` to check against the Trefle database and optionally write corrections.
+
+### 5. [Get Plant States Retrieval](./skills/get_plant_states.md)
+
+- **Description**: Lists the current/final cultivation states of all plant profiles in the repository.
+- **Trigger Condition**: When retrieving the status of all plants in the repository.
+- **Command**: `task get-plant-states`
+- **Behavior**: Calls `scripts/get_plant_states.py` to retrieve and output the states of all plants.
