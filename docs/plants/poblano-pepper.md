@@ -26,7 +26,7 @@ genus: Capsicum
 
 | Attribute | Details |
 | :--- | :--- |
-| **Current State** | Active Growth *(Options: Seedling / Active Growth / Flowering / Harvesting / Dormant)* |
+| **Current State** | Active Growth |
 | **Date Planted** | 2026-03-15 |
 | **Season Planted** | Early Spring |
 | **Location** | Raised Bed 3 |

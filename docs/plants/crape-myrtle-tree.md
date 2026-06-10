@@ -29,7 +29,7 @@ genus: Lagerstroemia
 
 | Attribute | Details |
 | :--- | :--- |
-| **Current State** | Flowering *(Options: Seedling / Active Growth / Flowering / Harvesting / Dormant)* |
+| **Current State** | Flowering |
 | **Date Planted** | 2026-06-09 |
 | **Season Planted** | Early Summer |
 | **Location** | Garden |

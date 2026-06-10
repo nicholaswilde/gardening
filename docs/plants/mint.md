@@ -29,7 +29,7 @@ genus: Mentha
 
 | Attribute | Details |
 | :--- | :--- |
-| **Current State** | Active Growth *(Options: Seedling / Active Growth / Flowering / Harvesting / Dormant)* |
+| **Current State** | Active Growth |
 | **Date Planted** | 2026-06-08 |
 | **Season Planted** | Early Summer |
 | **Location** | Backyard Pot 1 |
