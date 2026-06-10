@@ -22,6 +22,8 @@ genus: Petroselinum
     **:material-folder-outline: Genus:** Petroselinum
 
     **:material-dna: Variety:** Flat Leaf
+
+    **:material-seed: Origin:** Seed (Indoor Start)
 ## :clipboard: Cultivation Status
 
 | Attribute | Details |
@@ -31,6 +33,7 @@ genus: Petroselinum
 | **Date Removed** | 2026-05-10 |
 | **Location** | Raised Bed 2 |
 | **Outcome** | High yield. Ground into flour for sourdough starters. |
+| **Origin** | Seed (Indoor Start) |
 
 ## :memo: Log & Observations
 

@@ -22,6 +22,8 @@ genus: Origanum
     **:material-folder-outline: Genus:** Origanum
 
     **:material-dna: Variety:** Greek Oregano
+
+    **:material-seed: Origin:** Seed (Indoor Start)
 ## :clipboard: Cultivation Status
 
 | Attribute | Details |
@@ -30,6 +32,7 @@ genus: Origanum
 | **Date Planted** | 2026-03-15 |
 | **Season Planted** | Early Spring |
 | **Location** | Herb Bed |
+| **Origin** | Seed (Indoor Start) |
 
 ## :memo: Log & Observations
 

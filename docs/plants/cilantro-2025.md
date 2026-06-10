@@ -22,6 +22,8 @@ genus: Coriandrum
     **:material-folder-outline: Genus:** Coriandrum
 
     **:material-dna: Variety:** Common
+
+    **:material-seed: Origin:** Seed (Indoor Start)
 ## :clipboard: Cultivation Status
 
 | Attribute | Details |
@@ -31,6 +33,7 @@ genus: Coriandrum
 | **Date Removed** | 2026-05-10 |
 | **Location** | Raised Bed 2 |
 | **Outcome** | High yield. Ground into flour for sourdough starters. |
+| **Origin** | Seed (Indoor Start) |
 
 ## :memo: Log & Observations
 
