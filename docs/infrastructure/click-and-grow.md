@@ -14,8 +14,8 @@ Think of this as the "Current State" for the device, tracking what is actively p
 
 | Slot | Crop | Date Planted | Status |
 | :--- | :--- | :--- | :--- |
-| 1 | Basil | 2026-05-15 | Harvesting |
-| 2 | Mini Tomato | 2026-06-01 | Sprouting |
+| 1 | [Empty] | | |
+| 2 | [Empty] | | |
 | 3 | [Empty] | | |
 
 ## :package: Pod Inventory
