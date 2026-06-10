@@ -13,6 +13,9 @@ edit_uri = "edit/main/docs/"
 "Home" = "index.md"
 
 [[project.nav]]
+"Summary Dashboard" = "seasonal-dashboard.md"
+
+[[project.nav]]
 Plants = [
   { "Crape Myrtle Tree" = "plants/crape-myrtle-tree.md" },
   { "Foxtail Fern" = "plants/foxtail-fern.md" },
