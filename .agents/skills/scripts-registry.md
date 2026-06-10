@@ -10,6 +10,7 @@ This document lists the utility and automation scripts available in the `scripts
 | `archive_plant.py` | Python 3 | Archives a plant profile, renames files, and updates navigation | `python3 scripts/archive_plant.py <plant-name> <year> <removed-date> <final-state> "<outcome>"` |
 | `build_dashboard.py` | Python 3 | Generates the seasonal planting dashboard | `python3 scripts/build_dashboard.py` |
 | `generate_typos_config.py` | Python 3 | Generates the `_typos.toml` whitelist configuration from `dictionary.txt` | `python3 scripts/generate_typos_config.py` |
+| `get_plant_states.py` | Python 3 | Lists all plant cultivation states | `python3 scripts/get_plant_states.py` |
 | `new_bed.py` | Python 3 | Scaffolds a new raised bed profile template | `python3 scripts/new_bed.py <bed-name>` |
 | `new_plant.py` | Python 3 | Scaffolds a new plant profile template | `python3 scripts/new_plant.py <plant-name>` |
 | `optimize-images.sh` | Bash | Converts `.jpg` images to `.webp` and optimizes `.png` images in-place | `bash scripts/optimize-images.sh` |
@@ -101,3 +102,10 @@ This document lists the utility and automation scripts available in the `scripts
     - `final-state`: Final status state (e.g. `Harvested / Cleared`)
     - `outcome`: Brief description of crop outcome
 - **Dependencies**: `sys`, `os`, `re`
+
+### 10. `get_plant_states.py`
+
+- **Path**: `scripts/get_plant_states.py`
+- **Description**: Scans the plants directory to retrieve and display the current cultivation states for all plant profiles.
+- **Dependencies**: `os`, `re`
+
