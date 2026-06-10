@@ -1,7 +1,7 @@
 ---
 tags: [grass, active]
 location: backyard-lawn
-planted: 2026-06-09
+planted: 2021-11-01
 botanical_name: Festuca arundinacea
 family: Poaceae
 genus: Festuca
@@ -30,14 +30,14 @@ genus: Festuca
 | Attribute | Details |
 | :--- | :--- |
 | **Current State** | Active Growth |
-| **Date Planted** | 2026-06-09 |
-| **Season Planted** | Early Summer |
+| **Date Planted** | 2021-11-01 |
+| **Season Planted** | Mid-Fall |
 | **Location** | Backyard Lawn |
 | **Origin** | Nursery Start |
 
 ## :memo: Log & Observations
 
-* **2026-06-09:** Initial logging. Planted in the backyard lawn.
+* **2021-11-01:** Initial logging. Planted in the backyard lawn.
 
 ## :pushpin: Notes
 
