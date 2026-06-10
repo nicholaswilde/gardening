@@ -39,3 +39,10 @@ This catalog details the custom agent skills available in this repository to aut
 - **Trigger Condition**: When retrieving the status of all plants in the repository.
 - **Command**: `task get-plant-states`
 - **Behavior**: Calls `scripts/get_plant_states.py` to retrieve and output the states of all plants.
+
+### 6. [Plant Planting Date Update](./skills/update_plant_date.md)
+
+- **Description**: Automates updating a plant's planting date, corresponding season, and any matching initial log entry dates.
+- **Trigger Condition**: When updating the planting date of an existing plant.
+- **Command**: `task update-plant-date -- <plant_name> <date>`
+- **Behavior**: Calls `scripts/update_plant_date.py` to parse and update the dates.

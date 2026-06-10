@@ -139,6 +139,13 @@ tasks:
     cmds:
       - uv run python3 scripts/update_origin.py {{.CLI_ARGS}}
 
+  update-plant-date:
+    desc: "Update a plant's planting date. Usage: task update-plant-date -- <plant-name-or-file> <date>"
+    preconditions:
+      - test -f scripts/update_plant_date.py
+    cmds:
+      - uv run python3 scripts/update_plant_date.py {{.CLI_ARGS}}
+
   archive-plant:
     desc: "Archive a plant. Usage: task archive-plant -- <plant-name> <year> <removed-date> <final-state> \"<outcome>\""
     preconditions:

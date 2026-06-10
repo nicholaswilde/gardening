@@ -15,6 +15,7 @@ This document lists the utility and automation scripts available in the `scripts
 | `new_plant.py` | Python 3 | Scaffolds a new plant profile template | `python3 scripts/new_plant.py <plant-name>` |
 | `optimize-images.sh` | Bash | Converts `.jpg` images to `.webp` and optimizes `.png` images in-place | `bash scripts/optimize-images.sh` |
 | `update_origin.py` | Python 3 | Updates the plant origin in admonition and status table | `python3 scripts/update_origin.py <plant-name> <origin-type>` |
+| `update_plant_date.py` | Python 3 | Updates the planting date, corresponding season, and log entries | `python3 scripts/update_plant_date.py <plant-name> <date>` |
 | `verify_plant.py` | Python 3 | Verifies a plant profile against the Trefle database | `python3 scripts/verify_plant.py <filepath> [--update]` |
 
 ---
@@ -108,4 +109,13 @@ This document lists the utility and automation scripts available in the `scripts
 - **Path**: `scripts/get_plant_states.py`
 - **Description**: Scans the plants directory to retrieve and display the current cultivation states for all plant profiles.
 - **Dependencies**: `os`, `re`
+
+### 11. `update_plant_date.py`
+
+- **Path**: `scripts/update_plant_date.py`
+- **Description**: Automates updating a plant's planting date, corresponding season, and any matching initial log entry dates.
+- **Arguments**:
+    - `plant-name-or-file`: Name of the plant or path to the markdown file
+    - `date`: Planting date in YYYY-MM-DD or YYYY-MM format
+- **Dependencies**: `sys`, `os`, `re`, `datetime`
 
