@@ -38,7 +38,7 @@ This document lists the utility and automation scripts available in the `scripts
 - **Output**: `docs/seasonal-dashboard.md`
 - **Dependencies**: `os`, `re`, `collections.defaultdict`
 
-### 2. `generate_typos_config.py`
+### 3. `generate_typos_config.py`
 
 - **Path**: `scripts/generate_typos_config.py`
 - **Description**: Reads allowed spellings from `dictionary.txt`, sorts/deduplicates them, and writes
@@ -46,7 +46,7 @@ This document lists the utility and automation scripts available in the `scripts
 - **Output**: `_typos.toml`
 - **Dependencies**: `os`
 
-### 3. `new_bed.py`
+### 4. `new_bed.py`
 
 - **Path**: `scripts/new_bed.py`
 - **Description**: Generates a new raised bed Markdown document from a Jinja2 template.
@@ -55,7 +55,7 @@ This document lists the utility and automation scripts available in the `scripts
 - **Output**: `docs/beds/<filename>.md`
 - **Dependencies**: `sys`, `os`, `datetime`, `jinja2`
 
-### 4. `new_plant.py`
+### 5. `new_plant.py`
 
 - **Path**: `scripts/new_plant.py`
 - **Description**: Generates a new plant Markdown profile from a Jinja2 template.
@@ -64,14 +64,14 @@ This document lists the utility and automation scripts available in the `scripts
 - **Output**: `docs/plants/<filename>.md`
 - **Dependencies**: `sys`, `os`, `datetime`, `jinja2`
 
-### 5. `optimize-images.sh`
+### 6. `optimize-images.sh`
 
 - **Path**: `scripts/optimize-images.sh`
 - **Description**: Scans `docs/assets/images/` to process JPEG photos (converts to lossy WebP and removes
   source JPEGs) and PNG graphics (optimizes in-place using oxipng).
 - **External CLI Dependencies**: `cwebp` (from webp package), `oxipng` (from cargo/apt)
 
-### 6. `update_origin.py`
+### 7. `update_origin.py`
 
 - **Path**: `scripts/update_origin.py`
 - **Description**: Updates a plant's origin value in both the example admonition block (using standard icons) and the Cultivation Status table.
@@ -80,7 +80,7 @@ This document lists the utility and automation scripts available in the `scripts
     - `origin-type`: Keyword/term representing the plant's origin (e.g. `nursery-start`, `living-herb`)
 - **Dependencies**: `sys`, `os`, `re`
 
-### 7. `verify_plant.py`
+### 8. `verify_plant.py`
 
 - **Path**: `scripts/verify_plant.py`
 - **Description**: Connects to the Trefle API to verify a plant's classification and requirements, highlighting placeholders and automatically updating them when requested.
@@ -90,12 +90,12 @@ This document lists the utility and automation scripts available in the `scripts
     - `--update`: Write changes back to the markdown file
 - **Dependencies**: `sys`, `os`, `re`, `urllib.request`, `urllib.parse`, `json`, `argparse`
 
-### 8. `archive_plant.py`
+### 9. `archive_plant.py`
 
 - **Path**: `scripts/archive_plant.py`
 - **Description**: Automates archiving a plant profile: renames profile file and image, updates references in markdown, updates frontmatter tags/dates, updates cultivation table to final state, and moves configuration reference to Archive under the correct year in `zensical.toml`.
 - **Arguments**:
-    - `plant-name`: Name of the plant (e.g. `cilantro`)
+    - `plant-name`: Name of the plant (e.g. `rosemary`)
     - `year`: Target archiving year (e.g. `2025`)
     - `removed-date`: Removal date in YYYY-MM-DD
     - `final-state`: Final status state (e.g. `Harvested / Cleared`)
