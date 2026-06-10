@@ -7,6 +7,7 @@ This document lists the utility and automation scripts available in the `scripts
 | Script | Language | Purpose | Usage |
 |---|---|---|---|
 | `add_log_entry.py` | Python 3 | Appends a formatted observation log to a plant profile | `python3 scripts/add_log_entry.py <plant-name> "Message"` |
+| `archive_plant.py` | Python 3 | Archives a plant profile, renames files, and updates navigation | `python3 scripts/archive_plant.py <plant-name> <year> <removed-date> <final-state> "<outcome>"` |
 | `build_dashboard.py` | Python 3 | Generates the seasonal planting dashboard | `python3 scripts/build_dashboard.py` |
 | `generate_typos_config.py` | Python 3 | Generates the `_typos.toml` whitelist configuration from `dictionary.txt` | `python3 scripts/generate_typos_config.py` |
 | `new_bed.py` | Python 3 | Scaffolds a new raised bed profile template | `python3 scripts/new_bed.py <bed-name>` |
@@ -88,3 +89,15 @@ This document lists the utility and automation scripts available in the `scripts
     - `--slug`: Force a specific Trefle slug
     - `--update`: Write changes back to the markdown file
 - **Dependencies**: `sys`, `os`, `re`, `urllib.request`, `urllib.parse`, `json`, `argparse`
+
+### 8. `archive_plant.py`
+
+- **Path**: `scripts/archive_plant.py`
+- **Description**: Automates archiving a plant profile: renames profile file and image, updates references in markdown, updates frontmatter tags/dates, updates cultivation table to final state, and moves configuration reference to Archive under the correct year in `zensical.toml`.
+- **Arguments**:
+    - `plant-name`: Name of the plant (e.g. `cilantro`)
+    - `year`: Target archiving year (e.g. `2025`)
+    - `removed-date`: Removal date in YYYY-MM-DD
+    - `final-state`: Final status state (e.g. `Harvested / Cleared`)
+    - `outcome`: Brief description of crop outcome
+- **Dependencies**: `sys`, `os`, `re`
