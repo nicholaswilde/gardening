@@ -6,7 +6,7 @@ planted: 2026-03-15
 
 # :herb: Thyme
 
-![thyme][1]{ loading=lazy }
+![thyme][1]{ width="400" loading=lazy }
 
 !!! example ""
 
