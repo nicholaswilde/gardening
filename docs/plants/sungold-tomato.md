@@ -22,4 +22,4 @@
 
 ## :pushpin: Notes
 
-[1]: <../assets/images/sungold-tomato.jpg>
+[1]: <../assets/images/sungold-tomato.webp>

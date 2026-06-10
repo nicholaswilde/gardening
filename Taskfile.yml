@@ -9,6 +9,22 @@ vars:
   PORT: 8000
 
 tasks:
+  optimize-images:
+    desc: Optimize images
+    cmds:
+      - scripts/optimize-images.sh
+  check-deps:
+    desc: Ensure necessary tools are installed on Debian
+    status:
+      - command -v cwebp && command -v oxipng
+    cmds:
+      - sudo apt update
+      - sudo apt install -y webp
+      # If apt doesn't have oxipng, fall back to cargo
+      - |
+        if ! command -v oxipng; then
+          cargo install oxipng
+        fi
   bootstrap:
     desc: "Initialize the project and install all dependencies"
     cmds:

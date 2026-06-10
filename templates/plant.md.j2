@@ -5,7 +5,9 @@ planted: {{ current_date }}
 origin: {{ origin }}
 ---
 
-# {{ filename }}
+# :emoji: {{ filename }}
+
+![{{ filename }}][1]{ width="400" loading=lazy }
 
 !!! example ""
 
@@ -41,3 +43,5 @@ origin: {{ origin }}
 | Year | Season | Crop | Notes |
 | :--- | :--- | :--- | :--- |
 | | | | |
+
+[1]: <../assets/images/{{ filename }}.jpg>

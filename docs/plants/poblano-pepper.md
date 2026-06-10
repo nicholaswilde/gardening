@@ -22,4 +22,4 @@
 
 ## :pushpin: Notes
 
-[1]: <../assets/images/poblano-pepper.jpg>
+[1]: <../assets/images/poblano-pepper.webp>
