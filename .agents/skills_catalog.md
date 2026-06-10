@@ -21,7 +21,7 @@ This catalog details the custom agent skills available in this repository to aut
 
 ### 3. [Add Plant Log Entry](./skills/add_log_entry.md)
 
-- **Description**: Standardizes how log entries and observations are formatted and added to
-  individual plant documentation files under the log section.
+- **Description**: Automates adding formatted log entries and observations to a specified plant profile under the log section.
 - **Trigger Condition**: When editing an existing plant profile to record dated observations or care events.
-- **Behavior**: Appends a formatted, dated list item directly below the H2 heading to preserve reverse chronological order.
+- **Command**: `task add-log -- <plant_name> "<observation>"`
+- **Behavior**: Runs `scripts/add_log_entry.py` to prepend the formatted log entry below the H2 heading.
