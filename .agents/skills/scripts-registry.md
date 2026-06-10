@@ -12,6 +12,8 @@ This document lists the utility and automation scripts available in the `scripts
 | `new_bed.py` | Python 3 | Scaffolds a new raised bed profile template | `python3 scripts/new_bed.py <bed-name>` |
 | `new_plant.py` | Python 3 | Scaffolds a new plant profile template | `python3 scripts/new_plant.py <plant-name>` |
 | `optimize-images.sh` | Bash | Converts `.jpg` images to `.webp` and optimizes `.png` images in-place | `bash scripts/optimize-images.sh` |
+| `update_origin.py` | Python 3 | Updates the plant origin in admonition and status table | `python3 scripts/update_origin.py <plant-name> <origin-type>` |
+| `verify_plant.py` | Python 3 | Verifies a plant profile against the Trefle database | `python3 scripts/verify_plant.py <filepath> [--update]` |
 
 ---
 
@@ -67,3 +69,22 @@ This document lists the utility and automation scripts available in the `scripts
 - **Description**: Scans `docs/assets/images/` to process JPEG photos (converts to lossy WebP and removes
   source JPEGs) and PNG graphics (optimizes in-place using oxipng).
 - **External CLI Dependencies**: `cwebp` (from webp package), `oxipng` (from cargo/apt)
+
+### 6. `update_origin.py`
+
+- **Path**: `scripts/update_origin.py`
+- **Description**: Updates a plant's origin value in both the example admonition block (using standard icons) and the Cultivation Status table.
+- **Arguments**:
+    - `plant-name-or-file`: Name of the plant or path to the markdown file
+    - `origin-type`: Keyword/term representing the plant's origin (e.g. `nursery-start`, `living-herb`)
+- **Dependencies**: `sys`, `os`, `re`
+
+### 7. `verify_plant.py`
+
+- **Path**: `scripts/verify_plant.py`
+- **Description**: Connects to the Trefle API to verify a plant's classification and requirements, highlighting placeholders and automatically updating them when requested.
+- **Arguments**:
+    - `filepath`: Path to the plant markdown file
+    - `--slug`: Force a specific Trefle slug
+    - `--update`: Write changes back to the markdown file
+- **Dependencies**: `sys`, `os`, `re`, `urllib.request`, `urllib.parse`, `json`, `argparse`

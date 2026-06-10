@@ -53,6 +53,21 @@ When listing physical properties, infrastructure states, or botanical taxonomy (
 * **Project Name:** `:material-flask-outline:` (e.g., `**:material-flask-outline: Project:** Telemetry`)
 * **Target Integration:** `:material-connection:` (e.g., `**:material-connection: Target Integration:** MQTT`)
 
+### Origin Mappings
+When documenting a plant's origin in frontmatter or an admonition block, strictly use one of the following standard terms and its corresponding icon:
+
+| Origin Type | Icon Shortcode | Example |
+| :--- | :--- | :--- |
+| **Seed (Indoor Start)** | `:material-seed:` | `**:material-seed: Origin:** Seed (Indoor)` |
+| **Seed (Direct Sow)** | `:material-seed-outline:` | `**:material-seed-outline: Origin:** Seed (Direct)` |
+| **Nursery Start** | `:material-storefront-outline:` | `**:material-storefront-outline: Origin:** Nursery Start` |
+| **Bare Root** | `:material-pine-tree-variant-outline:` | `**:material-pine-tree-variant-outline: Origin:** Bare Root` |
+| **Cutting / Clone** | `:material-content-cut:` | `**:material-content-cut: Origin:** Cutting` |
+| **Division** | `:material-call-split:` | `**:material-call-split: Origin:** Division` |
+| **Volunteer** | `:material-recycle:` | `**:material-recycle: Origin:** Volunteer` |
+| **Gifted transplant** | `:material-gift-outline:` | `**:material-gift-outline: Origin:** Gifted transplant` |
+| **Living herb** | `:material-store-outline:` | `**:material-store-outline: Origin:** Living herb` |
+
 ## 🎨 Admonition Blocks
 
 When building summary blocks at the top of pages, utilize the built-in MkDocs admonitions formatted with the standard icons:
