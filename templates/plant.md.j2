@@ -1,27 +1,26 @@
 ---
-tags: []
+tags: [active]
 location: 
 planted: {{ current_date }}
-origin: {{ origin }}
 ---
 
-# :emoji: {{ filename }}
+# :emoji: {{ title }}
 
 ![{{ filename }}][1]{ width="400" loading=lazy }
 
 !!! example ""
 
-    **Type:**
+    **Type:** 
     
-    **Variety:**
+    **Variety:** 
 
 ## :clipboard: Cultivation Status
 
 | Attribute | Details |
 | :--- | :--- |
-| **Current State** | Active Growth |
+| **Current State** | Active Growth *(Options: Seedling / Active Growth / Flowering / Harvesting / Dormant)* |
 | **Date Planted** | {{ current_date }} |
-| **Season Planted** | |
+| **Season Planted** | {{ season }} |
 | **Location** | |
 | **Origin** | |
 
@@ -30,18 +29,8 @@ origin: {{ origin }}
 * **{{ current_date }}:** Initial logging.
 
 ## :pushpin: Notes
-* ```
 
-**`templates/bed.md.j2`**
-```jinja2
-# {{ filename }}
+* **Sunlight:** 
+* **Soil:** 
 
-**Dimensions:** **Material:** **Irrigation:** ## Soil Management
-* **{{ current_date }}:** Initial setup.
-
-## ::hourglass_flowing_sand: Crop History
-| Year | Season | Crop | Notes |
-| :--- | :--- | :--- | :--- |
-| | | | |
-
-[1]: <../assets/images/{{ filename }}.jpg>
+[1]: <../assets/images/{{ filename }}.webp>
