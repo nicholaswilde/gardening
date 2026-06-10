@@ -22,10 +22,12 @@ follow the required styling conventions, and have their metadata correctly initi
     - **Type & Variety:** Specify the botanical type and variety in the metadata block.
     - **Cultivation Details:** Fill in the Location and Origin attributes.
     - **Notes:** Fill in sun and soil requirements.
-5. **Run Quality Checks:** Check for any formatting issues using `rumdl`:
+5. **Run Quality Checks:** Check for formatting, spelling, and link integrity:
 
     ```bash
     rumdl check docs/plants/<plant_name>.md
+    task spellcheck-file FILE=docs/plants/<plant_name>.md
+    task linkcheck-file FILE=docs/plants/<plant_name>.md
     ```
 
     If any lint issues are found, resolve them or run:

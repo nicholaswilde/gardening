@@ -30,10 +30,11 @@ This skill automates updating a plant profile's origin in both the top-level exa
     - Confirm the Cultivation Status table has the updated origin row.
 
 4. **Validate and commit:**
-    - Run spellcheck:
+    - Run spellcheck and linkcheck:
 
       ```bash
       task spellcheck-file FILE=docs/plants/<plant_name>.md
+      task linkcheck-file FILE=docs/plants/<plant_name>.md
       ```
 
     - Commit changes following conventional commits formatting:

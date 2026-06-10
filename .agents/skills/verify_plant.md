@@ -33,11 +33,12 @@ This skill automates the verification of a plant profile's botanical details (su
     - Check the Admonition block to ensure the variety is correctly set and not a copy-paste placeholder like Rosemary's `[e.g., Tuscan Blue, Arp]`.
     - Ensure type formatting is correct (e.g., `Vegetable` instead of `Perennial Herb` for crops).
 
-6. **Validate Quality:** Compile the static site and run linting/spelling checks:
+6. **Validate Quality:** Compile the static site and run linting, spelling, and link checks:
 
     ```bash
     task build
     task spellcheck-file FILE=docs/plants/<plant_name>.md
+    task linkcheck-file FILE=docs/plants/<plant_name>.md
     ```
 
 7. **Git Checkpoint:** Commit the changes with a conventional commit message:
