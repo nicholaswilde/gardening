@@ -16,8 +16,11 @@ genus: Origanum
     **Type:** Perennial Herb
 
     **Botanical Name:** *Origanum vulgare*
+    
     **Family:** Lamiaceae
+    
     **Genus:** Origanum
+    
     **Variety:** Greek Oregano
 
 ## :clipboard: Cultivation Status
