@@ -9,6 +9,10 @@ status: Active
 
 # :deciduous_tree: Janet Craig Corn Plant (1)
 
+=== "2026-06-10"
+
+    ![dracaena-janet-craig-1][1]{ width="400" loading=lazy }
+
 !!! example ""
 
     **:material-leaf: Type:** Houseplant (Dracaena)
@@ -48,3 +52,6 @@ status: Active
 ## :wrench: Care Instructions
 
 See the full [Dracaena Care Guide](../reference/care-guides/dracaena.md) for detailed light and watering protocols.
+
+[1]: <../assets/images/dracaena-janet-craig-1-2026-06-10.webp>
+
