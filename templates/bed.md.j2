@@ -1,15 +1,31 @@
-# {{ filename }}
+# :brown_square: {{ filename.replace('-', ' ').title() }}
 
-**Dimensions:**
-**Material:**
-**Irrigation:**
+!!! example ""
 
-## Soil Management
+    **:material-list-status: Status:** Active  
 
-- **{{ current_date }}:** Initial setup.
+    **:material-ruler-square: Dimensions:** 
 
-## Crop History
+    **:material-fence: Material:** 
+
+    **:material-calendar-check-outline: Constructed:** {{ current_date.split('-')[0] }}
+
+## :hammer_and_wrench: Hardware & Irrigation
+
+* **Irrigation Node:** 
+* **Delivery:** 
+* **Maintenance:** 
+
+## :potted_plant: Soil Management
+
+| Date | Action | Details |
+| :--- | :--- | :--- |
+| {{ current_date }} | Initial Fill | |
+
+## :recycle: Crop History
 
 | Year | Season | Crop | Notes |
 | :--- | :--- | :--- | :--- |
 | | | | |
+
+## :pushpin: Notes
