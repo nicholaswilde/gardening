@@ -6,7 +6,9 @@ genus: Capsicum
 
 # :hot_pepper: Jalapeño Pepper
 
-![jalapeno-pepper][1]{ width="400" loading=lazy }
+=== "2026-06-07"
+
+    ![jalapeno-pepper][1]{ width="400" loading=lazy }
 
 !!! example ""
 
