@@ -9,7 +9,7 @@ genus: Dietes
 
 # :seedling: Large Wild Iris
 
-=== "2026-06-07"
+=== "2026-06-10"
 
     ![large-wild-iris][1]{ width="400" loading=lazy }
 
@@ -46,4 +46,4 @@ genus: Dietes
 * **Sunlight:** Full sun to light shade.
 * **Soil:** Well-draining, moist soil.
 
-[1]: <../assets/images/large-wild-iris-2026-06-07.webp>
+[1]: <../assets/images/large-wild-iris-2026-06-10.webp>
