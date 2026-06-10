@@ -9,7 +9,9 @@ genus: Mentha
 
 # :herb: Mint
 
-![mint][1]{ width="400" loading=lazy }
+=== "2026-06-07"
+
+    ![mint][1]{ width="400" loading=lazy }
 
 !!! example ""
 
