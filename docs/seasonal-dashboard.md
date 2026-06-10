@@ -2,7 +2,7 @@
 
 An auto-generated overview of all crops sorted by their optimal planting window.
 
-## Early Spring
+## :cherry_blossom: Early Spring
 
 * [Jalapeño Pepper](plants/jalapeno-pepper.md)
 * [Oregano](plants/oregano.md)
@@ -11,16 +11,16 @@ An auto-generated overview of all crops sorted by their optimal planting window.
 * [Sungold Tomato](plants/sungold-tomato.md)
 * [Thyme](plants/thyme.md)
 
-## Early Summer
+## :sun_with_face: Early Summer
 
 * [Mint](plants/mint.md)
 
-## Mid-Fall
+## :maple_leaf: Mid-Fall
 
 * [Crape Myrtle Tree](plants/crape-myrtle-tree.md)
 * [Marathon II Grass](plants/marathon-ii-grass.md)
 
-## Late Fall / Winter
+## :snowflake: Late Fall / Winter
 
 * [Foxtail Fern](plants/foxtail-fern.md)
 * [Iceburg Rose](plants/iceburg-rose.md)

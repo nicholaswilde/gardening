@@ -48,10 +48,24 @@ def build_dashboard():
             "Early Fall", "Mid-Fall", "Late Fall / Winter"
         ]
         
+        season_emojis = {
+            "Early Spring": ":cherry_blossom:",
+            "Mid-Spring": ":cherry_blossom:",
+            "Late Spring": ":cherry_blossom:",
+            "Early Summer": ":sun_with_face:",
+            "Mid-Summer": ":sun_with_face:",
+            "Late Summer": ":sun_with_face:",
+            "Early Fall": ":maple_leaf:",
+            "Mid-Fall": ":maple_leaf:",
+            "Late Fall / Winter": ":snowflake:"
+        }
+        
         sections = []
         for target_season in season_order:
             if target_season in seasons:
-                section_lines = [f"## {target_season}", ""]
+                emoji = season_emojis.get(target_season, "")
+                emoji_prefix = f"{emoji} " if emoji else ""
+                section_lines = [f"## {emoji_prefix}{target_season}", ""]
                 # Sort plants alphabetically within the season
                 for title, filename in sorted(seasons[target_season]):
                     section_lines.append(f"* [{title}](plants/{filename})")
