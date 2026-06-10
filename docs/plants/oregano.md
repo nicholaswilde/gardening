@@ -2,6 +2,9 @@
 tags: [perennial, herb, active]
 location: raised-bed-1
 planted: 2026-03-15
+botanical_name: Origanum vulgare
+family: Lamiaceae
+genus: Origanum
 ---
 
 # :herb: Oregano
@@ -11,8 +14,11 @@ planted: 2026-03-15
 !!! example ""
 
     **Type:** Perennial Herb
-    
-    **Variety:** [e.g., Tuscan Blue, Arp]
+
+    **Botanical Name:** *Origanum vulgare*
+    **Family:** Lamiaceae
+    **Genus:** Origanum
+    **Variety:** Greek Oregano
 
 ## :clipboard: Cultivation Status
 
@@ -31,6 +37,10 @@ planted: 2026-03-15
 
 ## :pushpin: Notes
 
+* **Trefle Database Info:**
+    * **Scientific Name:** *Origanum vulgare* (Lamiaceae Family)
+    * **Light Level:** 6/10
+    * **Preferred Soil pH:** 7.0 - 7.5
 * **Sunlight:** Full sun.
 * **Soil:** Needs excellent drainage; added extra perlite to the planting hole.
 

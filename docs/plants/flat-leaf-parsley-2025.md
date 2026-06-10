@@ -4,15 +4,21 @@ location: raised-bed-2
 planted: 2025-10-15
 removed: 2026-05-10
 source: seed
+botanical_name: Petroselinum crispum
+family: Apiaceae
+genus: Petroselinum
 ---
 
 # :herb: Flat Leaf Parsley
 
 !!! example ""
 
-    **Type:** Perennial Herb
-    
-    **Variety:** [e.g., Tuscan Blue, Arp]
+    **Type:** Biennial Herb (grown as annual)
+
+    **Botanical Name:** *Petroselinum crispum*
+    **Family:** Apiaceae
+    **Genus:** Petroselinum
+    **Variety:** Flat Leaf
 
 ## :clipboard: Cultivation Status
 
@@ -27,3 +33,8 @@ source: seed
 ## :memo: Log & Observations
 
 ## :pushpin: Notes
+
+* **Trefle Database Info:**
+    * **Scientific Name:** *Petroselinum crispum* (Apiaceae Family)
+    * **Light Level:** 7/10
+    * **Preferred Soil pH:** 5.5 - 6.5

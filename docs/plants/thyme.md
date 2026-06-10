@@ -2,6 +2,9 @@
 tags: [perennial, herb, active]
 location: raised-bed-1
 planted: 2026-03-15
+botanical_name: Thymus vulgaris
+family: Lamiaceae
+genus: Thymus
 ---
 
 # :herb: Thyme
@@ -11,8 +14,11 @@ planted: 2026-03-15
 !!! example ""
 
     **Type:** Perennial Herb
-    
-    **Variety:** [e.g., Tuscan Blue, Arp]
+
+    **Botanical Name:** *Thymus vulgaris*
+    **Family:** Lamiaceae
+    **Genus:** Thymus
+    **Variety:** Common
 
 ## :clipboard: Cultivation Status
 
@@ -32,6 +38,10 @@ planted: 2026-03-15
 
 ## :pushpin: Notes
 
+* **Trefle Database Info:**
+    * **Scientific Name:** *Thymus vulgaris* (Lamiaceae Family)
+    * **Light Level:** 8/10
+    * **Preferred Soil pH:** 7.5 - 8.0
 * **Sunlight:** Full sun.
 * **Soil:** Needs excellent drainage; added extra perlite to the planting hole.
 

@@ -1,12 +1,21 @@
+---
+botanical_name: Capsicum annuum
+family: Solanaceae
+genus: Capsicum
+---
+
 # :hot_pepper: Poblano Pepper
 
 ![poblano-pepper][1]{ width="400" loading=lazy }
 
 !!! example ""
 
-    **Type:** Perennial Herb
-    
-    **Variety:** [e.g., Tuscan Blue, Arp]
+    **Type:** Vegetable
+
+    **Botanical Name:** *Capsicum annuum*
+    **Family:** Solanaceae
+    **Genus:** Capsicum
+    **Variety:** Poblano
 
 ## :clipboard: Cultivation Status
 
@@ -21,5 +30,8 @@
 ## :memo: Log & Observations
 
 ## :pushpin: Notes
+
+* **Trefle Database Info:**
+    * **Scientific Name:** *Capsicum annuum* (Solanaceae Family)
 
 [1]: <../assets/images/poblano-pepper.webp>

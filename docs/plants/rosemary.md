@@ -2,6 +2,9 @@
 tags: [perennial, herb, active]
 location: raised-bed-1
 planted: 2026-03-15
+botanical_name: Rosmarinus officinalis
+family: Lamiaceae
+genus: Rosmarinus
 ---
 
 # :herb: Rosemary
@@ -11,8 +14,11 @@ planted: 2026-03-15
 !!! example ""
 
     **Type:** Perennial Herb
-    
-    **Variety:** [e.g., Tuscan Blue, Arp]
+
+    **Botanical Name:** *Rosmarinus officinalis*
+    **Family:** Lamiaceae
+    **Genus:** Rosmarinus
+    **Variety:** Common
 
 ## :clipboard: Cultivation Status
 
@@ -32,6 +38,8 @@ planted: 2026-03-15
 
 ## :pushpin: Notes
 
+* **Trefle Database Info:**
+    * **Scientific Name:** *Rosmarinus officinalis* (Lamiaceae Family)
 * **Sunlight:** Full sun.
 * **Soil:** Needs excellent drainage; added extra perlite to the planting hole.
 

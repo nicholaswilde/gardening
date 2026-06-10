@@ -1,12 +1,21 @@
+---
+botanical_name: Solanum lycopersicum
+family: Solanaceae
+genus: Solanum
+---
+
 # :tomato: Sungold Tomato
 
 ![sungold-tomato][1]{ width="400" loading=lazy }
 
 !!! example ""
 
-    **Type:** Perennial Herb
-    
-    **Variety:** [e.g., Tuscan Blue, Arp]
+    **Type:** Vegetable
+
+    **Botanical Name:** *Solanum lycopersicum*
+    **Family:** Solanaceae
+    **Genus:** Solanum
+    **Variety:** Sungold
 
 ## :clipboard: Cultivation Status
 
@@ -21,5 +30,10 @@
 ## :memo: Log & Observations
 
 ## :pushpin: Notes
+
+* **Trefle Database Info:**
+    * **Scientific Name:** *Solanum lycopersicum* (Solanaceae Family)
+    * **Light Level:** 8/10
+    * **Preferred Soil pH:** 7.0 - 7.5
 
 [1]: <../assets/images/sungold-tomato.webp>

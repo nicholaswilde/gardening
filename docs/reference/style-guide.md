@@ -1,6 +1,6 @@
 # :art: Style Guide & Iconography
 
-This document serves as the single source of truth for the visual language, typography, and iconography used across the Gardening repository. 
+This document serves as the single source of truth for the visual language, typography, and iconography used across the Gardening repository.
 
 > **🤖 Instructions for AI Agents:**
 > When generating, refactoring, or updating markdown pages in this repository, you **MUST** strictly adhere to the iconography mapping below. Do not invent new icons for these established fields. Always use standard GitHub emoji shortcodes (e.g., `:seedling:`) for H1/H2 headings, and Material Design shortcodes (e.g., `:material-leaf:`) for admonition properties.
@@ -25,11 +25,13 @@ Whenever creating top-level (`#`) or secondary (`##`) headings, prepend the titl
 When listing physical properties, infrastructure states, or botanical taxonomy (typically inside MkDocs admonition blocks), prepend the bolded label with the following Material Design icons:
 
 ### Botanical & Taxonomic
+
 * **Type:** `:material-leaf:` (e.g., `**:material-leaf: Type:** Herb`)
 * **Variety:** `:material-dna:` (e.g., `**:material-dna: Variety:** Winter Gem`)
 * **Origin:** `:material-seed-outline:` (e.g., `**:material-seed-outline: Origin:** Nursery`)
 
 ### Hardware & Infrastructure
+
 * **Model:** `:material-barcode:` (e.g., `**:material-barcode: Model:** Rain Bird`)
 * **Material:** `:material-fence:` (e.g., `**:material-fence: Material:** Redwood`)
 * **Dimensions:** `:material-ruler-square:` (e.g., `**:material-ruler-square: Dimensions:** 4x8`)
@@ -38,11 +40,13 @@ When listing physical properties, infrastructure states, or botanical taxonomy (
 * **Constructed:** `:material-calendar-check-outline:` (e.g., `**:material-calendar-check-outline: Constructed:** 2017`)
 
 ### State & Location
+
 * **Status:** `:material-list-status:` (e.g., `**:material-list-status: Status:** Active`)
 * **Location:** `:material-map-marker-outline:` (e.g., `**:material-map-marker-outline: Location:** Patio`)
 * **Station / Zone:** `:material-view-grid-outline:` (e.g., `**:material-view-grid-outline: Station:** Bed 2`)
 
 ### Projects & Engineering
+
 * **Project Name:** `:material-flask-outline:` (e.g., `**:material-flask-outline: Project:** Telemetry`)
 * **Target Integration:** `:material-connection:` (e.g., `**:material-connection: Target Integration:** MQTT`)
 
@@ -68,4 +72,3 @@ Reference = [
   { "Development" = "reference/development.md" }
 ]
 ```
-

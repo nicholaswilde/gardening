@@ -4,14 +4,21 @@ location: raised-bed-2
 planted: 2025-10-15
 removed: 2026-05-10
 origin: seed
+botanical_name: Coriandrum sativum
+family: Apiaceae
+genus: Coriandrum
 ---
+
 # :herb: Cilantro
 
 !!! example ""
 
     **Type:** Perennial Herb
-    
-    **Variety:** [e.g., Tuscan Blue, Arp]
+
+    **Botanical Name:** *Coriandrum sativum*
+    **Family:** Apiaceae
+    **Genus:** Coriandrum
+    **Variety:** Common
 
 ## :clipboard: Cultivation Status
 
@@ -26,3 +33,8 @@ origin: seed
 ## :memo: Log & Observations
 
 ## :pushpin: Notes
+
+* **Trefle Database Info:**
+    * **Scientific Name:** *Coriandrum sativum* (Apiaceae Family)
+    * **Light Level:** 7/10
+    * **Preferred Soil pH:** 7.0 - 7.5

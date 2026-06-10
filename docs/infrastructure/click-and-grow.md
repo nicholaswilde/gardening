@@ -3,9 +3,9 @@
 !!! example ""
 
     :material-list-status: **Status:** Inactive  
-    
+
     :material-tag-text-outline: **Model:** [Smart Garden 3][1]
-    
+
     :material-map-marker-outline: **Location:** Kitchen Counter  
 
 ## :clipboard: Active Pods
@@ -45,15 +45,15 @@ Think of this as the "Current State" for the device, tracking what is actively p
 !!! example ""
 
     :material-flask-outline: **Project:** ESP32 Water Level Telemetry 
-    
+
     :material-list-status: **Status:** Planning  
-    
+
     :material-connection: **Target Integration:** ESPHome / MQTT  
 
 * **Objective:** Automate water level alerts to eliminate manual weekly float checks and push notifications directly to the dashboard.
 * **Hardware Requirements:** * ESP32 microcontroller
-  * Water level sensor (Researching capacitive vs. ultrasonic to avoid nutrient water corrosion)
-  * Custom 3D printed low-profile enclosure
+    * Water level sensor (Researching capacitive vs. ultrasonic to avoid nutrient water corrosion)
+    * Custom 3D printed low-profile enclosure
 * **Implementation Notes:** The sensor will need to fit alongside the existing mechanical float without disrupting the light timer array. Once active, update the hardware table above with the deployment date.
 
 [1]: <https://www.clickandgrow.com/products/the-smart-garden-3>

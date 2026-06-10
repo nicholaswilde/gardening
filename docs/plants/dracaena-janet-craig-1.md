@@ -6,6 +6,7 @@ location: Master Bedroom
 instance_id: 1
 status: Active
 ---
+
 # :deciduous_tree: Janet Craig Corn Plant (1)
 
 !!! example ""
@@ -33,12 +34,15 @@ status: Active
 ## :pushpin: Notes
 
 **Dimensions:** **Material:** **Irrigation:** ## Soil Management
+
 * **2026-06-09:** Initial setup.
 
 ## :hourglass_flowing_sand: Crop History
+
 | Year | Season | Crop | Notes |
 | :--- | :--- | :--- | :--- |
 | | | | |
 
 ## :wrench: Care Instructions
+
 See the full [Dracaena Care Guide](../reference/care-guides/dracaena.md) for detailed light and watering protocols.
