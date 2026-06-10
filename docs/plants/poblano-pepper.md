@@ -19,6 +19,8 @@ genus: Capsicum
     **:material-folder-outline: Genus:** Capsicum
 
     **:material-dna: Variety:** Poblano
+
+    **:material-storefront-outline: Origin:** Nursery Start
 ## :clipboard: Cultivation Status
 
 | Attribute | Details |
@@ -27,7 +29,7 @@ genus: Capsicum
 | **Date Planted** | 2026-03-15 |
 | **Season Planted** | Early Spring |
 | **Location** | Raised Bed 3 |
-| **Origin** | Nusery start |
+| **Origin** | Nursery Start|
 
 ## :memo: Log & Observations
 

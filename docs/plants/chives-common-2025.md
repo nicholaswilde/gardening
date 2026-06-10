@@ -22,6 +22,8 @@ genus: Allium
     **:material-folder-outline: Genus:** Allium
 
     **:material-dna: Variety:** Common
+
+    **:material-store-outline: Origin:** Living herb
 ## :clipboard: Cultivation Status
 
 | Attribute | Details |
@@ -30,7 +32,7 @@ genus: Allium
 | **Date Planted** | 2026-03-15 |
 | **Season Planted** | Early Spring |
 | **Location** | Raised Bed 3 |
-| **Origin** | Living herb |
+| **Origin** | Living herb|
 
 ## :memo: Log & Observations
 

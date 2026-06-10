@@ -22,6 +22,8 @@ genus: Rosmarinus
     **:material-folder-outline: Genus:** Rosmarinus
 
     **:material-dna: Variety:** Common
+
+    **:material-gift-outline: Origin:** Gifted transplant
 ## :clipboard: Cultivation Status
 
 | Attribute | Details |
@@ -30,7 +32,7 @@ genus: Rosmarinus
 | **Date Planted** | 2026-03-15 |
 | **Season Planted** | Early Spring |
 | **Location** | Raised Bed 2 |
-| **Origin** | Gifted transplant |
+| **Origin** | Gifted transplant|
 
 ## :memo: Log & Observations
 
