@@ -16,8 +16,11 @@ genus: Rosmarinus
     **Type:** Perennial Herb
 
     **Botanical Name:** *Rosmarinus officinalis*
+    
     **Family:** Lamiaceae
+    
     **Genus:** Rosmarinus
+    
     **Variety:** Common
 
 ## :clipboard: Cultivation Status
