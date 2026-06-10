@@ -2,7 +2,7 @@
 
 !!! example ""
 
-    **Status:** Active
+    :material-list-status: **Status:** Active
 
     **Model:** [Rain Bird ESP-TM2 8 Station][1]
 
