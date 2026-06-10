@@ -12,7 +12,6 @@
 
 ### Ornamental Trees
 
-- [ ] Crape Myrtle Tree
 - [ ] Forest Pansy Redbud Tree
 - [ ] Bougainvillea Tree (Noted as "Bargainvilla" on the plans)
 
