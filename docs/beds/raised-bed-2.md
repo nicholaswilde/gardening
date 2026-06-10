@@ -2,7 +2,7 @@
 
 !!! example ""
 
-    **Status:** Active  
+    :material-list-status: **Status:** Active  
     
     **Dimensions:** 4' x 8' x 1.5' (48 cu ft) 
    
