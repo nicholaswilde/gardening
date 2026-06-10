@@ -1,7 +1,7 @@
 ---
 tags: [tree, active]
 location: Garden
-planted: 2026-06-09
+planted: 2021-11-01
 botanical_name: Lagerstroemia indica
 family: Lythraceae
 genus: Lagerstroemia
@@ -30,14 +30,14 @@ genus: Lagerstroemia
 | Attribute | Details |
 | :--- | :--- |
 | **Current State** | Flowering |
-| **Date Planted** | 2026-06-09 |
-| **Season Planted** | Early Summer |
+| **Date Planted** | 2021-11-01 |
+| **Season Planted** | Mid-Fall |
 | **Location** | Garden |
 | **Origin** | Nursery Start |
 
 ## :memo: Log & Observations
 
-* **2026-06-09:** Initial logging. Planted in the garden.
+* **2021-11-01:** Initial logging. Planted in the garden.
 
 ## :pushpin: Notes
 
