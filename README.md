@@ -1,4 +1,4 @@
-# :seedling: Gardening :open_book:
+# :seedling: Gardening :open_book: <!-- markdownlint-disable-line MD026 -->
 
 [![ci](https://img.shields.io/github/actions/workflow/status/nicholaswilde/gardening/ci.yaml?label=ci&style=for-the-badge&branch=main)](https://github.com/nicholaswilde/gardening/actions/workflows/ci.yaml)
 [![linkcheck](https://img.shields.io/github/actions/workflow/status/nicholaswilde/gardening/linkcheck.yaml?label=linkcheck&style=for-the-badge&branch=main)](https://github.com/nicholaswilde/gardening/actions/workflows/linkcheck.yaml)
