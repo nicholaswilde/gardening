@@ -9,7 +9,7 @@ genus: Lagerstroemia
 
 # :deciduous_tree: Crape Myrtle Tree
 
-=== "2026-06-07"
+=== "2026-06-10"
 
     ![crape-myrtle-tree][1]{ width="400" loading=lazy }
 
@@ -49,4 +49,4 @@ genus: Lagerstroemia
 * **Sunlight:** Full sun.
 * **Soil:** Moist, well-draining soil.
 
-[1]: <../assets/images/crape-myrtle-tree-2026-06-07.webp>
+[1]: <../assets/images/crape-myrtle-tree-2026-06-10.webp>
