@@ -15,11 +15,11 @@ genus: Coriandrum
 
     **:material-leaf: Type:** Perennial Herb
 
-    **Botanical Name:** *Coriandrum sativum*
+    **:material-tag-text-outline: Botanical Name:** *Coriandrum sativum*
 
-    **Family:** Apiaceae
+    **:material-sitemap-outline: Family:** Apiaceae
 
-    **Genus:** Coriandrum
+    **:material-folder-outline: Genus:** Coriandrum
 
     **:material-dna: Variety:** Common
 ## :clipboard: Cultivation Status

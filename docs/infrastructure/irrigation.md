@@ -10,7 +10,22 @@
 
     **:material-map-marker-outline: Location:** Backyard
 
-## Zones
+## :droplet: Zone Configuration
+
+| Zone | Status | Area / Description |
+| :--- | :--- | :--- |
+| **Zone 1** | 🔴 Disabled | |
+| **Zone 2** | 🔴 Disabled | |
+| **Zone 3** | 🟢 Enabled | |
+| **Zone 4** | 🟢 Enabled | |
+| **Zone 5** | 🟢 Enabled | |
+| **Zone 6** | 🟢 Enabled | |
+| **Zone 7** | 🟢 Enabled | |
+| **Zone 8** | 🟢 Enabled | |
+
+## :wrench: Maintenance & Hardware Log
+
+* **2026-06-09:** Initial documentation. Zones 1 and 2 capped/disabled. Zones 3 through 8 actively programmed.
 
 ## :pushpin: Notes
 

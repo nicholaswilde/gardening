@@ -15,11 +15,11 @@ genus: Thymus
 
     **:material-leaf: Type:** Perennial Herb
 
-    **Botanical Name:** *Thymus vulgaris*
+    **:material-tag-text-outline: Botanical Name:** *Thymus vulgaris*
 
-    **Family:** Lamiaceae
+    **:material-sitemap-outline: Family:** Lamiaceae
 
-    **Genus:** Thymus
+    **:material-folder-outline: Genus:** Thymus
 
     **:material-dna: Variety:** Common
 ## :clipboard: Cultivation Status

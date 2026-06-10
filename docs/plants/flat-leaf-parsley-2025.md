@@ -15,11 +15,11 @@ genus: Petroselinum
 
     **:material-leaf: Type:** Biennial Herb (grown as annual)
 
-    **Botanical Name:** *Petroselinum crispum*
+    **:material-tag-text-outline: Botanical Name:** *Petroselinum crispum*
 
-    **Family:** Apiaceae
+    **:material-sitemap-outline: Family:** Apiaceae
 
-    **Genus:** Petroselinum
+    **:material-folder-outline: Genus:** Petroselinum
 
     **:material-dna: Variety:** Flat Leaf
 ## :clipboard: Cultivation Status

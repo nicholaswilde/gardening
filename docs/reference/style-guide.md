@@ -27,6 +27,9 @@ When listing physical properties, infrastructure states, or botanical taxonomy (
 ### Botanical & Taxonomic
 
 * **Type:** `:material-leaf:` (e.g., `**:material-leaf: Type:** Herb`)
+* **Botanical Name:** `:material-tag-text-outline:` (e.g., `**:material-tag-text-outline: Botanical Name:** *Rosmarinus officinalis*`)
+* **Family:** `:material-sitemap-outline:` (e.g., `**:material-sitemap-outline: Family:** Lamiaceae`)
+* **Genus:** `:material-folder-outline:` (e.g., `**:material-folder-outline: Genus:** Rosmarinus`)
 * **Variety:** `:material-dna:` (e.g., `**:material-dna: Variety:** Winter Gem`)
 * **Origin:** `:material-seed-outline:` (e.g., `**:material-seed-outline: Origin:** Nursery`)
 

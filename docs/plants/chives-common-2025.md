@@ -15,11 +15,11 @@ genus: Allium
 
     **:material-leaf: Type:** Perennial Herb
 
-    **Botanical Name:** *Allium schoenoprasum*
+    **:material-tag-text-outline: Botanical Name:** *Allium schoenoprasum*
 
-    **Family:** Amaryllidaceae
+    **:material-sitemap-outline: Family:** Amaryllidaceae
 
-    **Genus:** Allium
+    **:material-folder-outline: Genus:** Allium
 
     **:material-dna: Variety:** Common
 ## :clipboard: Cultivation Status

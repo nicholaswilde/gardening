@@ -15,11 +15,11 @@ genus: Origanum
 
     **:material-leaf: Type:** Perennial Herb
 
-    **Botanical Name:** *Origanum vulgare*
+    **:material-tag-text-outline: Botanical Name:** *Origanum vulgare*
 
-    **Family:** Lamiaceae
+    **:material-sitemap-outline: Family:** Lamiaceae
 
-    **Genus:** Origanum
+    **:material-folder-outline: Genus:** Origanum
 
     **:material-dna: Variety:** Greek Oregano
 ## :clipboard: Cultivation Status

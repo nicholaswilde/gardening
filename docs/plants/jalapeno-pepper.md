@@ -12,11 +12,11 @@ genus: Capsicum
 
     **:material-leaf: Type:** Vegetable
 
-    **Botanical Name:** *Capsicum annuum*
+    **:material-tag-text-outline: Botanical Name:** *Capsicum annuum*
 
-    **Family:** Solanaceae
+    **:material-sitemap-outline: Family:** Solanaceae
 
-    **Genus:** Capsicum
+    **:material-folder-outline: Genus:** Capsicum
 
     **:material-dna: Variety:** Jalapeño
 ## :clipboard: Cultivation Status

@@ -15,11 +15,11 @@ genus: Rosmarinus
 
     **:material-leaf: Type:** Perennial Herb
 
-    **Botanical Name:** *Rosmarinus officinalis*
+    **:material-tag-text-outline: Botanical Name:** *Rosmarinus officinalis*
 
-    **Family:** Lamiaceae
+    **:material-sitemap-outline: Family:** Lamiaceae
 
-    **Genus:** Rosmarinus
+    **:material-folder-outline: Genus:** Rosmarinus
 
     **:material-dna: Variety:** Common
 ## :clipboard: Cultivation Status

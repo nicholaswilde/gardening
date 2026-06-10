@@ -12,11 +12,11 @@ genus: Solanum
 
     **:material-leaf: Type:** Vegetable
 
-    **Botanical Name:** *Solanum lycopersicum*
+    **:material-tag-text-outline: Botanical Name:** *Solanum lycopersicum*
 
-    **Family:** Solanaceae
+    **:material-sitemap-outline: Family:** Solanaceae
 
-    **Genus:** Solanum
+    **:material-folder-outline: Genus:** Solanum
 
     **:material-dna: Variety:** Sungold
 ## :clipboard: Cultivation Status
