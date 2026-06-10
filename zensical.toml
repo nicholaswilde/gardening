@@ -17,6 +17,7 @@ edit_uri = "edit/main/docs/"
 
 [[project.nav]]
 Plants = [
+  { "Butterfly Bush" = "plants/butterfly-bush.md" },
   { "Crape Myrtle Tree" = "plants/crape-myrtle-tree.md" },
   { "Foxtail Fern" = "plants/foxtail-fern.md" },
   { "Iceburg Rose" = "plants/iceburg-rose.md" },

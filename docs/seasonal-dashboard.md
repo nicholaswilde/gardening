@@ -22,6 +22,7 @@ An auto-generated overview of all crops sorted by their optimal planting window.
 
 ## :snowflake: Late Fall / Winter
 
+* [Butterfly Bush](plants/butterfly-bush.md)
 * [Foxtail Fern](plants/foxtail-fern.md)
 * [Iceburg Rose](plants/iceburg-rose.md)
 * [Western Redbud](plants/western-redbud.md)
