@@ -272,7 +272,7 @@ def main():
             indent = re.match(r'[ \t]*', original_var).group(0)
             # Check if botanical name is already in content
             if "Botanical Name:" not in content:
-                insertion = f"{indent}**Botanical Name:** *{db_botanical}*\n{indent}**Family:** {db_data.get('family')}\n{indent}**Genus:** {db_data.get('genus')}\n"
+                insertion = f"{indent}**Botanical Name:** *{db_botanical}*\n\n{indent}**Family:** {db_data.get('family')}\n\n{indent}**Genus:** {db_data.get('genus')}\n\n"
                 content = content.replace(original_var, insertion + original_var)
                 print("- Enriched admonition block with taxonomy details.")
 
