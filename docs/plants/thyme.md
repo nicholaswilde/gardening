@@ -9,7 +9,9 @@ genus: Thymus
 
 # :herb: Thyme
 
-![thyme][1]{ width="400" loading=lazy }
+=== "2026-06-07"
+
+    ![thyme][1]{ width="400" loading=lazy }
 
 !!! example ""
 
