@@ -1,8 +1,8 @@
 {
   "track_id": "markdown_parser_serializer_20260611",
   "type": "feature",
-  "status": "new",
+  "status": "in_progress",
   "created_at": "2026-06-11T12:51:00Z",
-  "updated_at": "2026-06-11T12:51:00Z",
+  "updated_at": "2026-06-11T19:52:54Z",
   "description": "Establish a unified, standard parser/serializer for the markdown pages using python-frontmatter and Pydantic, and refactor existing scripts to use it"
 }
