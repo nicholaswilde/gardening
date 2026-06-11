@@ -20,6 +20,10 @@ An auto-generated overview of all crops sorted by their optimal planting window.
 
 * [Mint](plants/mint.md)
 
+## :sun_with_face: Mid-Summer
+
+* [Wild Strawberry](plants/wild-strawberry-2022.md)
+
 ## :maple_leaf: Mid-Fall
 
 * [Crape Myrtle](plants/crape-myrtle.md)

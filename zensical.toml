@@ -59,6 +59,9 @@ Infrastructure = [
 
 [[project.nav]]
 Archive = [
+  { "2022" = [
+    { "Wild Strawberry" = "plants/wild-strawberry-2022.md" }
+  ] },
   { "2025" = [
   { "Basil" = "plants/basil-2025.md" },
   { "Chives Common" = "plants/chives-common-2025.md" },
