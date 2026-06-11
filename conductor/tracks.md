@@ -19,5 +19,5 @@ This file tracks all major tracks for the project. Each track has its own detail
 
 ---
 
-- [~] **Track: Establish a unified, standard parser/serializer for the markdown pages using python-frontmatter and Pydantic, and refactor existing scripts to use it**
+- [x] **Track: Establish a unified, standard parser/serializer for the markdown pages using python-frontmatter and Pydantic, and refactor existing scripts to use it**
 *Link: [./tracks/markdown_parser_serializer_20260611/](./tracks/markdown_parser_serializer_20260611/)*
