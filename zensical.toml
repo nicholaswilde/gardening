@@ -23,6 +23,7 @@ Plants = [
   { "Crape Myrtle" = "plants/crape-myrtle.md" },
   { "Fern Pine" = "plants/fern-pine.md" },
   { "Foxtail Fern" = "plants/foxtail-fern.md" },
+  { "French Lavender" = "plants/french-lavender.md" },
   { "Iceburg Rose" = "plants/iceburg-rose.md" },
   { "Indian Hawthorn" = "plants/indian-hawthorn.md" },
   { "Large Wild Iris" = "plants/large-wild-iris.md" },

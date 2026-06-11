@@ -29,6 +29,7 @@ An auto-generated overview of all crops sorted by their optimal planting window.
 * [Butterfly Bush](plants/butterfly-bush.md)
 * [Fern Pine](plants/fern-pine.md)
 * [Foxtail Fern](plants/foxtail-fern.md)
+* [French Lavender](plants/french-lavender.md)
 * [Iceburg Rose](plants/iceburg-rose.md)
 * [Large Wild Iris](plants/large-wild-iris.md)
 * [Lily Turf](plants/lily-turf.md)
