@@ -24,6 +24,7 @@ An auto-generated overview of all crops sorted by their optimal planting window.
 
 ## :snowflake: Late Fall / Winter
 
+* [Azalea](plants/azalea.md)
 * [Boxleaf Euonymus](plants/boxleaf-euonymus.md)
 * [Butterfly Bush](plants/butterfly-bush.md)
 * [Fern Pine](plants/fern-pine.md)
