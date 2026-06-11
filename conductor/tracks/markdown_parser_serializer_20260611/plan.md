@@ -6,11 +6,11 @@
 - [x] Task: Write comprehensive unit tests validating parsing, modification, and saving behaviors
 - [x] Task: Conductor - User Manual Verification 'Phase 1' (Protocol in workflow.md)
 
-## Phase 2: Refactor Existing Scripts
-- [ ] Task: Refactor `scripts/add_log_entry.py` to use Pydantic models
-- [ ] Task: Refactor `scripts/update_origin.py` to use Pydantic models
-- [ ] Task: Refactor `scripts/verify_plant.py` to use Pydantic models
-- [ ] Task: Refactor `scripts/archive_plant.py` to use Pydantic models
-- [ ] Task: Refactor `scripts/build_dashboard.py` to use Pydantic models
-- [ ] Task: Run full regression tests to ensure all refactored scripts behave identically to legacy versions
-- [ ] Task: Conductor - User Manual Verification 'Phase 2' (Protocol in workflow.md)
+## Phase 2: Refactor Existing Scripts [checkpoint: fa94ca8]
+- [x] Task: Refactor `scripts/add_log_entry.py` to use Pydantic models
+- [x] Task: Refactor `scripts/update_origin.py` to use Pydantic models
+- [x] Task: Refactor `scripts/verify_plant.py` to use Pydantic models
+- [x] Task: Refactor `scripts/archive_plant.py` to use Pydantic models
+- [x] Task: Refactor `scripts/build_dashboard.py` to use Pydantic models
+- [x] Task: Run full regression tests to ensure all refactored scripts behave identically to legacy versions
+- [x] Task: Conductor - User Manual Verification 'Phase 2' (Protocol in workflow.md)
