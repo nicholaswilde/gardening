@@ -29,4 +29,5 @@ An auto-generated overview of all crops sorted by their optimal planting window.
 * [Foxtail Fern](plants/foxtail-fern.md)
 * [Iceburg Rose](plants/iceburg-rose.md)
 * [Large Wild Iris](plants/large-wild-iris.md)
+* [Lily Turf](plants/lily-turf.md)
 * [Western Redbud](plants/western-redbud.md)
