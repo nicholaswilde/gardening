@@ -7,7 +7,7 @@ under the `## :memo: Log & Observations` section using the automated `scripts/ad
 
 ## Protocol
 
-1. **Validate Inputs:** Identify the target plant name (e.g. `rosemary`) and prepare the log observation message.
+1. **Validate and Review Inputs:** Identify the target plant name (e.g. `rosemary`) and prepare the log observation message. Review the wording of the observation, check for any grammatical issues, typos, or style guidelines, and refine/correct the wording to be clear, professional, and consistent before adding it to the markdown page.
 2. **Execute Log Command:** Run the log automation using `go-task`:
 
     ```bash
