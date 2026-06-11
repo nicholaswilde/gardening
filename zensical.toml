@@ -20,6 +20,7 @@ Plants = [
   { "Butterfly Bush" = "plants/butterfly-bush.md" },
   { "Boxleaf Euonymus" = "plants/boxleaf-euonymus.md" },
   { "Crape Myrtle" = "plants/crape-myrtle.md" },
+  { "Fern Pine" = "plants/fern-pine.md" },
   { "Foxtail Fern" = "plants/foxtail-fern.md" },
   { "Iceburg Rose" = "plants/iceburg-rose.md" },
   { "Indian Hawthorn" = "plants/indian-hawthorn.md" },
