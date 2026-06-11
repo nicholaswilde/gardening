@@ -249,7 +249,9 @@ class PlantProfile(BaseModel):
             
         if self.admonition_title:
             admon_block = [f"!!! {self.admonition_title}"]
-            for row in self.admonition_rows:
+            for i, row in enumerate(self.admonition_rows):
+                if i > 0:
+                    admon_block.append("")
                 if row.key == "":
                     admon_block.append(f"    {row.value}")
                 else:

@@ -3,6 +3,11 @@ import sys
 import os
 from datetime import datetime
 
+# Ensure the scripts directory is in the path to import lib.models
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+
+from lib.models import PlantProfile, LogEntry
+
 def main():
     if len(sys.argv) < 3:
         print("Error: Provide plant name and observation message.")
@@ -23,40 +28,21 @@ def main():
         sys.exit(1)
         
     current_date = datetime.now().strftime("%Y-%m-%d")
-    new_entry = f"* **{current_date}:** {observation}\n"
     
     with open(plant_file, "r", encoding="utf-8") as f:
-        lines = f.readlines()
+        content = f.read()
         
-    target_index = -1
-    for i, line in enumerate(lines):
-        if "## :memo: Log & Observations" in line:
-            target_index = i
-            break
+    try:
+        profile = PlantProfile.from_markdown(content)
+        profile.add_log_entry(LogEntry(date=current_date, message=observation))
+        
+        with open(plant_file, "w", encoding="utf-8") as f:
+            f.write(profile.serialize())
             
-    if target_index == -1:
-        print("Error: '## :memo: Log & Observations' section not found in file.")
+        print(f"Added log entry to {plant_file}")
+    except Exception as e:
+        print(f"Error updating plant log: {e}")
         sys.exit(1)
-        
-    # Insert entry:
-    # Check if the line after heading is empty.
-    # If yes, insert after it. If not, insert after heading with a blank line.
-    if target_index + 1 < len(lines):
-        next_line = lines[target_index + 1].strip()
-        if not next_line:
-            # It's an empty line, insert the new entry after it
-            lines.insert(target_index + 2, new_entry)
-        else:
-            # It's not an empty line, insert empty line + entry
-            lines.insert(target_index + 1, "\n" + new_entry)
-    else:
-        # Heading is the last line of the file
-        lines.append("\n" + new_entry)
-        
-    with open(plant_file, "w", encoding="utf-8") as f:
-        f.writelines(lines)
-        
-    print(f"Added log entry to {plant_file}")
 
 if __name__ == "__main__":
     main()

@@ -7,6 +7,11 @@ import urllib.parse
 import json
 import argparse
 
+# Ensure the scripts directory is in the path to import lib.models
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+
+from lib.models import PlantProfile
+
 # Setup user agent header for requests
 HEADERS = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'}
 
@@ -20,7 +25,6 @@ def load_dotenv():
                     continue
                 if "=" in line:
                     key, val = line.split("=", 1)
-                    # strip quotes if present
                     val = val.strip("'\"")
                     os.environ[key] = val
 
@@ -39,44 +43,20 @@ def query_trefle_details(slug, token):
         return json.loads(response.read().decode('utf-8'))
 
 def parse_markdown(filepath):
-    """Extract metadata from markdown file."""
+    """Extract metadata from markdown file using PlantProfile model."""
     with open(filepath, 'r', encoding='utf-8') as f:
         content = f.read()
 
-    # Get title
-    title_match = re.search(r'^#\s*(?::\w+:\s*)?(.+)', content, re.MULTILINE)
-    title = title_match.group(1).strip() if title_match else None
-
-    # Get YAML frontmatter
-    frontmatter = {}
-    fm_match = re.search(r'^---\n(.*?)\n---', content, re.DOTALL)
-    if fm_match:
-        for line in fm_match.group(1).split('\n'):
-            if ':' in line:
-                k, v = line.split(':', 1)
-                frontmatter[k.strip()] = v.strip().strip("[]'\"")
-
-    # Get Type and Variety from admonitions or main content (allowing optional Material icons)
-    type_match = re.search(r'\*\*(?::material-[a-z-]+:\s*)?Type:\*\*\s*(.+)', content)
-    plant_type = type_match.group(1).strip() if type_match else None
-
-    variety_match = re.search(r'\*\*(?::material-[a-z-]+:\s*)?Variety:\*\*\s*(.+)', content)
-    variety = variety_match.group(1).strip() if variety_match else None
-
-    # Get Sunlight and Soil from notes or admonition (allowing optional Material icons)
-    sunlight_match = re.search(r'\*\*(?::material-[a-z-]+:\s*)?Sunlight:\*\*\s*(.+)', content, re.IGNORECASE)
-    sunlight = sunlight_match.group(1).strip() if sunlight_match else None
-
-    soil_match = re.search(r'\*\*(?::material-[a-z-]+:\s*)?Soil:\*\*\s*(.+)', content, re.IGNORECASE)
-    soil = soil_match.group(1).strip() if soil_match else None
-
+    profile = PlantProfile.from_markdown(content)
+    
     return {
-        'title': title,
-        'frontmatter': frontmatter,
-        'type': plant_type,
-        'variety': variety,
-        'sunlight': sunlight,
-        'soil': soil,
+        'title': profile.title,
+        'frontmatter': profile.frontmatter.model_dump(),
+        'type': profile.get_admonition_value("Type"),
+        'variety': profile.get_admonition_value("Variety"),
+        'sunlight': profile.get_admonition_value("Sunlight"),
+        'soil': profile.get_admonition_value("Soil"),
+        'profile': profile,
         'content': content
     }
 
@@ -98,13 +78,16 @@ def main():
         print("Error: TREFLE_TOKEN not found in environment or .env file.")
         sys.exit(1)
 
-    # Parse markdown file
+    # Parse markdown file using our model wrapper
     md_data = parse_markdown(args.filepath)
     plant_name = md_data['title']
-    md_botanical = md_data['frontmatter'].get('botanical_name')
     
-    # If botanical name is already specified, search for that directly
-    search_query = md_botanical if md_botanical else plant_name
+    # Strip emoji or count prefix from title name if needed for clean search
+    clean_plant_name = re.sub(r'^:\w+:\s*', '', plant_name) # strip starting emoji
+    clean_plant_name = re.sub(r'\s*\(\d+\)$', '', clean_plant_name).strip() # strip ending (1)
+    
+    md_botanical = md_data['frontmatter'].get('botanical_name')
+    search_query = md_botanical if md_botanical else clean_plant_name
 
     db_data = None
     best_match = {}
@@ -125,16 +108,14 @@ def main():
             print(f"Error fetching slug details: {e}")
             sys.exit(1)
     else:
-        print(f"Verifying plant info for '{plant_name}' using Trefle database (query: '{search_query}')...")
-        # 1. Search Trefle
+        print(f"Verifying plant info for '{clean_plant_name}' using Trefle database (query: '{search_query}')...")
         try:
             search_res = query_trefle_search(search_query, token)
             results = search_res.get('data', [])
             if not results:
-                print(f"No results found for query '{plant_name}' on Trefle.")
+                print(f"No results found for query '{clean_plant_name}' on Trefle.")
                 sys.exit(0)
 
-            # Rank and select the best matching result
             best_match = results[0]
             best_score = -1
             
@@ -143,14 +124,13 @@ def main():
                 common = (r.get('common_name') or '').lower()
                 
                 score = 0
-                if common == plant_name.lower() or scientific == plant_name.lower():
+                if common == clean_plant_name.lower() or scientific == clean_plant_name.lower():
                     score = 3
-                elif f" {plant_name.lower()} " in f" {common} " or f" {plant_name.lower()} " in f" {scientific} ":
+                elif f" {clean_plant_name.lower()} " in f" {common} " or f" {clean_plant_name.lower()} " in f" {scientific} ":
                     score = 2
-                elif plant_name.lower() in common or plant_name.lower() in scientific:
+                elif clean_plant_name.lower() in common or clean_plant_name.lower() in scientific:
                     score = 1
                 
-                # Prioritize accepted status
                 if r.get('status') == 'accepted':
                     score += 0.5
                     
@@ -178,7 +158,6 @@ def main():
     print(f"\n--- Verification Report ---")
     
     # 1. Botanical details verification
-    md_botanical = md_data['frontmatter'].get('botanical_name')
     if md_botanical:
         if md_botanical.strip().lower() == db_botanical.strip().lower():
             print(f"✅ Botanical Name: Matches ('{md_botanical}')")
@@ -190,7 +169,7 @@ def main():
     # 2. Variety check
     variety = md_data['variety']
     if variety and "Tuscan Blue" in variety:
-        print(f"❌ Variety: Discrepancy! Found copy-paste placeholder '{variety}' which belongs to Rosemary, not {plant_name}.")
+        print(f"❌ Variety: Discrepancy! Found copy-paste placeholder '{variety}' which belongs to Rosemary, not {clean_plant_name}.")
     else:
         print(f"✅ Variety: Current markdown says '{variety}'")
 
@@ -213,87 +192,48 @@ def main():
 
     if args.update:
         print("\nUpdating markdown file with Trefle database information...")
-        content = md_data['content']
+        profile = md_data['profile']
         
         # Replace variety placeholder if it's the rosemary one
         if variety and "Tuscan Blue" in variety:
-            # Let's clean the variety field or set it
-            new_variety = "Greek Oregano" if "oregano" in plant_name.lower() else "Common"
-            content = re.sub(
-                rf'(\*\*(?::material-[a-z-]+:\s*)?Variety:\*\*)\s*{re.escape(variety)}',
-                rf'\1 {new_variety}',
-                content
-            )
+            new_variety = "Greek Oregano" if "oregano" in clean_plant_name.lower() else "Common"
+            profile.set_admonition_value("Variety", new_variety)
             print(f"- Replaced placeholder variety with '{new_variety}'.")
 
         # Ensure botanical_name, family, and genus are added to frontmatter
-        fm_match = re.search(r'^---\n(.*?)\n---', content, re.DOTALL)
-        if fm_match:
-            original_fm = fm_match.group(1)
-            new_fm_lines = []
-            
-            has_botanical = False
-            has_family = False
-            has_genus = False
-            
-            for line in original_fm.split('\n'):
-                if line.startswith("botanical_name:"):
-                    new_fm_lines.append(f"botanical_name: {db_botanical}")
-                    has_botanical = True
-                elif line.startswith("family:"):
-                    new_fm_lines.append(f"family: {db_data.get('family')}")
-                    has_family = True
-                elif line.startswith("genus:"):
-                    new_fm_lines.append(f"genus: {db_data.get('genus')}")
-                    has_genus = True
-                else:
-                    new_fm_lines.append(line)
-            
-            if not has_botanical:
-                new_fm_lines.append(f"botanical_name: {db_botanical}")
-            if not has_family:
-                new_fm_lines.append(f"family: {db_data.get('family')}")
-            if not has_genus:
-                new_fm_lines.append(f"genus: {db_data.get('genus')}")
-                
-            new_fm = "\n".join(new_fm_lines)
-            content = content.replace(original_fm, new_fm)
-            print("- Enriched frontmatter with botanical taxonomy.")
-        else:
-            new_fm = f"---\nbotanical_name: {db_botanical}\nfamily: {db_data.get('family')}\ngenus: {db_data.get('genus')}\n---\n\n"
-            content = new_fm + content
-            print("- Created frontmatter with botanical taxonomy.")
+        profile.frontmatter.botanical_name = db_botanical
+        profile.frontmatter.family = db_data.get('family')
+        profile.frontmatter.genus = db_data.get('genus')
+        print("- Enriched frontmatter with botanical taxonomy.")
 
         # Add botanical_name, family, genus details in the Admonition block
-        # Look for the Variety: line to insert right after or before it (allowing optional Material icons)
-        variety_pattern = r'([ \t]*\*\*(?::material-[a-z-]+:\s*)?Variety:\*\*.*?\n)'
-        var_match = re.search(variety_pattern, content)
-        if var_match:
-            original_var = var_match.group(1)
-            indent = re.match(r'[ \t]*', original_var).group(0)
-            # Check if botanical name is already in content
-            if "Botanical Name:" not in content:
-                insertion = f"{indent}**:material-tag-text-outline: Botanical Name:** *{db_botanical}*\n\n{indent}**:material-sitemap-outline: Family:** {db_data.get('family')}\n\n{indent}**:material-folder-outline: Genus:** {db_data.get('genus')}\n\n"
-                content = content.replace(original_var, insertion + original_var)
-                print("- Enriched admonition block with taxonomy details.")
+        # We set them on the admonition using standardized icons
+        if not profile.get_admonition_value("Botanical Name"):
+            profile.set_admonition_value("Botanical Name", f"*{db_botanical}*")
+        if not profile.get_admonition_value("Family"):
+            profile.set_admonition_value("Family", db_data.get('family'))
+        if not profile.get_admonition_value("Genus"):
+            profile.set_admonition_value("Genus", db_data.get('genus'))
+        print("- Enriched admonition block with taxonomy details.")
 
-        # Add Trefle information under notes
-        if "Trefle Database Info:" not in content:
-            notes_pattern = r'(## :pushpin: Notes\n)'
-            notes_match = re.search(notes_pattern, content)
-            if notes_match:
-                notes_header = notes_match.group(1)
-                trefle_notes = f"\n* **Trefle Database Info:**\n"
-                trefle_notes += f"    * **Scientific Name:** *{db_botanical}* ({db_data.get('family')} Family)\n"
-                if db_light:
-                    trefle_notes += f"    * **Light Level:** {db_light}/10\n"
-                if db_ph_min:
-                    trefle_notes += f"    * **Preferred Soil pH:** {db_ph_min} - {db_ph_max}\n"
-                content = content.replace(notes_header, notes_header + trefle_notes)
-                print("- Appended Trefle Database Info to Notes section.")
+        # Add Trefle information under notes section
+        notes_header = "## :pushpin: Notes"
+        if notes_header not in profile.sections:
+            profile.sections[notes_header] = ""
+            
+        notes_content = profile.sections[notes_header]
+        if "Trefle Database Info:" not in notes_content:
+            trefle_notes = f"\n* **Trefle Database Info:**\n"
+            trefle_notes += f"    * **Scientific Name:** *{db_botanical}* ({db_data.get('family')} Family)\n"
+            if db_light is not None:
+                trefle_notes += f"    * **Light Level:** {db_light}/10\n"
+            if db_ph_min is not None:
+                trefle_notes += f"    * **Preferred Soil pH:** {db_ph_min} - {db_ph_max}\n"
+            profile.sections[notes_header] = notes_content.rstrip() + "\n" + trefle_notes
+            print("- Appended Trefle Database Info to Notes section.")
 
         with open(args.filepath, 'w', encoding='utf-8') as f:
-            f.write(content)
+            f.write(profile.serialize())
         print(f"✅ File updated: {args.filepath}")
 
 if __name__ == "__main__":

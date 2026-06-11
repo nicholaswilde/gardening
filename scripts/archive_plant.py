@@ -5,6 +5,11 @@ import os
 import sys
 import re
 
+# Ensure the scripts directory is in the path to import lib.models
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+
+from lib.models import PlantProfile
+
 def main():
     if len(sys.argv) < 6:
         print("Usage: python3 scripts/archive_plant.py <plant-name> <year> <removed-date> <final-state> <outcome>")
@@ -30,7 +35,6 @@ def main():
     
     # 1. Rename Image File
     # Check if there is an image in docs/assets/images/
-    # We look for extensions: .webp, .png, .jpg, .jpeg
     img_exts = [".webp", ".png", ".jpg", ".jpeg"]
     found_img_ext = None
     orig_img_path = None
@@ -50,239 +54,181 @@ def main():
         os.rename(orig_img_path, new_img_path)
         print(f"- Renamed image file: {os.path.basename(orig_img_path)} -> {os.path.basename(new_img_path)}")
         
-    # 2. Update Markdown Content
+    # 2. Update Markdown Content using PlantProfile
     with open(orig_md_path, "r", encoding="utf-8") as f:
         content = f.read()
         
-    # Get plant display title
-    title_match = re.search(r'^#\s*(?::\w+:\s*)?(.+)', content, re.MULTILINE)
-    display_title = title_match.group(1).strip() if title_match else plant_name.replace('-', ' ').title()
-    
-    # Update Frontmatter tags and add removed date
-    fm_match = re.search(r'^---\n(.*?)\n---', content, re.DOTALL)
-    if fm_match:
-        orig_fm = fm_match.group(1)
-        fm_lines = orig_fm.split('\n')
-        new_fm_lines = []
-        has_removed = False
+    try:
+        profile = PlantProfile.from_markdown(content)
         
-        for line in fm_lines:
-            if line.startswith("tags:"):
-                # Parse tags
-                tags_match = re.match(r'^tags:\s*\[(.*?)\]', line)
-                if tags_match:
-                    tags = [t.strip() for t in tags_match.group(1).split(',') if t.strip()]
-                    # Remove 'active' and add 'archived'
-                    if "active" in tags:
-                        tags.remove("active")
-                    if "archived" not in tags:
-                        tags.append("archived")
-                    new_fm_lines.append(f"tags: [{', '.join(tags)}]")
-                else:
-                    new_fm_lines.append(line)
-            elif line.startswith("removed:"):
-                new_fm_lines.append(f"removed: {removed_date}")
-                has_removed = True
-            else:
-                new_fm_lines.append(line)
-                
-        if not has_removed:
-            new_fm_lines.append(f"removed: {removed_date}")
-            
-        content = content.replace(orig_fm, "\n".join(new_fm_lines))
+        # Get plant display title (clean title)
+        display_title = profile.title
+        display_title = re.sub(r'^:\w+:\s*', '', display_title) # strip starting emoji
+        display_title = re.sub(r'\s*\(\d+\)$', '', display_title).strip() # strip ending (1)
+        if not display_title:
+            display_title = plant_name.replace('-', ' ').title()
+        
+        # Update tags
+        tags = profile.frontmatter.tags or []
+        if "active" in tags:
+            tags.remove("active")
+        if "archived" not in tags:
+            tags.append("archived")
+        profile.frontmatter.tags = tags
+        profile.frontmatter.removed = removed_date
         print("- Updated frontmatter tags and added removed date.")
         
-    # Update Image References
-    if found_img_ext:
-        # Update inline image tag e.g. ![cilantro][1] -> ![cilantro-2025][1]
-        content = content.replace(f"![{plant_name}][", f"![{plant_name}-{year}][")
-        # Update link reference at the bottom e.g. [1]: <../assets/images/cilantro.webp>
+        # Update Image References
+        if found_img_ext:
+            # Update inline image tags in header_body and sections
+            profile.header_body = profile.header_body.replace(f"![{plant_name}][", f"![{plant_name}-{year}][")
+            for sec_heading, sec_content in profile.sections.items():
+                profile.sections[sec_heading] = sec_content.replace(f"![{plant_name}][", f"![{plant_name}-{year}][")
+                
+            # Update bottom image reference mappings
+            for label, path in list(profile.image_references.items()):
+                clean_path = path.strip("<>")
+                if f"{plant_name}{found_img_ext}" in clean_path:
+                    new_path = clean_path.replace(f"{plant_name}{found_img_ext}", f"{plant_name}-{year}{found_img_ext}")
+                    profile.image_references[label] = new_path
+            print("- Updated image references in markdown content.")
+            
+        # Update Admonition block using models
+        status_row_found = False
+        for row in profile.admonition_rows:
+            if row.key in ("Status", "Current State", "Final State"):
+                row.key = "Status"
+                row.value = final_state
+                row.icon = "material-list-status"
+                status_row_found = True
+                break
+        if not status_row_found:
+            profile.set_admonition_value("Status", final_state, "material-list-status")
+            
+        profile.set_admonition_value("Date Removed", removed_date, "material-calendar-remove-outline")
+        profile.set_admonition_value("Outcome", outcome, "material-chat-alert-outline")
+        print("- Updated admonition block with status, date removed, and outcome.")
+        
+        # Serialize the updated profile back to markdown
+        content = profile.serialize()
+        
+        # Update Cultivation Status Table to Final State table (Legacy Fallback)
         content = re.sub(
-            rf'(\[\d+\]:\s*<.*?/images/){re.escape(plant_name)}{re.escape(found_img_ext)}(>)',
-            rf'\g<1>{plant_name}-{year}{found_img_ext}\g<2>',
+            r'(\|\s*\*\*Current State\*\*\s*\|\s*)[^|\n]+',
+            r'\g<1>Final State',
             content
         )
-        print("- Updated image references in markdown content.")
         
-    # Update Admonition block if present
-    admon_pattern = r'(!!! example ""\n(?:(?:[ \t]+.*\n)|\n)+)'
-    admon_match = re.search(admon_pattern, content)
-    if admon_match:
-        original_block = admon_match.group(1)
-        block_lines = original_block.split('\n')
-        
-        status_line_idx = -1
-        indent = "    "
-        for idx, line in enumerate(block_lines):
-            if "Status:" in line or "Current State:" in line or "Final State:" in line:
-                status_line_idx = idx
-                indent_match = re.match(r'^([ \t]*)', line)
-                if indent_match:
-                    indent = indent_match.group(1)
-                break
-                
-        new_status_line = f"{indent}**:material-list-status: Status:** {final_state}"
-        new_removed_line = f"{indent}**:material-calendar-remove-outline: Date Removed:** {removed_date}"
-        new_outcome_line = f"{indent}**:material-chat-alert-outline: Outcome:** {outcome}"
-        
-        if status_line_idx != -1:
-            block_lines[status_line_idx] = new_status_line
-            # Insert Date Removed and Outcome after status line if they don't already exist
-            removed_exists = any("Date Removed:" in l for l in block_lines)
-            outcome_exists = any("Outcome:" in l for l in block_lines)
+        table_match = re.search(r'(\|\s*Attribute\s*\|\s*Details\s*\|.*?\n(?:\|[^\n]+\n)+)', content, re.IGNORECASE)
+        if table_match and ("Date Planted" in table_match.group(1) or "Current State" in table_match.group(1)):
+            orig_table = table_match.group(1)
+            table_lines = orig_table.split('\n')
+            new_table_lines = []
             
-            insert_offset = 1
-            if not removed_exists:
-                block_lines.insert(status_line_idx + insert_offset, new_removed_line)
-                insert_offset += 1
-            if not outcome_exists:
-                block_lines.insert(status_line_idx + insert_offset, new_outcome_line)
-        else:
-            # Append to admonition body
-            last_item_idx = len(block_lines) - 1
-            while last_item_idx >= 0 and not block_lines[last_item_idx].strip():
-                last_item_idx -= 1
-            if last_item_idx >= 0:
-                indent_match = re.match(r'^([ \t]*)', block_lines[last_item_idx])
-                if indent_match:
-                    indent = indent_match.group(1)
-                block_lines.insert(last_item_idx + 1, f"{indent}**:material-list-status: Status:** {final_state}")
-                block_lines.insert(last_item_idx + 2, f"{indent}**:material-calendar-remove-outline: Date Removed:** {removed_date}")
-                block_lines.insert(last_item_idx + 3, f"{indent}**:material-chat-alert-outline: Outcome:** {outcome}")
-                
-        new_block = "\n".join(block_lines)
-        content = content.replace(original_block, new_block)
-        print("- Updated admonition block with status, date removed, and outcome.")
-
-    # Update Cultivation Status Table to Final State table (Legacy Fallback)
-    # Replace Current State with Final State
-    content = re.sub(
-        r'(\|\s*\*\*Current State\*\*\s*\|\s*)[^|\n]+',
-        r'\g<1>Final State', # Or keep value, but we will replace table rows
-        content
-    )
-    
-    # Parse the table to modify rows
-    table_match = re.search(r'(\|\s*Attribute\s*\|\s*Details\s*\|.*?\n(?:\|[^\n]+\n)+)', content, re.IGNORECASE)
-    if table_match and ("Date Planted" in table_match.group(1) or "Current State" in table_match.group(1)):
-        orig_table = table_match.group(1)
-        table_lines = orig_table.split('\n')
-        new_table_lines = []
-        
-        has_removed_row = False
-        has_outcome_row = False
-        
-        for line in table_lines:
-            if not line.strip():
-                continue
-            if "Current State" in line:
-                # Replace with Final State
-                new_table_lines.append(f"| **Final State** | {final_state} |")
-            elif "Date Removed" in line:
-                new_table_lines.append(f"| **Date Removed** | {removed_date} |")
-                has_removed_row = True
-            elif "Outcome" in line:
-                new_table_lines.append(f"| **Outcome** | {outcome} |")
-                has_outcome_row = True
+            has_removed_row = False
+            has_outcome_row = False
+            
+            for line in table_lines:
+                if not line.strip():
+                    continue
+                if "Current State" in line:
+                    new_table_lines.append(f"| **Final State** | {final_state} |")
+                elif "Date Removed" in line:
+                    new_table_lines.append(f"| **Date Removed** | {removed_date} |")
+                    has_removed_row = True
+                elif "Outcome" in line:
+                    new_table_lines.append(f"| **Outcome** | {outcome} |")
+                    has_outcome_row = True
+                else:
+                    new_table_lines.append(line)
+                    
+            idx_to_insert = -1
+            for idx, line in enumerate(new_table_lines):
+                if "Date Planted" in line or "Planted" in line:
+                    idx_to_insert = idx
+                    break
+                    
+            if idx_to_insert != -1:
+                if not has_removed_row:
+                    new_table_lines.insert(idx_to_insert + 1, f"| **Date Removed** | {removed_date} |")
+                if not has_outcome_row:
+                    new_table_lines.append(f"| **Outcome** | {outcome} |")
             else:
-                new_table_lines.append(line)
-                
-        # Insert Date Removed and Outcome if not present
-        # Find index of Date Planted or Location to insert after
-        idx_to_insert = -1
-        for idx, line in enumerate(new_table_lines):
-            if "Date Planted" in line or "Planted" in line:
-                idx_to_insert = idx
-                break
-                
-        if idx_to_insert != -1:
-            if not has_removed_row:
-                new_table_lines.insert(idx_to_insert + 1, f"| **Date Removed** | {removed_date} |")
-            # Outcomes usually go at the end
-            if not has_outcome_row:
-                new_table_lines.append(f"| **Outcome** | {outcome} |")
-        else:
-            if not has_removed_row:
-                new_table_lines.append(f"| **Date Removed** | {removed_date} |")
-            if not has_outcome_row:
-                new_table_lines.append(f"| **Outcome** | {outcome} |")
-                
-        content = content.replace(orig_table, "\n".join(new_table_lines) + "\n")
-        print("- Updated Cultivation Status table with Final State, Date Removed, and Outcome.")
+                if not has_removed_row:
+                    new_table_lines.append(f"| **Date Removed** | {removed_date} |")
+                if not has_outcome_row:
+                    new_table_lines.append(f"| **Outcome** | {outcome} |")
+                    
+            content = content.replace(orig_table, "\n".join(new_table_lines) + "\n")
+            print("- Updated Cultivation Status table with Final State, Date Removed, and Outcome.")
+            
+        # Write the modified markdown content to the new path, and delete original
+        with open(new_md_path, "w", encoding="utf-8") as f:
+            f.write(content)
+        os.remove(orig_md_path)
+        print(f"- Created archived profile: {os.path.basename(new_md_path)}")
+        print(f"- Removed original profile: {os.path.basename(orig_md_path)}")
         
-    # Write the modified markdown content to the new path, and delete original
-    with open(new_md_path, "w", encoding="utf-8") as f:
-        f.write(content)
-    os.remove(orig_md_path)
-    print(f"- Created archived profile: {os.path.basename(new_md_path)}")
-    print(f"- Removed original profile: {os.path.basename(orig_md_path)}")
-    
-    # 3. Update zensical.toml Navigation
-    config_path = os.path.join(project_root, "zensical.toml")
-    if os.path.exists(config_path):
-        with open(config_path, "r", encoding="utf-8") as f:
-            config_content = f.read()
-            
-        modified_config = False
-        
-        # Remove entry from Plants list
-        # We search for: { "Title" = "plants/plant_name.md" }
-        plant_entry_pattern = rf'(\s*\{{\s*".*?"\s*=\s*"plants/{plant_name}\.md"\s*\}},?\n)'
-        nav_match = re.search(plant_entry_pattern, config_content)
-        if nav_match:
-            config_content = config_content.replace(nav_match.group(1), "")
-            print(f"- Removed '{display_title}' entry from Plants list in zensical.toml")
-            modified_config = True
-            
-        # Add entry to Archive section under target year
-        # Find Archive = [ ... ]
-        archive_pattern = r'(Archive\s*=\s*\[\s*\n(.*?)\n\s*\]\s*,?\s*\n)'
-        archive_match = re.search(archive_pattern, config_content, re.DOTALL)
-        if archive_match:
-            entire_archive_block = archive_match.group(1)
-            archive_body = archive_match.group(2)
-            
-            # Check if the year block e.g. { "2025" = [ ... ] } already exists
-            year_pattern = rf'(\{{\s*"{year}"\s*=\s*\[\s*\n(.*?)\n\s*\]\s*\}})'
-            year_match = re.search(year_pattern, archive_body, re.DOTALL)
-            
-            if year_match:
-                # Add to existing year block
-                entire_year_block = year_match.group(1)
-                year_body = year_match.group(2)
+        # 3. Update zensical.toml Navigation
+        config_path = os.path.join(project_root, "zensical.toml")
+        if os.path.exists(config_path):
+            with open(config_path, "r", encoding="utf-8") as f:
+                config_content = f.read()
                 
-                # Split entries, add new entry, sort alphabetically
-                entries = [line.strip() for line in year_body.split('\n') if line.strip()]
-                new_entry = f'{{ "{display_title}" = "plants/{plant_name}-{year}.md" }},'
-                entries.append(new_entry)
-                
-                # Deduplicate and sort
-                # A simple sort is enough since they are formatted consistently
-                sorted_entries = sorted(list(set(entries)))
-                new_year_body = "\n".join(f"  {entry}" for entry in sorted_entries)
-                
-                new_year_block = f'{{ "{year}" = [\n{new_year_body}\n  ] }}'
-                new_archive_body = archive_body.replace(entire_year_block, new_year_block)
-                new_archive_block = entire_archive_block.replace(archive_body, new_archive_body)
-                config_content = config_content.replace(entire_archive_block, new_archive_block)
-                print(f"- Added '{display_title}' entry to Archive under {year} in zensical.toml")
-                modified_config = True
-            else:
-                # Create a new year block under Archive
-                new_year_block = f'  {{ "{year}" = [\n    {{ "{display_title}" = "plants/{plant_name}-{year}.md" }}\n  ] }},\n'
-                # Insert at the beginning of the Archive body
-                new_archive_body = new_year_block + archive_body
-                new_archive_block = entire_archive_block.replace(archive_body, new_archive_body)
-                config_content = config_content.replace(entire_archive_block, new_archive_block)
-                print(f"- Created new Archive year category '{year}' and added '{display_title}' in zensical.toml")
+            modified_config = False
+            
+            # Remove entry from Plants list
+            plant_entry_pattern = rf'(\s*\{{\s*".*?"\s*=\s*"plants/{plant_name}\.md"\s*\}},?\n)'
+            nav_match = re.search(plant_entry_pattern, config_content)
+            if nav_match:
+                config_content = config_content.replace(nav_match.group(1), "")
+                print(f"- Removed '{display_title}' entry from Plants list in zensical.toml")
                 modified_config = True
                 
-        if modified_config:
-            with open(config_path, "w", encoding="utf-8") as f:
-                f.write(config_content)
-            print(f"✅ Successfully updated zensical.toml")
-            
-    print("🎉 Archiving complete!")
+            # Add entry to Archive section under target year
+            archive_pattern = r'(Archive\s*=\s*\[\s*\n(.*?)\n\s*\]\s*,?\s*\n)'
+            archive_match = re.search(archive_pattern, config_content, re.DOTALL)
+            if archive_match:
+                entire_archive_block = archive_match.group(1)
+                archive_body = archive_match.group(2)
+                
+                year_pattern = rf'(\{{\s*"{year}"\s*=\s*\[\s*\n(.*?)\n\s*\]\s*\}})'
+                year_match = re.search(year_pattern, archive_body, re.DOTALL)
+                
+                if year_match:
+                    entire_year_block = year_match.group(1)
+                    year_body = year_match.group(2)
+                    
+                    entries = [line.strip() for line in year_body.split('\n') if line.strip()]
+                    new_entry = f'{{ "{display_title}" = "plants/{plant_name}-{year}.md" }},'
+                    entries.append(new_entry)
+                    
+                    sorted_entries = sorted(list(set(entries)))
+                    new_year_body = "\n".join(f"  {entry}" for entry in sorted_entries)
+                    
+                    new_year_block = f'{{ "{year}" = [\n{new_year_body}\n  ] }}'
+                    new_archive_body = archive_body.replace(entire_year_block, new_year_block)
+                    new_archive_block = entire_archive_block.replace(archive_body, new_archive_body)
+                    config_content = config_content.replace(entire_archive_block, new_archive_block)
+                    print(f"- Added '{display_title}' entry to Archive under {year} in zensical.toml")
+                    modified_config = True
+                else:
+                    new_year_block = f'  {{ "{year}" = [\n    {{ "{display_title}" = "plants/{plant_name}-{year}.md" }}\n  ] }},\n'
+                    new_archive_body = new_year_block + archive_body
+                    new_archive_block = entire_archive_block.replace(archive_body, new_archive_body)
+                    config_content = config_content.replace(entire_archive_block, new_archive_block)
+                    print(f"- Created new Archive year category '{year}' and added '{display_title}' in zensical.toml")
+                    modified_config = True
+                    
+            if modified_config:
+                with open(config_path, "w", encoding="utf-8") as f:
+                    f.write(config_content)
+                print(f"✅ Successfully updated zensical.toml")
+                
+        print("🎉 Archiving complete!")
+    except Exception as e:
+        print(f"Error archiving plant: {e}")
+        sys.exit(1)
 
 if __name__ == "__main__":
     main()

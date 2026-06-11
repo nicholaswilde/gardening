@@ -5,6 +5,11 @@ import os
 import sys
 import re
 
+# Ensure the scripts directory is in the path to import lib.models
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+
+from lib.models import PlantProfile
+
 # Standard origin mappings matching style-guide.md
 ORIGIN_MAPPINGS = {
     "seed-indoor": {
@@ -101,89 +106,47 @@ def main():
     with open(filepath, "r", encoding="utf-8") as f:
         content = f.read()
         
-    modified = False
-    
-    # 1. Update admonition block
-    # Check if there is an admonition block
-    pattern = r'(!!! example ""\n(?:(?:[ \t]+.*\n)|\n)+)'
-    match = re.search(pattern, content)
-    if match:
-        original_block = match.group(1)
-        block_lines = original_block.split('\n')
+    try:
+        profile = PlantProfile.from_markdown(content)
         
-        # Check if Origin already exists in the admonition block
-        origin_line_idx = -1
-        indent = "    "
-        for idx, line in enumerate(block_lines):
-            if "Origin:" in line:
-                origin_line_idx = idx
-                # Capture indentation
-                indent_match = re.match(r'^([ \t]*)', line)
-                if indent_match:
-                    indent = indent_match.group(1)
-                break
-                
-        if origin_line_idx != -1:
-            # Update existing line
-            block_lines[origin_line_idx] = f"{indent}**{icon} Origin:** {term}"
-            print(f"- Updated existing Origin in admonition block to: {term}")
-        else:
-            # Add to the end of admonition block (before H2 or end of block)
-            # Find the last non-empty line of the admonition body
-            last_item_idx = len(block_lines) - 1
-            while last_item_idx >= 0 and not block_lines[last_item_idx].strip():
-                last_item_idx -= 1
-                
-            if last_item_idx >= 0:
-                # Capture indentation from the last item
-                indent_match = re.match(r'^([ \t]*)', block_lines[last_item_idx])
-                if indent_match:
-                    indent = indent_match.group(1)
-                
-                # Insert empty line and then the new Origin line
-                block_lines.insert(last_item_idx + 1, "")
-                block_lines.insert(last_item_idx + 2, f"{indent}**{icon} Origin:** {term}")
-                print(f"- Appended Origin to admonition block: {term}")
-                
-        new_block = "\n".join(block_lines)
-        if original_block != new_block:
-            content = content.replace(original_block, new_block)
-            modified = True
-            
-    # 2. Update Cultivation Status table
-    # Match: | **Origin** | ... |
-    table_pattern = r'(\|\s*\*\*Origin\*\*\s*\|\s*)[^|\n]+(\s*\|?)'
-    if re.search(table_pattern, content):
-        content = re.sub(table_pattern, rf'\g<1>{term}\g<2>', content)
-        print(f"- Updated Origin in Cultivation Status table to: {term}")
+        # Update origin in the admonition block using the model
+        profile.set_admonition_value("Origin", term, icon.strip(":"))
+        print(f"- Updated Origin in admonition block to: {term}")
+        
+        # Serialize the updated profile
+        content = profile.serialize()
         modified = True
-    else:
-        # If the table doesn't have an Origin row, find the Cultivation Status table and add it
-        table_match = re.search(r'(\|\s*Attribute\s*\|\s*Details\s*\|.*?\n(?:\|[^\n]+\n)+)', content, re.IGNORECASE)
-        if table_match and ("Date Planted" in table_match.group(1) or "Current State" in table_match.group(1)):
-            original_table = table_match.group(1)
-            table_lines = original_table.split('\n')
-            
-            # Insert Origin row at the end of the table
-            last_line_idx = len(table_lines) - 1
-            while last_line_idx >= 0 and not table_lines[last_line_idx].strip():
-                last_line_idx -= 1
+        
+        # Update Cultivation Status table in the content if it exists (legacy fallback)
+        table_pattern = r'(\|\s*\*\*Origin\*\*\s*\|\s*)[^|\n]+(\s*\|?)'
+        if re.search(table_pattern, content):
+            content = re.sub(table_pattern, rf'\g<1>{term}\g<2>', content)
+            print(f"- Updated Origin in Cultivation Status table to: {term}")
+        else:
+            # If the table doesn't have an Origin row, find the Cultivation Status table and add it
+            table_match = re.search(r'(\|\s*Attribute\s*\|\s*Details\s*\|.*?\n(?:\|[^\n]+\n)+)', content, re.IGNORECASE)
+            if table_match and ("Date Planted" in table_match.group(1) or "Current State" in table_match.group(1)):
+                original_table = table_match.group(1)
+                table_lines = original_table.split('\n')
                 
-            if last_line_idx >= 0:
-                # Add row
-                new_row = "| **Origin** | {} |".format(term)
-                table_lines.insert(last_line_idx + 1, new_row)
-                new_table = "\n".join(table_lines)
-                content = content.replace(original_table, new_table)
-                print(f"- Added Origin row to Cultivation Status table: {term}")
-                modified = True
-                
-    if modified:
+                # Insert Origin row at the end of the table
+                last_line_idx = len(table_lines) - 1
+                while last_line_idx >= 0 and not table_lines[last_line_idx].strip():
+                    last_line_idx -= 1
+                    
+                if last_line_idx >= 0:
+                    new_row = "| **Origin** | {} |".format(term)
+                    table_lines.insert(last_line_idx + 1, new_row)
+                    new_table = "\n".join(table_lines)
+                    content = content.replace(original_table, new_table)
+                    print(f"- Added Origin row to Cultivation Status table: {term}")
+                    
         with open(filepath, "w", encoding="utf-8") as f:
             f.write(content)
         print(f"✅ Successfully updated {filepath}")
-    else:
-        print(f"No changes needed for {filepath}")
+    except Exception as e:
+        print(f"Error updating origin: {e}")
+        sys.exit(1)
 
 if __name__ == "__main__":
     main()
