@@ -13,6 +13,8 @@ status: Active
 
     ![dracaena-janet-craig-1][1]{ width="400" loading=lazy }
 
+![dracaena-janet-craig-1-moisture-2026-06-11][2]{ width="400" loading=lazy }
+
 !!! example ""
 
     **:material-leaf: Type:** Houseplant (Dracaena)
@@ -31,6 +33,7 @@ status: Active
 
 ## :memo: Log & Observations
 
+* **2026-06-11:** A graph of the soilure moisture.
 * **2026-06-09:** Initial logging.
 
 ## :pushpin: Notes
@@ -50,4 +53,5 @@ status: Active
 See the full [Dracaena Care Guide](../reference/care-guides/dracaena.md) for detailed light and watering protocols.
 
 [1]: <../assets/images/dracaena-janet-craig-1-2026-06-10.webp>
+[2]: <../assets/images/dracaena-janet-craig-1-2026-06-11.webp>
 
