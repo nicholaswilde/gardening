@@ -5,6 +5,8 @@
 - **Python**: >=3.14 (main programming language for build scripts and templating)
 - **Zensical**: >=0.0.44 (static site engine and documentation formatter)
 - **Jinja2**: >=3.1.6 (templating engine for generating plant/bed files)
+- **Pydantic**: >=2.13.4 (data validation and settings management using python type annotations)
+- **python-frontmatter**: >=1.3.0 (parsing and writing markdown files with YAML frontmatter)
 - **Trefle API**: Used to lookup and verify botanical taxonomy and metadata (e.g., scientific name, family, genus,
   preferred light, soil pH)
 - **GitHub CLI (`gh`)**: Used to interface with GitHub to manage issues, pull requests, and automate repository workflows.
