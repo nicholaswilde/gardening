@@ -23,7 +23,7 @@ def main():
         sys.exit(1)
         
     current_date = datetime.now().strftime("%Y-%m-%d")
-    new_entry = f"* **{current_date}**: {observation}\n"
+    new_entry = f"* **{current_date}:** {observation}\n"
     
     with open(plant_file, "r", encoding="utf-8") as f:
         lines = f.readlines()
