@@ -1,0 +1,8 @@
+{
+  "track_id": "companion_planting_validator_20260611",
+  "type": "feature",
+  "status": "new",
+  "created_at": "2026-06-11T12:47:00Z",
+  "updated_at": "2026-06-11T12:47:00Z",
+  "description": "Validate raised bed crops against a JSON database of companion rules and rotation history"
+}

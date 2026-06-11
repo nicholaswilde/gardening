@@ -1,0 +1,8 @@
+{
+  "track_id": "maintenance_scheduler_20260611",
+  "type": "feature",
+  "status": "new",
+  "created_at": "2026-06-11T12:47:00Z",
+  "updated_at": "2026-06-11T12:47:00Z",
+  "description": "Generate a maintenance schedule for active crops based on care intervals parsed from plant frontmatter and logs"
+}
