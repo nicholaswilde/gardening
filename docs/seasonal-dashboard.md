@@ -31,6 +31,7 @@ An auto-generated overview of all crops sorted by their optimal planting window.
 * [Foxtail Fern](plants/foxtail-fern.md)
 * [French Lavender](plants/french-lavender.md)
 * [Iceburg Rose](plants/iceburg-rose.md)
+* [Impatiens](plants/impatiens.md)
 * [Large Wild Iris](plants/large-wild-iris.md)
 * [Lily Turf](plants/lily-turf.md)
 * [Trailing Lantana](plants/trailing-lantana.md)
