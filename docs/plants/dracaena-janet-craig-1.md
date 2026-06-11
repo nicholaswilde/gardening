@@ -11,9 +11,9 @@ status: Active
 
 === "2026-06-10"
 
-    ![dracaena-janet-craig-1][1]{ width="400" loading=lazy }
+    ![dracaena-janet-craig-1][1]{ loading=lazy }
 
-![dracaena-janet-craig-1-moisture-2026-06-11][2]{ width="400" loading=lazy }
+![dracaena-janet-craig-1-moisture-2026-06-11][2]{ loading=lazy }
 
 !!! example ""
 
@@ -40,7 +40,7 @@ status: Active
 
 * **Sensors:** Monitoring temperature and soil moisture levels using a Third Reality 3RSM0147Z sensor.
 
-## Soil Management
+## :potted_plant: Soil Management
 
 * **2026-06-09:** Initial setup.
 

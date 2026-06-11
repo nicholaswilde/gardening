@@ -19,6 +19,7 @@ Whenever creating top-level (`#`) or secondary (`##`) headings, prepend the titl
 | **Hardware Logs** (H2) | `:wrench:` | `## :wrench: Maintenance & Hardware` |
 | **Future Planning** (H2) | `:rocket:` | `## :rocket: Planned Upgrades` |
 | **Water Zones** (H2) | `:droplet:` | `## :droplet: Zone Configuration` |
+| **Soil Management** (H2) | `:potted_plant:` | `## :potted_plant: Soil Management` |
 
 ## 🛠️ Metadata & Admonitions (Material Icons)
 
