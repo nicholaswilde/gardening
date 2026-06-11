@@ -9,6 +9,10 @@ genus: Festuca
 
 # :seedling: Marathon II Grass
 
+=== "2026-06-10"
+
+    ![marathon-ii-grass][2]{ width="400" loading=lazy }
+
 === "2026-06-07"
 
     ![marathon-ii-grass][1]{ width="400" loading=lazy }
@@ -50,3 +54,4 @@ genus: Festuca
     * **Preferred Soil pH:** 5.5 - 8.5
 
 [1]: <../assets/images/marathon-ii-grass-2026-06-07.webp>
+[2]: <../assets/images/marathon-ii-grass-2026-06-10.webp>
