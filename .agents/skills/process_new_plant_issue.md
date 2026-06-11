@@ -2,7 +2,7 @@
 
 ## Description
 
-This skill instructs the agent on how to use the GitHub CLI (`gh`) to fetch and parse a new plant issue submitted via the `🌱 New Plant Entry` template, automatically generate the plant profile, download/optimize the image, verify taxonomy, and submit a Pull Request.
+This skill instructs the agent on how to use the GitHub CLI (`gh`) to fetch and parse a new plant issue submitted via the `🌱 New Plant Entry` template, automatically generate the plant profile, download/optimize the image, verify taxonomy, and commit and push changes directly to the `main` branch.
 
 ## Protocol
 
@@ -19,10 +19,11 @@ This skill instructs the agent on how to use the GitHub CLI (`gh`) to fetch and 
    - **Garden Location / Zone**: E.g., `Indoor Shelf`
    - **Plant Image**: Parse the URL of the uploaded image (e.g., from `https://github.com/user-attachments/...` or `https://github.com/.../assets/...`).
    - **Initial Care Notes**: E.g., `Planted in peat moss.`
-3. **Setup Branch:**
-   Create a new git branch for the issue:
+3. **Verify Main Branch:**
+   Ensure you are working on the `main` branch:
    ```bash
-   git checkout -b issue-<issue_number>-new-plant
+   git checkout main
+   git pull origin main
    ```
 4. **Download and Optimize Image:**
    - Download the image from the parsed URL using `curl` or `wget` to `docs/assets/images/<plant_name_kebab>.<ext>` (e.g., `.png` or `.jpg`).
@@ -52,18 +53,21 @@ This skill instructs the agent on how to use the GitHub CLI (`gh`) to fetch and 
      ```
    - **Log Section**:
      Ensure the initial log matches the planting date and initial notes.
-7. **Add to Navigation:**
-   Add the new plant to `zensical.toml` under `[[project.nav]]` `Plants` section in alphabetical order.
+7. **Add to Navigation & Update Dashboard:**
+   - Add the new plant to `zensical.toml` under `[[project.nav]]` `Plants` section in alphabetical order.
+   - Update the seasonal dashboard:
+     ```bash
+     task dashboard
+     ```
 8. **Run Quality Checks:**
    ```bash
    rumdl check docs/plants/<plant_name_kebab>.md
    task spellcheck-file FILE=docs/plants/<plant_name_kebab>.md
    task linkcheck-file FILE=docs/plants/<plant_name_kebab>.md
    ```
-9. **Commit, Push & Create PR:**
+9. **Commit & Push directly to main:**
    ```bash
-   git add docs/plants/<plant_name_kebab>.md docs/assets/images/<plant_name_kebab>.webp zensical.toml
+   git add docs/plants/<plant_name_kebab>.md docs/assets/images/<plant_name_kebab>.webp zensical.toml docs/seasonal-dashboard.md
    git commit -m "feat(plants): add <plant_name> (Closed #<issue_number>)"
-   git push origin issue-<issue_number>-new-plant
-   gh pr create --title "feat: Add <plant_name> (closes #<issue_number>)" --body "Automatically processed from issue #<issue_number> using Antigravity." --label "new-plant"
+   git push origin main
    ```
