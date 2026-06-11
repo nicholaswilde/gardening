@@ -12,6 +12,10 @@ An auto-generated overview of all crops sorted by their optimal planting window.
 * [Sungold Tomato](plants/sungold-tomato.md)
 * [Thyme](plants/thyme.md)
 
+## :cherry_blossom: Late Spring
+
+* [Hydrangea](plants/hydrangea.md)
+
 ## :sun_with_face: Early Summer
 
 * [Mint](plants/mint.md)
