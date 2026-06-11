@@ -22,6 +22,7 @@ Plants = [
   { "Butterfly Bush" = "plants/butterfly-bush.md" },
   { "Coral Bells" = "plants/coral-bells.md" },
   { "Crape Myrtle" = "plants/crape-myrtle.md" },
+  { "Dwarf Umbrella" = "plants/dwarf-umbrella.md" },
   { "Fern Pine" = "plants/fern-pine.md" },
   { "Foxtail Fern" = "plants/foxtail-fern.md" },
   { "French Lavender" = "plants/french-lavender.md" },
