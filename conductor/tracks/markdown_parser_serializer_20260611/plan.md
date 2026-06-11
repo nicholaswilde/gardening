@@ -1,10 +1,10 @@
 # Implementation Plan: Markdown Parser & Serializer
 
-## Phase 1: Setup and Model Implementation
-- [ ] Task: Add `python-frontmatter` and `pydantic` dependencies to `pyproject.toml` and sync environment
-- [ ] Task: Create `scripts/lib/models.py` defining `PlantProfile` and `LogEntry` models
-- [ ] Task: Write comprehensive unit tests validating parsing, modification, and saving behaviors
-- [ ] Task: Conductor - User Manual Verification 'Phase 1' (Protocol in workflow.md)
+## Phase 1: Setup and Model Implementation [checkpoint: e318099]
+- [x] Task: Add `python-frontmatter` and `pydantic` dependencies to `pyproject.toml` and sync environment
+- [x] Task: Create `scripts/lib/models.py` defining `PlantProfile` and `LogEntry` models
+- [x] Task: Write comprehensive unit tests validating parsing, modification, and saving behaviors
+- [x] Task: Conductor - User Manual Verification 'Phase 1' (Protocol in workflow.md)
 
 ## Phase 2: Refactor Existing Scripts
 - [ ] Task: Refactor `scripts/add_log_entry.py` to use Pydantic models
