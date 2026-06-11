@@ -31,4 +31,5 @@ An auto-generated overview of all crops sorted by their optimal planting window.
 * [Iceburg Rose](plants/iceburg-rose.md)
 * [Large Wild Iris](plants/large-wild-iris.md)
 * [Lily Turf](plants/lily-turf.md)
+* [Trailing Lantana](plants/trailing-lantana.md)
 * [Western Redbud](plants/western-redbud.md)

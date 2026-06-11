@@ -36,6 +36,7 @@ Plants = [
   { "Rosemary" = "plants/rosemary.md" },
   { "Sungold Tomato" = "plants/sungold-tomato.md" },
   { "Thyme" = "plants/thyme.md" },
+  { "Trailing Lantana" = "plants/trailing-lantana.md" },
   { "Western Redbud" = "plants/western-redbud.md" }
 ]
 
