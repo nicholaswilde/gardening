@@ -1,0 +1,68 @@
+name: Deploy Zensical Site to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch: # Allows you to manually trigger a build from the GitHub UI
+
+# Sets the necessary permissions for GitHub Pages deployment
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Prevents multiple builds from colliding
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+
+      - name: Install Task
+        uses: arduino/setup-task@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12" 
+
+      # (Optional) Install your site dependencies if you aren't doing it inside the task build
+      # - name: Install Dependencies
+      #   run: uv pip install -r requirements.txt 
+
+      # 1. Ephemeral Generation: Creates seasonal-dashboard.md on the runner only
+      - name: Build Seasonal Dashboard
+        run: task dashboard
+
+      # 2. Build Site: Zensical parses the newly generated dashboard into HTML
+      - name: Build Site
+        run: task build
+
+      # 3. Upload Artifact: Packages the built HTML for Pages
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # Change this if Zensical outputs to a folder other than 'site' (e.g., 'public' or 'dist')
+          path: './site' 
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
