@@ -45,5 +45,6 @@ An auto-generated overview of all crops sorted by their optimal planting window.
 * [Impatiens](plants/impatiens.md)
 * [Large Wild Iris](plants/large-wild-iris.md)
 * [Lily Turf](plants/lily-turf.md)
+* [Red Sweet Pepper](plants/red-sweet-pepper-2025.md)
 * [Trailing Lantana](plants/trailing-lantana.md)
 * [Western Redbud](plants/western-redbud.md)
