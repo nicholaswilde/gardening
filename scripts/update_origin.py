@@ -160,7 +160,7 @@ def main():
     else:
         # If the table doesn't have an Origin row, find the Cultivation Status table and add it
         table_match = re.search(r'(\|\s*Attribute\s*\|\s*Details\s*\|.*?\n(?:\|[^\n]+\n)+)', content, re.IGNORECASE)
-        if table_match:
+        if table_match and ("Date Planted" in table_match.group(1) or "Current State" in table_match.group(1)):
             original_table = table_match.group(1)
             table_lines = original_table.split('\n')
             

@@ -18,7 +18,8 @@ An auto-generated overview of all crops sorted by their optimal planting window.
 
 ## :maple_leaf: Mid-Fall
 
-* [Crape Myrtle Tree](plants/crape-myrtle-tree.md)
+* [Crape Myrtle](plants/crape-myrtle.md)
+* [Indian Hawthorn](plants/indian-hawthorn.md)
 * [Marathon II Grass](plants/marathon-ii-grass.md)
 
 ## :snowflake: Late Fall / Winter

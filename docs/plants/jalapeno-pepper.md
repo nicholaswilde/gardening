@@ -24,15 +24,13 @@ genus: Capsicum
 
     **:material-storefront-outline: Origin:** Nursery Start
 
-## :clipboard: Cultivation Status
+    **:material-map-marker-outline: Location:** Raised Bed 3
 
-| Attribute | Details |
-| :--- | :--- |
-| **Current State** | Active Growth |
-| **Date Planted** | 2026-03-15 |
-| **Season Planted** | Early Spring |
-| **Location** | Raised Bed 3 |
-| **Origin** | Nursery Start|
+    **:material-calendar-check-outline: Date Planted:** 2026-03-15 (Early Spring)
+
+    **:material-list-status: Status:** Active Growth
+
+## :clipboard: Cultivation Status
 
 ## :memo: Log & Observations
 

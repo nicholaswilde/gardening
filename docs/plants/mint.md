@@ -27,15 +27,17 @@ genus: Mentha
 
     **:material-seed: Origin:** Seed (Indoor Start)
 
-## :clipboard: Cultivation Status
+    **:material-map-marker-outline: Location:** Backyard Pot 1
 
-| Attribute | Details |
-| :--- | :--- |
-| **Current State** | Active Growth |
-| **Date Planted** | 2026-06-08 |
-| **Season Planted** | Early Summer |
-| **Location** | Backyard Pot 1 |
-| **Origin** | Seed (Indoor Start) |
+    **:material-calendar-check-outline: Date Planted:** 2026-06-08 (Early Summer)
+
+    **:material-list-status: Status:** Active Growth
+
+    **:material-weather-sunny: Sunlight:** Full sun to partial shade.
+
+    **:material-texture: Soil:** Moist, well-draining soil rich in organic matter.
+
+## :clipboard: Cultivation Status
 
 ## :memo: Log & Observations
 
@@ -47,7 +49,5 @@ genus: Mentha
     * **Scientific Name:** *Mentha spicata* (Lamiaceae Family)
     * **Light Level:** 7/10
     * **Preferred Soil pH:** 6.5 - 7.0
-* **Sunlight:** Full sun to partial shade.
-* **Soil:** Moist, well-draining soil rich in organic matter.
 
 [1]: <../assets/images/mint-2026-06-07.webp>

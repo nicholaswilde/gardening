@@ -19,19 +19,15 @@ status: Active
 
     **:material-dna: Variety:** 'Janet Craig'
 
-    **:material-map-marker-outline: Location:** Bedroom
-
     **:material-storefront-outline: Origin:** Nursery Start
 
-## :clipboard: Cultivation Status
+    **:material-map-marker-outline: Location:** Master Bedroom
 
-| Attribute | Details |
-| :--- | :--- |
-| **Current State** | Active Growth |
-| **Date Planted** | 2026-06-09 |
-| **Season Planted** | Unknown |
-| **Location** | Master Bedroom |
-| **Origin** | Nursery Start |
+    **:material-calendar-check-outline: Date Planted:** 2026-06-09 (Unknown)
+
+    **:material-list-status: Status:** Active Growth
+
+## :clipboard: Cultivation Status
 
 ## :memo: Log & Observations
 

@@ -13,7 +13,6 @@ genus: Rhaphiolepis
 
     ![indian-hawthorn][1]{ width="400" loading=lazy }
 
-
 !!! example ""
 
     **:material-leaf: Type:** Evergreen Shrub
@@ -28,15 +27,13 @@ genus: Rhaphiolepis
 
     **:material-storefront-outline: Origin:** Nursery Start
 
-## :clipboard: Cultivation Status
+    **:material-map-marker-outline: Location:** Front Yard
 
-| Attribute | Details |
-| :--- | :--- |
-| **Current State** | Active Growth |
-| **Date Planted** | 2021-11-01 |
-| **Season Planted** | Mid-Fall |
-| **Location** | Front Yard |
-| **Origin** | Nursery Start |
+    **:material-calendar-check-outline: Date Planted:** 2021-11-01 (Mid-Fall)
+
+    **:material-list-status: Status:** Active Growth
+
+## :clipboard: Cultivation Status
 
 ## :memo: Log & Observations
 
@@ -46,8 +43,5 @@ genus: Rhaphiolepis
 
 * **Trefle Database Info:**
     * **Scientific Name:** *Rhaphiolepis indica* (Rosaceae Family)
-
-* **Sunlight:** 
-* **Soil:** 
 
 [1]: <../assets/images/indian-hawthorn-2026-06-10.webp>

@@ -27,23 +27,22 @@ genus: Asparagus
 
     **:material-storefront-outline: Origin:** Nursery Start
 
-## :clipboard: Cultivation Status
+    **:material-map-marker-outline: Location:** Backyard
 
-| Attribute | Details |
-| :--- | :--- |
-| **Current State** | Active Growth |
-| **Date Planted** | 2021-11-01 |
-| **Season Planted** | Late Fall / Winter |
-| **Location** | Backyard |
-| **Origin** | Nursery Start |
+    **:material-calendar-check-outline: Date Planted:** 2021-11-01 (Late Fall / Winter)
+
+    **:material-list-status: Status:** Active Growth
+
+    **:material-weather-sunny: Sunlight:** Partial shade.
+
+    **:material-texture: Soil:** Rich, moist, well-draining soil.
+
+## :clipboard: Cultivation Status
 
 ## :memo: Log & Observations
 
 * **2021-11-01:** Initial logging. Planted in the Backyard.
 
 ## :pushpin: Notes
-
-* **Sunlight:** Partial shade.
-* **Soil:** Rich, moist, well-draining soil.
 
 [1]: <../assets/images/foxtail-fern-2026-06-10.webp>

@@ -27,15 +27,17 @@ genus: Rosmarinus
 
     **:material-gift-outline: Origin:** Gifted transplant
 
-## :clipboard: Cultivation Status
+    **:material-map-marker-outline: Location:** Raised Bed 2
 
-| Attribute | Details |
-| :--- | :--- |
-| **Current State** | Active Growth |
-| **Date Planted** | 2026-03-15 |
-| **Season Planted** | Early Spring |
-| **Location** | Raised Bed 2 |
-| **Origin** | Gifted transplant|
+    **:material-calendar-check-outline: Date Planted:** 2026-03-15 (Early Spring)
+
+    **:material-list-status: Status:** Active Growth
+
+    **:material-weather-sunny: Sunlight:** Full sun.
+
+    **:material-texture: Soil:** Needs excellent drainage; added extra perlite to the planting hole.
+
+## :clipboard: Cultivation Status
 
 ## :memo: Log & Observations
 
@@ -47,7 +49,5 @@ genus: Rosmarinus
 
 * **Trefle Database Info:**
     * **Scientific Name:** *Rosmarinus officinalis* (Lamiaceae Family)
-* **Sunlight:** Full sun.
-* **Soil:** Needs excellent drainage; added extra perlite to the planting hole.
 
 [1]: <../assets/images/rosemary-2026-06-07.webp>

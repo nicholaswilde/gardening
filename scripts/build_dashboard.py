@@ -25,8 +25,10 @@ def build_dashboard():
             
         # Parse title from H1 header
         title_match = re.search(r'^#\s+(?::\w+:\s*)?(.+)', content, re.MULTILINE)
-        # Parse season from the Cultivation Status table
+        # Parse season from the Cultivation Status table or the new admonition block
         season_match = re.search(r'\|\s*\*\*Season Planted\*\*\s*\|\s*([^|]+)\s*\|', content)
+        if not season_match:
+            season_match = re.search(r'\*\*(?::material-[a-z-]+:\s*)?Date Planted:\*\*\s*[^\n\(]+\(([^)]+)\)', content)
         
         if title_match and season_match:
             title = title_match.group(1).strip()

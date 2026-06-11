@@ -104,7 +104,57 @@ def main():
         )
         print("- Updated image references in markdown content.")
         
-    # Update Cultivation Status Table to Final State table
+    # Update Admonition block if present
+    admon_pattern = r'(!!! example ""\n(?:(?:[ \t]+.*\n)|\n)+)'
+    admon_match = re.search(admon_pattern, content)
+    if admon_match:
+        original_block = admon_match.group(1)
+        block_lines = original_block.split('\n')
+        
+        status_line_idx = -1
+        indent = "    "
+        for idx, line in enumerate(block_lines):
+            if "Status:" in line or "Current State:" in line or "Final State:" in line:
+                status_line_idx = idx
+                indent_match = re.match(r'^([ \t]*)', line)
+                if indent_match:
+                    indent = indent_match.group(1)
+                break
+                
+        new_status_line = f"{indent}**:material-list-status: Status:** {final_state}"
+        new_removed_line = f"{indent}**:material-calendar-remove-outline: Date Removed:** {removed_date}"
+        new_outcome_line = f"{indent}**:material-chat-alert-outline: Outcome:** {outcome}"
+        
+        if status_line_idx != -1:
+            block_lines[status_line_idx] = new_status_line
+            # Insert Date Removed and Outcome after status line if they don't already exist
+            removed_exists = any("Date Removed:" in l for l in block_lines)
+            outcome_exists = any("Outcome:" in l for l in block_lines)
+            
+            insert_offset = 1
+            if not removed_exists:
+                block_lines.insert(status_line_idx + insert_offset, new_removed_line)
+                insert_offset += 1
+            if not outcome_exists:
+                block_lines.insert(status_line_idx + insert_offset, new_outcome_line)
+        else:
+            # Append to admonition body
+            last_item_idx = len(block_lines) - 1
+            while last_item_idx >= 0 and not block_lines[last_item_idx].strip():
+                last_item_idx -= 1
+            if last_item_idx >= 0:
+                indent_match = re.match(r'^([ \t]*)', block_lines[last_item_idx])
+                if indent_match:
+                    indent = indent_match.group(1)
+                block_lines.insert(last_item_idx + 1, f"{indent}**:material-list-status: Status:** {final_state}")
+                block_lines.insert(last_item_idx + 2, f"{indent}**:material-calendar-remove-outline: Date Removed:** {removed_date}")
+                block_lines.insert(last_item_idx + 3, f"{indent}**:material-chat-alert-outline: Outcome:** {outcome}")
+                
+        new_block = "\n".join(block_lines)
+        content = content.replace(original_block, new_block)
+        print("- Updated admonition block with status, date removed, and outcome.")
+
+    # Update Cultivation Status Table to Final State table (Legacy Fallback)
     # Replace Current State with Final State
     content = re.sub(
         r'(\|\s*\*\*Current State\*\*\s*\|\s*)[^|\n]+',
@@ -114,7 +164,7 @@ def main():
     
     # Parse the table to modify rows
     table_match = re.search(r'(\|\s*Attribute\s*\|\s*Details\s*\|.*?\n(?:\|[^\n]+\n)+)', content, re.IGNORECASE)
-    if table_match:
+    if table_match and ("Date Planted" in table_match.group(1) or "Current State" in table_match.group(1)):
         orig_table = table_match.group(1)
         table_lines = orig_table.split('\n')
         new_table_lines = []

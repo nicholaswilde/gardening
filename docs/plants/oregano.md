@@ -27,15 +27,17 @@ genus: Origanum
 
     **:material-seed: Origin:** Seed (Indoor Start)
 
-## :clipboard: Cultivation Status
+    **:material-map-marker-outline: Location:** Herb Bed
 
-| Attribute | Details |
-| :--- | :--- |
-| **Current State** | Active Growth |
-| **Date Planted** | 2026-03-15 |
-| **Season Planted** | Early Spring |
-| **Location** | Herb Bed |
-| **Origin** | Seed (Indoor Start) |
+    **:material-calendar-check-outline: Date Planted:** 2026-03-15 (Early Spring)
+
+    **:material-list-status: Status:** Active Growth
+
+    **:material-weather-sunny: Sunlight:** Full sun.
+
+    **:material-texture: Soil:** Needs excellent drainage; added extra perlite to the planting hole.
+
+## :clipboard: Cultivation Status
 
 ## :memo: Log & Observations
 
@@ -49,7 +51,5 @@ genus: Origanum
     * **Scientific Name:** *Origanum vulgare* (Lamiaceae Family)
     * **Light Level:** 6/10
     * **Preferred Soil pH:** 7.0 - 7.5
-* **Sunlight:** Full sun.
-* **Soil:** Needs excellent drainage; added extra perlite to the planting hole.
 
 [1]: <../assets/images/oregano-2026-06-07.webp>

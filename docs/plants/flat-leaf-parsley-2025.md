@@ -25,16 +25,17 @@ genus: Petroselinum
 
     **:material-seed: Origin:** Seed (Indoor Start)
 
-## :clipboard: Cultivation Status
+    **:material-map-marker-outline: Location:** Raised Bed 2
 
-| Attribute | Details |
-| :--- | :--- |
-| **Final State** | Harvested / Cleared |
-| **Date Planted** | 2025-10-15 |
-| **Date Removed** | 2026-05-10 |
-| **Location** | Raised Bed 2 |
-| **Outcome** | High yield. Ground into flour for sourdough starters. |
-| **Origin** | Seed (Indoor Start) |
+    **:material-calendar-check-outline: Date Planted:** 2025-10-15
+
+    **:material-list-status: Status:** Harvested / Cleared
+
+    **:material-calendar-remove-outline: Date Removed:** 2026-05-10
+
+    **:material-chat-alert-outline: Outcome:** High yield. Ground into flour for sourdough starters.
+
+## :clipboard: Cultivation Status
 
 ## :memo: Log & Observations
 

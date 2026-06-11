@@ -27,23 +27,22 @@ genus: Cercis
 
     **:material-storefront-outline: Origin:** Nursery Start
 
-## :clipboard: Cultivation Status
+    **:material-map-marker-outline: Location:** Backyard
 
-| Attribute | Details |
-| :--- | :--- |
-| **Current State** | Active Growth |
-| **Date Planted** | 2021-11-01 |
-| **Season Planted** | Late Fall / Winter |
-| **Location** | Backyard |
-| **Origin** | Nursery Start |
+    **:material-calendar-check-outline: Date Planted:** 2021-11-01 (Late Fall / Winter)
+
+    **:material-list-status: Status:** Active Growth
+
+    **:material-weather-sunny: Sunlight:** Full sun to partial shade.
+
+    **:material-texture: Soil:** Well-draining soil, tolerant of clay and nutrient-poor soils.
+
+## :clipboard: Cultivation Status
 
 ## :memo: Log & Observations
 
 * **2021-11-01:** Initial logging. Planted in the Backyard.
 
 ## :pushpin: Notes
-
-* **Sunlight:** Full sun to partial shade.
-* **Soil:** Well-draining soil, tolerant of clay and nutrient-poor soils.
 
 [1]: <../assets/images/western-redbud-2026-06-10.webp>

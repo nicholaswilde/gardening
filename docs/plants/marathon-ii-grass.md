@@ -27,15 +27,17 @@ genus: Festuca
 
     **:material-storefront-outline: Origin:** Nursery Start
 
-## :clipboard: Cultivation Status
+    **:material-map-marker-outline: Location:** Backyard Lawn
 
-| Attribute | Details |
-| :--- | :--- |
-| **Current State** | Active Growth |
-| **Date Planted** | 2021-11-01 |
-| **Season Planted** | Mid-Fall |
-| **Location** | Backyard Lawn |
-| **Origin** | Nursery Start |
+    **:material-calendar-check-outline: Date Planted:** 2021-11-01 (Mid-Fall)
+
+    **:material-list-status: Status:** Active Growth
+
+    **:material-weather-sunny: Sunlight:** Full sun to partial shade.
+
+    **:material-texture: Soil:** Moist, well-draining soil.
+
+## :clipboard: Cultivation Status
 
 ## :memo: Log & Observations
 
@@ -46,7 +48,5 @@ genus: Festuca
 * **Trefle Database Info:**
     * **Scientific Name:** *Festuca arundinacea* (Poaceae Family)
     * **Preferred Soil pH:** 5.5 - 8.5
-* **Sunlight:** Full sun to partial shade.
-* **Soil:** Moist, well-draining soil.
 
 [1]: <../assets/images/marathon-ii-grass-2026-06-07.webp>

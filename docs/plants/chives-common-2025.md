@@ -25,16 +25,17 @@ genus: Allium
 
     **:material-store-outline: Origin:** Living herb
 
-## :clipboard: Cultivation Status
+    **:material-map-marker-outline: Location:** Raised Bed 3
 
-| Attribute | Details |
-| :--- | :--- |
-| **Final State** | Harvested / Cleared |
-| **Date Planted** | 2025-10-15 |
-| **Date Removed** | 2026-05-10 |
-| **Location** | Raised Bed 3 |
-| **Outcome** | High yield. |
-| **Origin** | Living herb |
+    **:material-calendar-check-outline: Date Planted:** 2025-10-15
+
+    **:material-list-status: Status:** Harvested / Cleared
+
+    **:material-calendar-remove-outline: Date Removed:** 2026-05-10
+
+    **:material-chat-alert-outline: Outcome:** High yield.
+
+## :clipboard: Cultivation Status
 
 ## :memo: Log & Observations
 

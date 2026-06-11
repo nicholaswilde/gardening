@@ -117,6 +117,13 @@ def main():
         modified = True
         print(f"- Updated Season Planted in table: {new_season}")
 
+    # Update Date Planted in admonition block
+    admon_date_pattern = r'(\*\*(?::material-[a-z-]+:\s*)?Date Planted:\*\*\s*)[^\n]+'
+    if re.search(admon_date_pattern, content):
+        content = re.sub(admon_date_pattern, rf'\g<1>{new_date} ({new_season})', content)
+        modified = True
+        print(f"- Updated Date Planted in admonition: {new_date} ({new_season})")
+
     # 4. Update matching log entry date if old_date is known
     if old_date:
         log_pattern = rf'\*\s*\*\*{re.escape(old_date)}:\*\*'

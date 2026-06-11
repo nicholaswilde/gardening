@@ -28,17 +28,17 @@ removed: 2026-02
 
     **:material-store-outline: Origin:** Living herb
 
-## :clipboard: Cultivation Status
+    **:material-map-marker-outline: Location:** Click & Grow
 
-| Attribute | Details |
-| :--- | :--- |
-| **Final State** | Harvested / Cleared |
-| **Date Planted** | 2025-02-15 |
-| **Date Removed** | 2026-02 |
-| **Season Planted** | Early Spring |
-| **Location** | Click & Grow |
-| **Origin** |Living herb|
-| **Outcome** | Harvested from Click & Grow. |
+    **:material-calendar-check-outline: Date Planted:** 2025-02-15 (Early Spring)
+
+    **:material-list-status: Status:** Harvested / Cleared
+
+    **:material-calendar-remove-outline: Date Removed:** 2026-02
+
+    **:material-chat-alert-outline: Outcome:** Harvested from Click & Grow.
+
+## :clipboard: Cultivation Status
 
 ## :memo: Log & Observations
 
@@ -50,8 +50,5 @@ removed: 2026-02
     * **Scientific Name:** *Ocimum basilicum* (Lamiaceae Family)
     * **Light Level:** 7/10
     * **Preferred Soil pH:** 6.5 - 7.0
-
-* **Sunlight:** 
-* **Soil:** 
 
 [1]: <../assets/images/basil-2025-02-15.webp>

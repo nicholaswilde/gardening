@@ -63,11 +63,11 @@ def parse_markdown(filepath):
     variety_match = re.search(r'\*\*(?::material-[a-z-]+:\s*)?Variety:\*\*\s*(.+)', content)
     variety = variety_match.group(1).strip() if variety_match else None
 
-    # Get Sunlight and Soil from notes
-    sunlight_match = re.search(r'\*\*\s*Sunlight\s*:\*\*\s*(.+)', content, re.IGNORECASE)
+    # Get Sunlight and Soil from notes or admonition (allowing optional Material icons)
+    sunlight_match = re.search(r'\*\*(?::material-[a-z-]+:\s*)?Sunlight:\*\*\s*(.+)', content, re.IGNORECASE)
     sunlight = sunlight_match.group(1).strip() if sunlight_match else None
 
-    soil_match = re.search(r'\*\*\s*Soil\s*:\*\*\s*(.+)', content, re.IGNORECASE)
+    soil_match = re.search(r'\*\*(?::material-[a-z-]+:\s*)?Soil:\*\*\s*(.+)', content, re.IGNORECASE)
     soil = soil_match.group(1).strip() if soil_match else None
 
     return {

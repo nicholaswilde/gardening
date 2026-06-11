@@ -27,15 +27,17 @@ genus: Lagerstroemia
 
     **:material-storefront-outline: Origin:** Nursery Start
 
-## :clipboard: Cultivation Status
+    **:material-map-marker-outline: Location:** Garden
 
-| Attribute | Details |
-| :--- | :--- |
-| **Current State** | Flowering |
-| **Date Planted** | 2021-11-01 |
-| **Season Planted** | Mid-Fall |
-| **Location** | Garden |
-| **Origin** | Nursery Start |
+    **:material-calendar-check-outline: Date Planted:** 2021-11-01 (Mid-Fall)
+
+    **:material-list-status: Status:** Flowering
+
+    **:material-weather-sunny: Sunlight:** Full sun.
+
+    **:material-texture: Soil:** Moist, well-draining soil.
+
+## :clipboard: Cultivation Status
 
 ## :memo: Log & Observations
 
@@ -46,7 +48,5 @@ genus: Lagerstroemia
 * **Trefle Database Info:**
     * **Scientific Name:** *Lagerstroemia indica* (Lythraceae Family)
     * **Preferred Soil pH:** 5.0 - 7.5
-* **Sunlight:** Full sun.
-* **Soil:** Moist, well-draining soil.
 
 [1]: <../assets/images/crape-myrtle-tree-2026-06-10.webp>
