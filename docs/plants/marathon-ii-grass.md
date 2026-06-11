@@ -49,6 +49,10 @@ genus: Festuca
 
 ## :pushpin: Notes
 
+* **Care & Maintenance:**
+    * **Crabgrass Prevention:** Applied Scotts Turf Builder Halts Crabgrass Preventer every 3 months.
+    * **Fertilization:** Applied Scotts Max Fertilizer every 3 months.
+    * **Patching / Repair:** Applied Scotts EZ Seed to patch bare areas as needed.
 * **Trefle Database Info:**
     * **Scientific Name:** *Festuca arundinacea* (Poaceae Family)
     * **Preferred Soil pH:** 5.5 - 8.5
