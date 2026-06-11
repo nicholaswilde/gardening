@@ -38,7 +38,9 @@ status: Active
 
 ## :pushpin: Notes
 
-**Dimensions:** **Material:** **Irrigation:** ## Soil Management
+* **Sensors:** Monitoring temperature and soil moisture levels using a Third Reality 3RSM0147Z sensor.
+
+## Soil Management
 
 * **2026-06-09:** Initial setup.
 
