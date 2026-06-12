@@ -2,6 +2,8 @@
 tags: [grass, active]
 location: backyard-lawn
 planted: 2021-11-01
+care_schedule:
+  fertilize: 90
 botanical_name: Festuca arundinacea
 family: Poaceae
 genus: Festuca
@@ -41,6 +43,7 @@ genus: Festuca
 
 ## :memo: Log & Observations
 
+* **2026-04-15:** Applied Scotts Max Fertilizer (fertilized lawn).
 * **2021-11-01:** Initial logging. Planted in the backyard lawn.
 
 ## :pushpin: Notes
