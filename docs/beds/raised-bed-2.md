@@ -10,6 +10,7 @@
 
     **:material-calendar-check-outline: Constructed:** October 2021
 
+<!-- BED_LAYOUT_START -->
 ```mermaid
 flowchart TD
     subgraph Bed ["Raised Bed 2 (4' x 8')"]
@@ -49,6 +50,7 @@ flowchart TD
     click cell2_3 "../plants/oregano.md" "Oregano Profile"
     click cell2_4 "../plants/thyme.md" "Thyme Profile"
 ```
+<!-- BED_LAYOUT_END -->
 
 ## :hammer_and_wrench: Hardware & Irrigation
 

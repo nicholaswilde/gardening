@@ -10,6 +10,7 @@
 
     **:material-calendar-check-outline: Constructed:** October 2021
 
+<!-- BED_LAYOUT_START -->
 ```mermaid
 flowchart TD
     subgraph Bed ["Raised Bed 1 (4' x 8')"]
@@ -45,6 +46,7 @@ flowchart TD
     click cell1_3 "../plants/impatiens.md" "Impatiens Profile"
     click cell1_4 "../plants/impatiens.md" "Impatiens Profile"
 ```
+<!-- BED_LAYOUT_END -->
 
 ## :hammer_and_wrench: Hardware & Irrigation
 

@@ -180,6 +180,13 @@ tasks:
       - uv run python scripts/build_dashboard.py
       - echo "Seasonal dashboard updated!"
 
+  generate-layouts:
+    desc: Generate automated raised bed layouts from plant profiles
+    preconditions:
+      - test -f scripts/generate_layouts.py
+    cmds:
+      - uv run python scripts/generate_layouts.py
+
   default:
     cmds:
       - task -a
