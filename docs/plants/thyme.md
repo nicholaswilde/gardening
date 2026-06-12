@@ -1,6 +1,7 @@
 ---
 tags: [perennial, herb, active]
-location: raised-bed-1
+location: raised-bed-2
+grid_position: [2, 4]
 planted: 2026-03-15
 botanical_name: Thymus vulgaris
 family: Lamiaceae

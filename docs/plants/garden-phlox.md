@@ -1,6 +1,7 @@
 ---
 tags: [active, annual, flower]
 location: raised-bed-1
+grid_position: [1, 1]
 planted: 2026-01-01
 botanical_name: Phlox drummondii
 family: Polemoniaceae

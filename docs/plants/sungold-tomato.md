@@ -1,4 +1,7 @@
 ---
+tags: [active, crop]
+location: raised-bed-3
+grid_position: [1, 1]
 botanical_name: Solanum lycopersicum
 family: Solanaceae
 genus: Solanum

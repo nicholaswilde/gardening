@@ -87,7 +87,7 @@ def inject_layout_into_bed(bed_content: str, mermaid_diagram: str) -> str:
     if not pattern.search(bed_content):
         raise ValueError("Bed layout markers <!-- BED_LAYOUT_START --> and <!-- BED_LAYOUT_END --> not found in bed file.")
         
-    replacement = f"\\1```mermaid\n{mermaid_diagram.strip()}\n```\\3"
+    replacement = f"\\1\n```mermaid\n{mermaid_diagram.strip()}\n```\n\\3"
     return pattern.sub(replacement, bed_content)
 
 def main():

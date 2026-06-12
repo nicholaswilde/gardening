@@ -1,4 +1,7 @@
 ---
+tags: [active, crop]
+location: raised-bed-3
+grid_position: [2, 4]
 botanical_name: Capsicum annuum
 family: Solanaceae
 genus: Capsicum

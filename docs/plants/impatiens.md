@@ -1,6 +1,7 @@
 ---
 tags: [active, annual, flower]
 location: raised-bed-1
+grid_position: [1, 3]
 planted: 2026-01-01
 botanical_name: Impatiens walleriana
 family: Balsaminaceae

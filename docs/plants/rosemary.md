@@ -1,6 +1,7 @@
 ---
 tags: [perennial, herb, active]
-location: raised-bed-1
+location: raised-bed-2
+grid_position: [1, 1]
 planted: 2026-03-15
 botanical_name: Rosmarinus officinalis
 family: Lamiaceae
