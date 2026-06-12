@@ -10,6 +10,42 @@
 
     **:material-calendar-check-outline: Constructed:** October 2021
 
+```mermaid
+flowchart TD
+    subgraph Bed ["Raised Bed 1 (4' x 8')"]
+        direction TB
+        subgraph Row1 ["Row 1"]
+            direction LR
+            cell1_1["🌸 Garden Phlox<br>(Active)"]
+            cell1_2["🌸 Garden Phlox<br>(Active)"]
+            cell1_3["🌺 Impatiens<br>(Active)"]
+            cell1_4["🌺 Impatiens<br>(Active)"]
+        end
+        subgraph Row2 ["Row 2"]
+            direction LR
+            cell2_1["🟫 Fallow / Compost<br>(Empty)"]
+            cell2_2["🟫 Fallow / Compost<br>(Empty)"]
+            cell2_3["🟫 Fallow / Compost<br>(Empty)"]
+            cell2_4["🟫 Fallow / Compost<br>(Empty)"]
+        end
+    end
+
+    style Bed fill:transparent,stroke:#b4befe,stroke-width:2px
+    style cell1_1 fill:#313244,stroke:#a6e3a1,stroke-width:2px,color:#cdd6f4,rx:5,ry:5
+    style cell1_2 fill:#313244,stroke:#a6e3a1,stroke-width:2px,color:#cdd6f4,rx:5,ry:5
+    style cell1_3 fill:#313244,stroke:#a6e3a1,stroke-width:2px,color:#cdd6f4,rx:5,ry:5
+    style cell1_4 fill:#313244,stroke:#a6e3a1,stroke-width:2px,color:#cdd6f4,rx:5,ry:5
+    style cell2_1 fill:#1e1e2e,stroke:#585b70,stroke-width:2px,color:#a6adc8,stroke-dasharray: 5 5,rx:5,ry:5
+    style cell2_2 fill:#1e1e2e,stroke:#585b70,stroke-width:2px,color:#a6adc8,stroke-dasharray: 5 5,rx:5,ry:5
+    style cell2_3 fill:#1e1e2e,stroke:#585b70,stroke-width:2px,color:#a6adc8,stroke-dasharray: 5 5,rx:5,ry:5
+    style cell2_4 fill:#1e1e2e,stroke:#585b70,stroke-width:2px,color:#a6adc8,stroke-dasharray: 5 5,rx:5,ry:5
+
+    click cell1_1 "../plants/garden-phlox.md" "Garden Phlox Profile"
+    click cell1_2 "../plants/garden-phlox.md" "Garden Phlox Profile"
+    click cell1_3 "../plants/impatiens.md" "Impatiens Profile"
+    click cell1_4 "../plants/impatiens.md" "Impatiens Profile"
+```
+
 ## :hammer_and_wrench: Hardware & Irrigation
 
 * **Irrigation Node:** Zone 1 Valve (Networked)
