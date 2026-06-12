@@ -100,7 +100,7 @@ tasks:
   build:
     desc: Build the static site
     cmds:
-      - zensical build
+      - uv run zensical build
 
   encrypt:
     desc: Encrypt secrets file using SOPS
