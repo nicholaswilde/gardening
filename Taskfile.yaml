@@ -187,6 +187,13 @@ tasks:
     cmds:
       - uv run python scripts/generate_layouts.py
 
+  schedule:
+    desc: Generate the gardening maintenance schedule
+    preconditions:
+      - test -f scripts/generate_schedule.py
+    cmds:
+      - uv run python scripts/generate_schedule.py
+
   default:
     cmds:
       - task -a

@@ -16,6 +16,9 @@ edit_uri = "edit/main/docs/"
 "Summary Dashboard" = "seasonal-dashboard.md"
 
 [[project.nav]]
+"Maintenance Schedule" = "schedule.md"
+
+[[project.nav]]
 Plants = [
   { "Azalea" = "plants/azalea.md" },
   { "Boxleaf Euonymus" = "plants/boxleaf-euonymus.md" },
