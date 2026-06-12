@@ -14,5 +14,5 @@ This file tracks all major tracks for the project. Each track has its own detail
 
 ---
 
-- [ ] **Track: Automate raised bed layout rendering and injection using plant metadata**
+- [x] **Track: Automate raised bed layout rendering and injection using plant metadata**
 *Link: [./tracks/automate_bed_layouts_20260611/](./tracks/automate_bed_layouts_20260611/)*
