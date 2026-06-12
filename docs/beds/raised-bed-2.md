@@ -4,7 +4,7 @@
 
     **:material-list-status: Status:** Active  
 
-    **:material-ruler-square: Dimensions:** 4' x 8' x 1.5' (48 cu ft)  
+    **:material-ruler-square: Dimensions:** 8' x 8' x 1.5' (96 cu ft)  
 
     **:material-fence: Material:** Rough-sawn Cedar  
 
@@ -14,7 +14,7 @@
 
 ```mermaid
 flowchart TD
-    subgraph Bed ["Raised Bed 2 (4' x 8')"]
+    subgraph Bed ["Raised Bed 2 (8' x 8')"]
         direction TB
         subgraph Row1 ["Row 1"]
             direction LR
