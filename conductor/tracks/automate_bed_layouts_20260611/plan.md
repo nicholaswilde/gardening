@@ -2,7 +2,7 @@
 
 ## Phase 1: Models Extension and Generator Logic
 
-* [ ] Task: Extend Pydantic models in `scripts/lib/models.py` to support `grid_position` and bed layout metadata
+* [x] Task: Extend Pydantic models in `scripts/lib/models.py` to support `grid_position` and bed layout metadata (6ccddac)
 * [ ] Task: Create layout generation core in `scripts/lib/layout_generator.py` to compile the grids to Mermaid syntax
 * [ ] Task: Write unit tests in `tests/test_layout_generator.py` for grid validation, collision checks, and Mermaid generation
 * [ ] Task: Conductor - User Manual Verification 'Phase 1' (Protocol in workflow.md)
