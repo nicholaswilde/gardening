@@ -80,15 +80,17 @@ def inject_layout_into_bed(bed_content: str, mermaid_diagram: str) -> str:
     """
     Replaces the content between layout markers with the new Mermaid diagram.
     """
-    pattern = re.compile(
-        r'(<!-- BED_LAYOUT_START -->\s*\n)(.*?)(\n\s*<!-- BED_LAYOUT_END -->)',
-        re.DOTALL
-    )
-    if not pattern.search(bed_content):
+    start_marker = "<!-- BED_LAYOUT_START -->"
+    end_marker = "<!-- BED_LAYOUT_END -->"
+    
+    if start_marker not in bed_content or end_marker not in bed_content:
         raise ValueError("Bed layout markers <!-- BED_LAYOUT_START --> and <!-- BED_LAYOUT_END --> not found in bed file.")
         
-    replacement = f"\\1\n```mermaid\n{mermaid_diagram.strip()}\n```\n\\3"
-    return pattern.sub(replacement, bed_content)
+    start_idx = bed_content.find(start_marker) + len(start_marker)
+    end_idx = bed_content.find(end_marker)
+    
+    new_block = f"\n\n```mermaid\n{mermaid_diagram.strip()}\n```\n\n"
+    return bed_content[:start_idx] + new_block + bed_content[end_idx:]
 
 def main():
     project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))

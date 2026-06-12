@@ -91,7 +91,8 @@ def generate_mermaid_layout(bed_title: str, dimensions: str, placements: List[Di
             else:
                 cell_definitions.append(f'{cell_id}["🟫 Fallow / Compost<br>(Empty)"]')
                 
-        lines.append("            " + " --- ".join(cell_definitions))
+        for cell_def in cell_definitions:
+            lines.append(f"            {cell_def}")
         lines.append("        end")
         
     lines.append("    end")

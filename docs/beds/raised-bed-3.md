@@ -18,11 +18,17 @@ flowchart TD
         direction TB
         subgraph Row1 ["Row 1"]
             direction LR
-            cell1_1["🍅 Sungold Tomato<br>(Active)"] --- cell1_2["🟫 Fallow / Compost<br>(Empty)"] --- cell1_3["🟫 Fallow / Compost<br>(Empty)"] --- cell1_4["🌶️ Poblano Pepper<br>(Active)"]
+            cell1_1["🍅 Sungold Tomato<br>(Active)"]
+            cell1_2["🟫 Fallow / Compost<br>(Empty)"]
+            cell1_3["🟫 Fallow / Compost<br>(Empty)"]
+            cell1_4["🌶️ Poblano Pepper<br>(Active)"]
         end
         subgraph Row2 ["Row 2"]
             direction LR
-            cell2_1["🟫 Fallow / Compost<br>(Empty)"] --- cell2_2["🟫 Fallow / Compost<br>(Empty)"] --- cell2_3["🟫 Fallow / Compost<br>(Empty)"] --- cell2_4["🌶️ Jalapeño Pepper<br>(Active)"]
+            cell2_1["🟫 Fallow / Compost<br>(Empty)"]
+            cell2_2["🟫 Fallow / Compost<br>(Empty)"]
+            cell2_3["🟫 Fallow / Compost<br>(Empty)"]
+            cell2_4["🌶️ Jalapeño Pepper<br>(Active)"]
         end
     end
 
