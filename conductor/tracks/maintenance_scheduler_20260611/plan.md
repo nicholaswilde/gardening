@@ -1,8 +1,8 @@
 # Implementation Plan: Maintenance Scheduler
 
 ## Phase 1: Implement Schedule Generator
-- [ ] Task: Create `scripts/generate_schedule.py` script to parse plant metadata and logs
-- [ ] Task: Write unit tests for scheduling calculations and formatting logic
+- [x] Task: Create `scripts/generate_schedule.py` script to parse plant metadata and logs (67a5859)
+- [x] Task: Write unit tests for scheduling calculations and formatting logic (67a5859)
 - [ ] Task: Conductor - User Manual Verification 'Phase 1' (Protocol in workflow.md)
 
 ## Phase 2: Add CLI Task and Link Page
