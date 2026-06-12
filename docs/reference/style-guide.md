@@ -104,7 +104,8 @@ When building summary blocks at the top of pages, utilize the built-in MkDocs ad
 
 ### 2. Add it to the Navigation
 
-To ensure it compiles correctly and is accessible on your site, update the `Reference` block in your `zensical.toml` file to include the new page:
+To ensure it compiles correctly and is accessible on your site, update the `Reference` block in your
+`zensical.toml` file to include the new page:
 
 ```toml
 [[project.nav]]
@@ -113,4 +114,59 @@ Reference = [
   { "Style Guide" = "reference/style-guide.md" },
   { "Development" = "reference/development.md" }
 ]
+```
+
+## 🗺️ Raised Bed Visual Layouts (Mermaid.js)
+
+To provide a clear, interactive visual map of crop placements, raised bed profiles (and only raised beds, not
+pot-based containers) include Mermaid.js diagrams.
+
+### Structure Guidelines
+
+1. **Layout Direction:** Use `flowchart TD` as the base flowchart type.
+2. **Rows Representation:** Group columns/cells within horizontal subgraphs representing rows with `direction LR` to
+   stack them vertically.
+3. **Cell Naming Convention:**
+   * Cell nodes should be named using the format `cell_R_C` where `R` is the row number and `C` is the column/grid cell
+     number (e.g., `cell1_1`, `cell1_2`).
+   * Labels should contain the plant's common name prepended with a representative emoji, followed by its status
+     (e.g., `"🍅 Sungold Tomato<br>(Active)"`).
+4. **Interactivity:**
+   * Every active cell node must be clickable, linking to the corresponding plant profile file path relative to the
+     beds folder.
+   * Syntax: `click cell1_1 "../plants/sungold-tomato.md"`
+5. **Styling and Catppuccin Mocha Palette:**
+   * **Bed Subgraph Border:** `fill:transparent,stroke:#b4befe,stroke-width:2px` (Lavender border for the bed).
+   * **Active Crops:** `fill:#313244,stroke:#a6e3a1,stroke-width:2px,color:#cdd6f4` (Surface0 fill, Green stroke,
+     Text color).
+   * **Empty / Fallow Cells:** `fill:#1e1e2e,stroke:#585b70,stroke-width:2px,color:#a6adc8,stroke-dasharray: 5 5`
+     (Base fill, Surface2 dashed stroke, Subtext0 color).
+
+### Example Mermaid Block
+
+```mermaid
+flowchart TD
+    subgraph Bed ["Raised Bed (4' x 8')"]
+        direction TB
+        subgraph Row1 ["Row 1"]
+            direction LR
+            cell1_1["🌸 Garden Phlox<br>(Active)"]
+            cell1_2["🌺 Impatiens<br>(Active)"]
+        end
+        subgraph Row2 ["Row 2"]
+            direction LR
+            cell2_1["🌿 Oregano<br>(Active)"]
+            cell2_2["🟫 Fallow / Compost<br>(Empty)"]
+        end
+    end
+
+    style Bed fill:transparent,stroke:#b4befe,stroke-width:2px
+    style cell1_1 fill:#313244,stroke:#a6e3a1,stroke-width:2px,color:#cdd6f4,rx:5,ry:5
+    style cell1_2 fill:#313244,stroke:#a6e3a1,stroke-width:2px,color:#cdd6f4,rx:5,ry:5
+    style cell2_1 fill:#313244,stroke:#a6e3a1,stroke-width:2px,color:#cdd6f4,rx:5,ry:5
+    style cell2_2 fill:#1e1e2e,stroke:#585b70,stroke-width:2px,color:#a6adc8,stroke-dasharray: 5 5,rx:5,ry:5
+
+    click cell1_1 "../plants/garden-phlox.md" "Garden Phlox Profile"
+    click cell1_2 "../plants/impatiens.md" "Impatiens Profile"
+    click cell2_1 "../plants/oregano.md" "Oregano Profile"
 ```
