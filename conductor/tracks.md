@@ -4,7 +4,7 @@ This file tracks all major tracks for the project. Each track has its own detail
 
 ---
 
-- [ ] **Track: Implement Mermaid.js grid/block layouts for raised beds in the documentation**
+- [x] **Track: Implement Mermaid.js grid/block layouts for raised beds in the documentation**
 *Link: [./tracks/visual_bed_layouts_20260611/](./tracks/visual_bed_layouts_20260611/)*
 
 ---
