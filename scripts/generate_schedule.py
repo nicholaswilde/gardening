@@ -128,9 +128,9 @@ def generate_schedule_markdown(tasks: List[Dict[str, Any]], current_date: date) 
     for w_start in sorted(upcoming_weeks.keys()):
         week_str = w_start.strftime("%Y-%m-%d")
         if w_start == current_week_start:
-            lines.append(f"## Week of {week_str} (Current Week)")
+            lines.append(f"## :calendar: Week of {week_str} (Current Week)")
         else:
-            lines.append(f"## Week of {week_str}")
+            lines.append(f"## :calendar: Week of {week_str}")
         lines.append("")
         
         days_in_week = upcoming_weeks[w_start]
