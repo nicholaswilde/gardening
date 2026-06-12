@@ -11,6 +11,7 @@ A personalized, high-performance static site and documentation system that track
 3. **Seasonal Archives**: Historical records of plants grown in past years (e.g., 2025) to compare performance and yield.
 4. **Interactive Reference Guides**: Style guides, care references, and future planning documents.
 5. **Static Site Dashboard**: Automatically built static website generated from Markdown files for convenient browsing.
+6. **Maintenance Schedule**: Automatically generated gardening care tasks (watering, fertilization, etc.) calculated from active plant profiles and care logs.
 
 ## Target Audience
 
