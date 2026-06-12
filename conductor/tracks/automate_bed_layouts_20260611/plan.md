@@ -9,7 +9,7 @@
 
 ## Phase 2: CLI Script and Taskfile Integration
 
-* [ ] Task: Create CLI script `scripts/generate_layouts.py` to scan plant profiles and inject diagrams into bed profiles
+* [x] Task: Create CLI script `scripts/generate_layouts.py` to scan plant profiles and inject diagrams into bed profiles (f4057e5)
 * [ ] Task: Add the `generate-layouts` task to `Taskfile.yaml` and add layout markers to bed markdown profiles
 * [ ] Task: Run `task generate-layouts` to verify automated generation and links validation
 * [ ] Task: Conductor - User Manual Verification 'Phase 2' (Protocol in workflow.md)
