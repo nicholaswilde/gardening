@@ -3,7 +3,7 @@ import os
 import re
 import glob
 import sys
-from datetime import datetime, date, timedelta
+from datetime import datetime, date, timedelta, timezone
 from typing import List, Dict, Any, Tuple, Optional
 
 # Add scripts directory to path to import models
@@ -146,10 +146,55 @@ def generate_schedule_markdown(tasks: List[Dict[str, Any]], current_date: date) 
         
     return "\n".join(lines)
 
+def generate_ics(tasks: List[Dict[str, Any]], out_file: str):
+    """
+    Generates an RFC 5545 compliant ICS calendar file from calculated tasks.
+    """
+    now_str = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
+    lines = [
+        "BEGIN:VCALENDAR",
+        "VERSION:2.0",
+        "PRODID:-//Gardening Maintenance Schedule//NONSGML v1.0//EN",
+        "CALSCALE:GREGORIAN",
+        "METHOD:PUBLISH"
+    ]
+    
+    for t in tasks:
+        # Generate a stable UID
+        clean_name = re.sub(r'[^a-zA-Z0-9]', '', t["common_name"])
+        clean_loc = re.sub(r'[^a-zA-Z0-9]', '', t["location"])
+        clean_act = re.sub(r'[^a-zA-Z0-9]', '', t["action"])
+        date_str = t["next_date"].strftime("%Y%m%d")
+        uid = f"{clean_name}_{clean_loc}_{clean_act}_{date_str}@gardening.nicholaswilde.io"
+        
+        # End date for all-day event is day after start date (non-inclusive)
+        end_date = t["next_date"] + timedelta(days=1)
+        end_date_str = end_date.strftime("%Y%m%d")
+        
+        summary = f"{t['action'].title()}: {t['common_name']} ({t['location']})"
+        description = f"Gardening maintenance task: {t['action'].title()} {t['common_name']} located at {t['location']}."
+        
+        lines.extend([
+            "BEGIN:VEVENT",
+            f"UID:{uid}",
+            f"DTSTAMP:{now_str}",
+            f"DTSTART;VALUE=DATE:{date_str}",
+            f"DTEND;VALUE=DATE:{end_date_str}",
+            f"SUMMARY:{summary}",
+            f"DESCRIPTION:{description}",
+            "END:VEVENT"
+        ])
+        
+    lines.append("END:VCALENDAR")
+    
+    with open(out_file, "w", encoding="utf-8", newline="\r\n") as f:
+        f.write("\r\n".join(lines) + "\r\n")
+
 def main():
     project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     plants_dir = os.path.join(project_root, "docs", "plants")
     out_file = os.path.join(project_root, "docs", "schedule.md")
+    ics_file = os.path.join(project_root, "docs", "schedule.ics")
     
     plant_files = glob.glob(os.path.join(plants_dir, "*.md"))
     tasks = []
@@ -197,7 +242,8 @@ def main():
     with open(out_file, "w", encoding="utf-8") as f:
         f.write(markdown)
         
-    print(f"Successfully generated schedule to {out_file}")
+    generate_ics(tasks, ics_file)
+    print(f"Successfully generated schedule to {out_file} and {ics_file}")
 
 if __name__ == "__main__":
     main()

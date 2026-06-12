@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Gardening Maintenance Schedule//NONSGML v1.0//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:MarathonIIGrass_backyardlawn_fertilize_20260714@gardening.nicholaswilde.io
+DTSTAMP:20260612T064919Z
+DTSTART;VALUE=DATE:20260714
+DTEND;VALUE=DATE:20260715
+SUMMARY:Fertilize: Marathon II Grass (backyard-lawn)
+DESCRIPTION:Gardening maintenance task: Fertilize Marathon II Grass located at backyard-lawn.
+END:VEVENT
+BEGIN:VEVENT
+UID:Rosemary_raisedbed2_water_20260417@gardening.nicholaswilde.io
+DTSTAMP:20260612T064919Z
+DTSTART;VALUE=DATE:20260417
+DTEND;VALUE=DATE:20260418
+SUMMARY:Water: Rosemary (raised-bed-2)
+DESCRIPTION:Gardening maintenance task: Water Rosemary located at raised-bed-2.
+END:VEVENT
+END:VCALENDAR

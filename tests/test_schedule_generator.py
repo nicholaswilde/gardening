@@ -12,7 +12,8 @@ from scripts.generate_schedule import (
     parse_care_schedule,
     get_last_action_date,
     calculate_next_date,
-    generate_schedule_markdown
+    generate_schedule_markdown,
+    generate_ics
 )
 
 class TestScheduleGenerator(unittest.TestCase):
@@ -97,6 +98,36 @@ care_schedule:
         self.assertIn("Rosemary", markdown)
         self.assertIn("water", markdown.lower())
         self.assertIn("fertilize", markdown.lower())
+
+    def test_generate_ics(self):
+        import tempfile
+        tasks = [
+            {
+                "common_name": "Sungold Tomato",
+                "location": "raised-bed-3",
+                "action": "fertilize",
+                "next_date": date(2026, 6, 15),
+                "relative_path": "plants/sungold-tomato.md"
+            }
+        ]
+        
+        with tempfile.NamedTemporaryFile(suffix=".ics", delete=False) as tmp:
+            tmp_path = tmp.name
+            
+        try:
+            generate_ics(tasks, tmp_path)
+            with open(tmp_path, "r", encoding="utf-8") as f:
+                content = f.read()
+                
+            self.assertIn("BEGIN:VCALENDAR", content)
+            self.assertIn("VERSION:2.0", content)
+            self.assertIn("SUMMARY:Fertilize: Sungold Tomato (raised-bed-3)", content)
+            self.assertIn("DTSTART;VALUE=DATE:20260615", content)
+            self.assertIn("DTEND;VALUE=DATE:20260616", content)
+            self.assertIn("END:VCALENDAR", content)
+        finally:
+            if os.path.exists(tmp_path):
+                os.remove(tmp_path)
 
 if __name__ == "__main__":
     unittest.main()
