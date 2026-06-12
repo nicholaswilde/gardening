@@ -7,9 +7,9 @@
 * [x] Task: Write unit tests in `tests/test_layout_generator.py` for grid validation, collision checks, and Mermaid generation (7aa7a27)
 * [x] Task: Conductor - User Manual Verification 'Phase 1' (Protocol in workflow.md) (ae64e26)
 
-## Phase 2: CLI Script and Taskfile Integration
+## Phase 2: CLI Script and Taskfile Integration [checkpoint: abf85df]
 
 * [x] Task: Create CLI script `scripts/generate_layouts.py` to scan plant profiles and inject diagrams into bed profiles (f4057e5)
 * [x] Task: Add the `generate-layouts` task to `Taskfile.yaml` and add layout markers to bed markdown profiles (d7173be)
 * [x] Task: Run `task generate-layouts` to verify automated generation and links validation (b8bff79)
-* [ ] Task: Conductor - User Manual Verification 'Phase 2' (Protocol in workflow.md)
+* [x] Task: Conductor - User Manual Verification 'Phase 2' (Protocol in workflow.md) (abf85df)
