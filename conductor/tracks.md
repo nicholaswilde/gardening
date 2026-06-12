@@ -4,7 +4,7 @@ This file tracks all major tracks for the project. Each track has its own detail
 
 ---
 
-- [ ] **Track: Generate a maintenance schedule for active crops based on care intervals parsed from plant frontmatter and logs**
+- [x] **Track: Generate a maintenance schedule for active crops based on care intervals parsed from plant frontmatter and logs**
 *Link: [./tracks/maintenance_scheduler_20260611/](./tracks/maintenance_scheduler_20260611/)*
 
 ---
