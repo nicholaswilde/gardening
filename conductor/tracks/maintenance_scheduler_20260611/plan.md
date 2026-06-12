@@ -1,9 +1,9 @@
 # Implementation Plan: Maintenance Scheduler
 
-## Phase 1: Implement Schedule Generator
+## Phase 1: Implement Schedule Generator [checkpoint: 7d9afe5]
 - [x] Task: Create `scripts/generate_schedule.py` script to parse plant metadata and logs (67a5859)
 - [x] Task: Write unit tests for scheduling calculations and formatting logic (67a5859)
-- [ ] Task: Conductor - User Manual Verification 'Phase 1' (Protocol in workflow.md)
+- [x] Task: Conductor - User Manual Verification 'Phase 1' (Protocol in workflow.md) (7d9afe5)
 
 ## Phase 2: Add CLI Task and Link Page
 - [ ] Task: Add the `schedule` task to `Taskfile.yaml`
