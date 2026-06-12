@@ -98,7 +98,7 @@ def generate_schedule_markdown(tasks: List[Dict[str, Any]], current_date: date) 
     lines = []
     lines.append("# :calendar: Gardening Maintenance Schedule")
     lines.append("")
-    lines.append(f"Last updated: {current_date.strftime('%Y-%m-%d')}")
+    lines.append(f"Last updated: {current_date.strftime('%Y-%m-%d')} | :date: [Download Calendar (ICS)](schedule.ics)")
     lines.append("")
     
     # Render Overdue section
