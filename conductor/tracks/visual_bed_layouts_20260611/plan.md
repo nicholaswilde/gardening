@@ -5,5 +5,5 @@
 - [x] Task: Conductor - User Manual Verification 'Phase 1' (Protocol in workflow.md) [55f2c68]
 
 ## Phase 2: Implement Layouts on Raised Bed Profiles
-- [ ] Task: Update raised bed profiles (`raised-bed-1.md`, `raised-bed-2.md`, `raised-bed-3.md`) with Mermaid grid diagrams
-- [ ] Task: Conductor - User Manual Verification 'Phase 2' (Protocol in workflow.md)
+- [x] Task: Update raised bed profiles (`raised-bed-1.md`, `raised-bed-2.md`, `raised-bed-3.md`) with Mermaid grid diagrams [c51ad77]
+- [~] Task: Conductor - User Manual Verification 'Phase 2' (Protocol in workflow.md)
