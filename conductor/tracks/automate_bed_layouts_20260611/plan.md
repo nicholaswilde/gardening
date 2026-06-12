@@ -11,5 +11,5 @@
 
 * [x] Task: Create CLI script `scripts/generate_layouts.py` to scan plant profiles and inject diagrams into bed profiles (f4057e5)
 * [x] Task: Add the `generate-layouts` task to `Taskfile.yaml` and add layout markers to bed markdown profiles (d7173be)
-* [ ] Task: Run `task generate-layouts` to verify automated generation and links validation
+* [x] Task: Run `task generate-layouts` to verify automated generation and links validation (b8bff79)
 * [ ] Task: Conductor - User Manual Verification 'Phase 2' (Protocol in workflow.md)
