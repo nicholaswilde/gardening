@@ -134,6 +134,19 @@ class TestPlantProfile(unittest.TestCase):
         self.assertEqual(profile.get_admonition_value("Type"), profile2.get_admonition_value("Type"))
         self.assertEqual(profile.image_references, profile2.image_references)
 
+    def test_grid_position(self):
+        sample_md = """---
+common_name: Oregano
+location: raised-bed-1
+grid_position: [1, 3]
+tags: [active]
+---
+# :herb: Oregano
+"""
+        profile = PlantProfile.from_markdown(sample_md)
+        self.assertIn("grid_position", PlantFrontmatter.model_fields)
+        self.assertEqual(profile.frontmatter.grid_position, [1, 3])
+
     def test_parse_all_repository_plants(self):
         project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
         plant_files = glob.glob(os.path.join(project_root, "docs", "plants", "*.md"))

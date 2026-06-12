@@ -46,6 +46,7 @@ class PlantFrontmatter(BaseModel):
     family: Optional[str] = None
     genus: Optional[str] = None
     removed: Optional[Any] = None
+    grid_position: Optional[List[int]] = None
 
 class AdmonitionRow(BaseModel):
     key: str
