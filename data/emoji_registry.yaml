@@ -1,0 +1,41 @@
+# Emoji Registry for Plant Profiles
+# Used by new_plant.py to auto-assign heading emojis.
+#
+# Lookup order (first match wins):
+#   1. genus    — exact genus match (e.g. Capsicum → :hot_pepper:)
+#   2. family   — exact family match (e.g. Poaceae → :ear_of_rice:)
+#   3. type     — plant type keyword (e.g. herb → :herb:)
+#   4. default  — fallback when nothing else matches
+#
+# All values are GitHub/Python-Markdown emoji shortcodes.
+
+# --- Genus overrides (highest priority) ---
+genus:
+  Capsicum: ":hot_pepper:"
+  Solanum: ":tomato:"
+  Rosa: ":rose:"
+  Allium: ":onion:"
+  Fragaria: ":strawberry:"
+  Citrus: ":lemon:"
+  Prunus: ":cherry_blossom:"
+  Lavandula: ":lavender:"
+
+# --- Family overrides ---
+family:
+  Poaceae: ":ear_of_rice:"
+
+# --- Type-based mapping ---
+type:
+  herb: ":herb:"
+  vegetable: ":seedling:"
+  fruit: ":seedling:"
+  flower: ":blossom:"
+  tree: ":deciduous_tree:"
+  shrub: ":seedling:"
+  grass: ":ear_of_rice:"
+  fern: ":seedling:"
+  succulent: ":cactus:"
+  vine: ":seedling:"
+
+# --- Fallback ---
+default: ":seedling:"

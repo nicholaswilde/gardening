@@ -32,11 +32,11 @@ This skill instructs the agent on how to use the GitHub CLI (`gh`) to fetch and 
      bash scripts/optimize-images.sh
      ```
 5. **Generate Profile Template:**
-   Convert the plant name to kebab-case (e.g., `wild-strawberry`) and run the generation script:
+   Convert the plant name to kebab-case (e.g., `wild-strawberry`) and run the generation script. Pass `--genus`, `--family`, or `--type` to auto-assign the heading emoji from the registry (`data/emoji_registry.yaml`):
    ```bash
-   uv run python3 scripts/new_plant.py <plant_name_kebab>
+   uv run python3 scripts/new_plant.py <plant_name_kebab> --genus "<Genus>" --type "<type>"
    ```
-   This script will automatically detect the optimized image, extract the EXIF date taken, rename the WebP image to include the date (e.g., `wild-strawberry-2026-06-10.webp`), and generate the Markdown profile with the correct date tab and image reference.
+   This script will automatically detect the optimized image, extract the EXIF date taken, rename the WebP image to include the date (e.g., `wild-strawberry-2026-06-10.webp`), resolve the heading emoji, and generate the Markdown profile with the correct date tab and image reference.
 6. **Populate Metadata and Details:**
    Open `docs/plants/<plant_name_kebab>.md` and update:
    - **Tags/Frontmatter**:

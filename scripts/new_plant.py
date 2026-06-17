@@ -3,6 +3,45 @@ import sys
 import os
 from datetime import datetime
 from jinja2 import Environment, FileSystemLoader
+import yaml
+
+
+def load_emoji_registry():
+    """Load the emoji registry from data/emoji_registry.yaml."""
+    project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    registry_path = os.path.join(project_root, "data", "emoji_registry.yaml")
+    if not os.path.exists(registry_path):
+        return None
+    with open(registry_path, "r", encoding="utf-8") as f:
+        return yaml.safe_load(f)
+
+
+def resolve_emoji(genus=None, family=None, plant_type=None):
+    """Resolve the heading emoji using the registry.
+
+    Lookup order: genus → family → type → default.
+    """
+    registry = load_emoji_registry()
+    if registry is None:
+        return ":seedling:"
+
+    # 1. Genus override
+    if genus and genus in registry.get("genus", {}):
+        return registry["genus"][genus]
+
+    # 2. Family override
+    if family and family in registry.get("family", {}):
+        return registry["family"][family]
+
+    # 3. Type-based mapping (case-insensitive)
+    if plant_type:
+        type_map = registry.get("type", {})
+        plant_type_lower = plant_type.lower()
+        if plant_type_lower in type_map:
+            return type_map[plant_type_lower]
+
+    # 4. Fallback
+    return registry.get("default", ":seedling:")
 
 def get_season(date_obj):
     month = date_obj.month
@@ -43,6 +82,9 @@ def main():
     parser.add_argument("filename", help="Kebab-case name of the plant (e.g. poblano-pepper)")
     parser.add_argument("--image-date", help="Date the image was taken (YYYY-MM-DD)")
     parser.add_argument("--image-filename", help="Filename of the image (without .webp)")
+    parser.add_argument("--genus", help="Plant genus for emoji lookup (e.g. Capsicum)")
+    parser.add_argument("--family", help="Plant family for emoji lookup (e.g. Solanaceae)")
+    parser.add_argument("--type", dest="plant_type", help="Plant type for emoji lookup (e.g. herb, vegetable, tree)")
     
     args = parser.parse_args()
     filename = args.filename
@@ -115,9 +157,15 @@ def main():
     
     # Load and render the template
     template = env.get_template("plant.md.j2")
+    emoji = resolve_emoji(
+        genus=args.genus,
+        family=args.family,
+        plant_type=args.plant_type
+    )
     content = template.render(
         filename=filename,
         title=title,
+        emoji=emoji,
         season=season,
         current_date=current_date,
         image_date=image_date,
