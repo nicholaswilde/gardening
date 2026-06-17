@@ -1,10 +1,14 @@
 ---
-tags: [active, crop]
-location: raised-bed-3
-grid_position: [1, 4]
 botanical_name: Capsicum annuum
 family: Solanaceae
 genus: Capsicum
+grid_position:
+- 1
+- 4
+location: raised-bed-3
+tags:
+- active
+- crop
 ---
 
 # :hot_pepper: Poblano Pepper
@@ -14,7 +18,6 @@ genus: Capsicum
     ![poblano-pepper][1]{ width="400" loading=lazy }
 
 !!! example ""
-
     **:material-leaf: Type:** Vegetable
 
     **:material-tag-text-outline: Botanical Name:** *Capsicum annuum*
@@ -36,6 +39,9 @@ genus: Capsicum
 ## :clipboard: Cultivation Status
 
 ## :memo: Log & Observations
+
+* **2026-06-16:** The first poblano peppers are coming in
+  ![Update - 2026-06-16](<../assets/images/poblano-pepper-2026-06-16.webp>){ width="400" loading=lazy }
 
 ## :pushpin: Notes
 
