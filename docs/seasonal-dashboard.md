@@ -22,6 +22,7 @@ An auto-generated overview of all crops sorted by their optimal planting window.
 
 ## :sun_with_face: Mid-Summer
 
+* [Green Onion](plants/green-onion.md)
 * [Wild Strawberry](plants/wild-strawberry-2022.md)
 
 ## :maple_leaf: Mid-Fall
