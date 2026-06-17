@@ -7,7 +7,7 @@ family: Podocarpaceae
 genus: Afrocarpus
 ---
 
-# :seedling: Fern Pine
+# :evergreen_tree: Fern Pine
 
 === "2026-06-10"
 

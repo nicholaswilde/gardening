@@ -8,7 +8,7 @@ genus: Capsicum
 removed: 2026-02-18
 ---
 
-# :seedling: Red Sweet Pepper
+# :hot_pepper: Red Sweet Pepper
 
 === "2025-02-18"
 

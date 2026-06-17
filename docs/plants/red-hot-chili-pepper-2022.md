@@ -8,7 +8,7 @@ genus: Capsicum
 removed: 2023-02-15
 ---
 
-# :seedling: Red Hot Chili Pepper
+# :hot_pepper: Red Hot Chili Pepper
 
 === "2022-02-15"
 

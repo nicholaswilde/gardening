@@ -8,7 +8,7 @@ family: Polemoniaceae
 genus: Phlox
 ---
 
-# :seedling: Garden Phlox
+# :blossom: Garden Phlox
 
 === "2026-06-10"
 

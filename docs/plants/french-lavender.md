@@ -7,7 +7,7 @@ family: Lamiaceae
 genus: Lavandula
 ---
 
-# :seedling: French Lavender
+# :lavender: French Lavender
 
 === "2026-06-10"
 

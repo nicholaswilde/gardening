@@ -9,7 +9,7 @@ family: Poaceae
 genus: Festuca
 ---
 
-# :seedling: Marathon II Grass
+# :ear_of_rice: Marathon II Grass
 
 === "2026-06-10"
 

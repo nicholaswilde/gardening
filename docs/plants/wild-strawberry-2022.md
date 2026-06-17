@@ -8,7 +8,7 @@ genus: Fragaria
 removed: 2023-06-17
 ---
 
-# :seedling: Wild Strawberry
+# :strawberry: Wild Strawberry
 
 === "2022-06-17"
 

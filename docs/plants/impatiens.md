@@ -8,7 +8,7 @@ family: Balsaminaceae
 genus: Impatiens
 ---
 
-# :seedling: Impatiens
+# :blossom: Impatiens
 
 === "2026-06-10"
 
