@@ -2,40 +2,68 @@
 # Used by new_plant.py to auto-assign heading emojis.
 #
 # Lookup order (first match wins):
-#   1. genus    — exact genus match (e.g. Capsicum → :hot_pepper:)
-#   2. family   — exact family match (e.g. Poaceae → :ear_of_rice:)
-#   3. type     — plant type keyword (e.g. herb → :herb:)
-#   4. default  — fallback when nothing else matches
+#   1. name     — exact plant name override (kebab-case filename)
+#   2. genus    — exact genus match (e.g. Capsicum → :hot_pepper:)
+#   3. family   — exact family match (e.g. Lamiaceae → :herb:)
+#   4. type     — keyword match against plant Type field
+#   5. default  — fallback when nothing else matches
 #
 # All values are GitHub/Python-Markdown emoji shortcodes.
 
+# --- Plant name overrides (highest priority) ---
+# Use kebab-case filenames (without .md) for edge cases where
+# genus/family/type matching would give the wrong emoji.
+name:
+  green-onion: ":onion:"
+
 # --- Genus overrides (highest priority) ---
 genus:
+  # Peppers
   Capsicum: ":hot_pepper:"
+  # Tomatoes
   Solanum: ":tomato:"
+  # Roses
   Rosa: ":rose:"
-  Allium: ":onion:"
+  # Strawberries
   Fragaria: ":strawberry:"
+  # Citrus
   Citrus: ":lemon:"
+  # Cherry / Plum trees
   Prunus: ":cherry_blossom:"
+  # Lavender
   Lavandula: ":lavender:"
+  # Trees — specific genera
+  Lagerstroemia: ":deciduous_tree:"
+  Cercis: ":deciduous_tree:"
+  Afrocarpus: ":evergreen_tree:"
+  # Houseplant trees
+  Dracaena: ":deciduous_tree:"
 
 # --- Family overrides ---
 family:
+  # Herbs — mint family (basil, mint, oregano, rosemary, sage, thyme)
+  Lamiaceae: ":herb:"
+  # Herbs — parsley/cilantro family
+  Apiaceae: ":herb:"
+  # Grasses
   Poaceae: ":ear_of_rice:"
 
-# --- Type-based mapping ---
+# --- Type-based mapping (matched case-insensitively, partial match) ---
+# Keywords are checked against the full Type string.
+# Order matters: more specific keywords should come first.
 type:
+  houseplant: ":potted_plant:"
   herb: ":herb:"
   vegetable: ":seedling:"
   fruit: ":seedling:"
   flower: ":blossom:"
   tree: ":deciduous_tree:"
-  shrub: ":seedling:"
   grass: ":ear_of_rice:"
-  fern: ":seedling:"
   succulent: ":cactus:"
   vine: ":seedling:"
+  shrub: ":seedling:"
+  fern: ":seedling:"
+  perennial: ":seedling:"
 
 # --- Fallback ---
 default: ":seedling:"

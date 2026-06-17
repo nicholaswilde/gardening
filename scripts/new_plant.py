@@ -16,31 +16,41 @@ def load_emoji_registry():
         return yaml.safe_load(f)
 
 
-def resolve_emoji(genus=None, family=None, plant_type=None):
+def resolve_emoji(name=None, genus=None, family=None, plant_type=None):
     """Resolve the heading emoji using the registry.
 
-    Lookup order: genus → family → type → default.
+    Lookup order: name → genus → family → type → default.
     """
     registry = load_emoji_registry()
     if registry is None:
         return ":seedling:"
 
-    # 1. Genus override
+    # 1. Plant name override (kebab-case filename)
+    if name and name in registry.get("name", {}):
+        return registry["name"][name]
+
+    # 2. Genus override
     if genus and genus in registry.get("genus", {}):
         return registry["genus"][genus]
 
-    # 2. Family override
+    # 3. Family override
     if family and family in registry.get("family", {}):
         return registry["family"][family]
 
-    # 3. Type-based mapping (case-insensitive)
+    # 4. Type-based mapping (case-insensitive, word-boundary match)
     if plant_type:
+        import re
         type_map = registry.get("type", {})
         plant_type_lower = plant_type.lower()
+        # Exact match first
         if plant_type_lower in type_map:
             return type_map[plant_type_lower]
+        # Word-boundary match: keyword must appear as a whole word
+        for keyword, emoji in type_map.items():
+            if re.search(r'\b' + re.escape(keyword) + r'\b', plant_type_lower):
+                return emoji
 
-    # 4. Fallback
+    # 5. Fallback
     return registry.get("default", ":seedling:")
 
 def get_season(date_obj):
@@ -158,6 +168,7 @@ def main():
     # Load and render the template
     template = env.get_template("plant.md.j2")
     emoji = resolve_emoji(
+        name=filename,
         genus=args.genus,
         family=args.family,
         plant_type=args.plant_type
